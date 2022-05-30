@@ -8,10 +8,6 @@
 puts "adding some data"
 5.times do
     carehome = Carehome.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    password: Faker::Internet.password,
-    email: Faker::Internet.email,
-    phone_number: Faker::PhoneNumber.cell_phone
+    user_id: 1,
   )
 end
