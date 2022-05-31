@@ -1,26 +1,27 @@
-<div class="simple-form">
-      <%= simple_form_for(@carehome) do |f| %>
-        <%= f.input :address %>
-        <%= f.input :name %>
-        <%= f.input :price_range %>
-        <%= f.input :description %>
-        <%= f.input :types, :collection => ["Care Home", "Nursing Home", "Care homes with dementia care", "Dual-registered care homes"] %>
-        <%= f.input :activities, as: :boolean %>
-        <%= f.input :pets_allowed, as: :boolean %>
-        <%= f.input :wifi, as: :boolean %>
-        <%= f.input :lift, as: :boolean %>
-        <%= f.input :wheelchair_access, as: :boolean %>
-        <%= f.input :security, as: :boolean %>
-        <%= f.input :smoke_alarm, as: :boolean %>
-        <%= f.input :tv, as: :boolean %>
-        <%= f.input :parking, as: :boolean %>
-        <%= f.input :hair_salon, as: :boolean %>
-        <%= f.input :sauna, as: :boolean %>
-        <%= f.input :bar, as: :boolean %>
-        <%= f.input :air_conditioning, as: :boolean %>
-        <%= f.input :physiotherapist, as: :boolean %>
-
-
-        <%= f.submit %>
-      <% end %>
-    </div>
+<div class="simple-form-container">
+  <div class="simple-form">
+        <%= simple_form_for(@carehome) do |f| %>
+          <%= f.input :address %>
+          <%= f.input :name %>
+          <%= f.input :min_price %>
+          <%= f.input :max_price %>
+          <%= f.input :description %>
+          <%= f.input :types, :collection => ["Care Home", "Nursing Home", "Care homes with dementia care", "Dual-registered care homes"] %>
+          <%= f.input :activities, as: :boolean %>
+          <%= f.input :pets_allowed, as: :boolean %>
+          <%= f.input :wifi, as: :boolean %>
+          <%= f.input :lift, as: :boolean %>
+          <%= f.input :wheelchair_access, as: :boolean %>
+          <%= f.input :security, as: :boolean %>
+          <%= f.input :smoke_alarm, as: :boolean %>
+          <%= f.input :tv, as: :boolean %>
+          <%= f.input :parking, as: :boolean %>
+          <%= f.input :hair_salon, as: :boolean %>
+          <%= f.input :sauna, as: :boolean %>
+          <%= f.input :bar, as: :boolean %>
+          <%= f.input :air_conditioning, as: :boolean %>
+          <%= f.input :physiotherapist, as: :boolean %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+</div>
