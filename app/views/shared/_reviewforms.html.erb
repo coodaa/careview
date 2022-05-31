@@ -1,0 +1,14 @@
+
+<div class="carehome-show-card mt-3">
+        <h4>Rate this Carehome</h4>
+        <%= simple_form_for([@carehome, @reviews_form]) do |f| %>
+          <%= f.input :content %>
+          <%= f.input :rating %>
+          <%= f.input :food %>
+          <%= f.input :privacy %>
+          <%= f.input :staff %>
+          <%= f.input :hygiene %>
+          <%= f.input :atmosphere %>
+          <%= f.submit "Submit rating", class: "btn-approve"%>
+        <% end %>
+</div>

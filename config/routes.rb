@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :carehomes do
-    resources :reviews, only: [:create]
-    resources :favorites, only: [:create]
-    resources :chatrooms, only: [:create]
+    resources :reviews
+    resources :favorites
+    resources :chatrooms
   end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

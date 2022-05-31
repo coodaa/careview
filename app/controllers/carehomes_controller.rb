@@ -2,8 +2,7 @@ class CarehomesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @carehomespol = policy_scope(Carehome)
-    @carehomes = Carehome.all
+    @carehomes = policy_scope(Carehome)
   end
 
   def show

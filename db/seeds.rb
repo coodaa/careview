@@ -18,7 +18,7 @@ User.destroy_all
 User.create(email: 'aa@bb.com', password: 'qwertz12')
 
 5.times do
-  User.create(
+  User.create!(
     email: Faker::Internet.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10)
   )
@@ -29,7 +29,7 @@ carehome_type = ['Care Home', 'Nursing Home', 'Care homes with dementia care', '
 
 puts 'Creating new Carehomes ...'
 15.times do
-  Carehome.create(
+  Carehome.create!(
     address: Faker::Address.full_address,
     name: Faker::Company.name,
     activities: 'Add extra activities here !',
