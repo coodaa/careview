@@ -1,23 +1,26 @@
 class CarehomesController < ApplicationController
-
   skip_before_action :authenticate_user!
 
   def index
+    @carehomespol = policy_scope(Carehome)
     @carehomes = Carehome.all
   end
 
   def show
     @carehome = Carehome.find(params[:id])
+    authorize @carehome
   end
 
   def new
     @carehome = Carehome.new
+    authorize @carehome
   end
 
   def create
     @carehome = Carehome.new(carehome_params)
     @carehome.user = current_user
     @carehome.save
+    authorize @carehome
   end
 
   private
