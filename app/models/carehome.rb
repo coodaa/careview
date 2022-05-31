@@ -4,5 +4,5 @@ class Carehome < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :chatrooms
 
-  validates :address, :name, :price_range, :description,  presence: true
+  validates :address, :name, :min_price, :max_price, :description,  presence: true
 end
