@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :carehomes
   has_many :reviews
   has_many :favorites, dependent: :destroy
+  has_many :chatrooms
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

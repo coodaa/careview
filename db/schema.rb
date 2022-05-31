@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_30_154523) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_31_085102) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_30_154523) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_carehomes_on_user_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.bigint "carehome_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["carehome_id"], name: "index_chatrooms_on_carehome_id"
+    t.index ["user_id"], name: "index_chatrooms_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -78,6 +87,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_30_154523) do
   end
 
   add_foreign_key "carehomes", "users"
+  add_foreign_key "chatrooms", "carehomes"
+  add_foreign_key "chatrooms", "users"
   add_foreign_key "favorites", "carehomes"
   add_foreign_key "favorites", "users"
   add_foreign_key "reviews", "carehomes"
