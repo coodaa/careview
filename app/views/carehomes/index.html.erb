@@ -1,11 +1,31 @@
-<div>
-  <h1>Our Homes</h1>
-  <% @carehomes.each do |carehome| %>
-  <br>
-  <li>
-  <ul><h3><%= carehome.name %></h3></ul>
-  <ul><%= carehome.address %></ul>
-  <ul><%= carehome.description %></ul>
-  </li>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Our homes in your region</h1>
+    </div>
+  </div>
+
+  <div class="carehomes-container">
+    <div class="carehomes-cards col-8">
+      <% @carehomes.each do |carehome| %>
+        <div class="carehome-card">
+          <%= link_to carehome_path(carehome) do %>
+            <div
+            class="carehome-card-image"
+            style= "background-image: url('assets/default-carehome.jpg')">
+            </div>
+            <div class="carehome-card-content">
+              <h4><%= carehome.name %></h4>
+              <p><%= carehome.address %></p>
+            </div>
+            <div class="carehome-card-icons">
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="carehomes-map col-4">
+
+    </div>
+  </div>
 </div>

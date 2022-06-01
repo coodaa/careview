@@ -1,0 +1,48 @@
+.carehomes-container {
+  display: flex;
+  width: 100%;
+}
+
+.carehomes-cards {
+  width: 50%;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.carehome-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  height: 350px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.carehome-card-image {
+  height: 60%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.2);
+  background-blend-mode: color;
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+.carehome-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+  .carehome-card-image {
+    background-color: rgba(0,0,0,0);
+  }
+}
+
+.carehome-card-content {
+  padding: 5px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none !important;
+}

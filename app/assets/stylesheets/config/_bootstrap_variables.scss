@@ -6,15 +6,15 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $secondary-color;
+$body-bg:                 $bg-color;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $gray;
-$primary:    $my-yellow;
-$success:    $secondary-color;
-$info:       $my-teal;
-$danger:     $my-navy;
+$body-color: $secondary-color;
+$primary:    $primary-color;
+$success:    $green;
+$info:       $secondary-color;
+$danger:     $red;
 $warning:    $orange;
 
 // Buttons & inputs' radius

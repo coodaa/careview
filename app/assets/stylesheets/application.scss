@@ -16,4 +16,15 @@
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+  background-color: $bg-color;
+}
+
+body {
+  background-color: $bg-color;
+  color: $primary-color;
+}
+
+h1 {
+  background-color: $bg-color;
+  color: $secondary-color;
 }
