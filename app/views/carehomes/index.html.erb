@@ -1,40 +1,58 @@
-<div>
-  <div class="container-md">
-    <div class="row">
-      <div class="col-12">
-        <h1>Our homes in your region</h1>
-      </div>
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <h1>Our homes in your region</h1>
     </div>
   </div>
-  <div class="d-flex">
-    <div class="carehomes-container col-8 d-flex flex-wrap justify-content-around">
-        <% @carehomes.each do |carehome| %>
-          <div class="carehome-card">
-            <%= link_to carehome_path(carehome) do %>
-              <div
-              class="carehome-card-image"
-              style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
-              </div>
-              <div class="carehome-card-content">
-                <h5><%= carehome.name %></h5>
-                <p><%= carehome.address %></p>
-              </div>
-              <div class="carehome-card-icons">
-                <%= carehome.wifi? ? image_tag("wifi-solid.svg", class: "icon wifi") : "" %>
-                <%= carehome.bar? ? image_tag("mug-saucer-solid.svg", class: "icon bar") : "" %>
-                <%= carehome.wheelchair_access? ? image_tag("wheelchair-solid.svg", class: "icon wheelchair") : "" %>
-                <%= carehome.physiotherapist? ? image_tag("user-doctor-solid.svg", class: "icon physiotherapist") : "" %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+</div>
+
+<div class="d-flex">
+  <div class="carehomes-container col-8 d-flex flex-wrap justify-content-around">
+      <% @carehomes.each do |carehome| %>
+        <div class="carehome-card">
+          <%= link_to carehome_path(carehome) do %>
+            <div
+            class="carehome-card-image"
+            style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
+            </div>
+
+            <div class="carehome-card-content">
+              <h5><%= carehome.name %></h5>
+              <p><%= carehome.address %></p>
+            </div>
+
+            <div class="carehome-card-icons">
+              <%= carehome.wifi? ? image_tag("wifi-solid.svg", class: "icon wifi") : "" %>
+              <%= carehome.bar? ? image_tag("mug-saucer-solid.svg", class: "icon bar") : "" %>
+              <%= carehome.wheelchair_access? ? image_tag("wheelchair-solid.svg", class: "icon wheelchair") : "" %>
+              <%= carehome.physiotherapist? ? image_tag("user-doctor-solid.svg", class: "icon physiotherapist") : "" %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
-    <div id="index-map"
-      class="col-4 position-sticky top-0"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+  </div>
+  <div id="index-map"
+    class="col-4 position-sticky top-0"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <%= paginate @carehomes %>
+</div>
+
+
+<div>
+  <h1>Our Homes</h1>
+    <% @carehomes.each do |carehome| %>
+    <br>
+    <li>
+    <ul><h3><%= carehome.name %></h3></ul>
+    <ul><%= carehome.address %></ul>
+    <ul><%= carehome.description %></ul>
+    </li>
+    <% end %>
+    <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1>
+    <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1>
+    <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1> <h1>Our Homes</h1>
+</div>

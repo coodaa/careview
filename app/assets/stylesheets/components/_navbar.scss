@@ -5,7 +5,8 @@
   position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-  background-color: red !important;
+  background-color: $bg-color;
+  border-bottom: 2px solid #31326fa9;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -26,6 +27,7 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
+  border-bottom: none;
   .navbar-wagon-link {
     color: white;
     font-weight: bold;
