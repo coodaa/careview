@@ -1,30 +1,32 @@
-<div class="container">
+<div class="container-md">
   <div class="row">
     <div class="col-12">
       <h1>Our homes in your region</h1>
     </div>
   </div>
+  <div class="d-flex">
+    <div class="carehomes-container col-8 d-flex flex-wrap justify-content-around">
 
-  <div class="carehomes-container">
-    <div class="carehomes-cards col-8">
-      <% @carehomes.each do |carehome| %>
-        <div class="carehome-card">
-          <%= link_to carehome_path(carehome) do %>
-            <div
-            class="carehome-card-image"
-            style= "background-image: url('assets/default-carehome.jpg')">
-            </div>
-            <div class="carehome-card-content">
-              <h4><%= carehome.name %></h4>
-              <p><%= carehome.address %></p>
-            </div>
-            <div class="carehome-card-icons">
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+        <% @carehomes.each do |carehome| %>
+          <div class="carehome-card">
+            <%= link_to carehome_path(carehome) do %>
+              <div
+              class="carehome-card-image"
+              style= "background-image: url('assets/default-carehome.jpg')">
+              </div>
+              <div class="carehome-card-content">
+                <h4><%= carehome.name %></h4>
+                <p><%= carehome.address %></p>
+              </div>
+              <div class="carehome-card-icons">
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
     </div>
-    <div id="index-map col-4"
+    <div id="index-map"
+      class="col-4 position-sticky top-0"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
