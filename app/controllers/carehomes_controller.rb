@@ -3,6 +3,15 @@ class CarehomesController < ApplicationController
 
   def index
     @carehomes = policy_scope(Carehome)
+    @carehomes_all = Carehome.all
+    @markers = @carehomes_all.geocoded.map do |carehome|
+      {
+        lat: carehome.latitude,
+        lng: carehome.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { carehome: carehome }),
+        image_url: helpers.asset_url("/assets/mapin.png")
+      }
+    end
   end
 
   def show
