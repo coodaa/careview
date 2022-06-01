@@ -1,11 +1,6 @@
-<div>
-  <h1>Our Homes</h1>
-  <% @carehomes.each do |carehome| %>
-  <br>
-  <li>
-  <ul><h3><%= carehome.name %></h3></ul>
-  <ul><%= carehome.address %></ul>
-  <ul><%= carehome.description %></ul>
-  </li>
-  <% end %>
+
+<div id="index-map"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
