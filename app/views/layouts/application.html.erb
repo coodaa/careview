@@ -19,7 +19,7 @@
       <%= render "shared/flashes" %>
 
       <%= yield %>
-      <%= render "shared/footer" %>
+      <%= render "shared/footer" unless @skip_footer %>
     </div>
   </body>
 </html>
