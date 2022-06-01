@@ -12,13 +12,17 @@
           <%= link_to carehome_path(carehome) do %>
             <div
             class="carehome-card-image"
-            style= "background-image: url('assets/default-carehome.jpg')">
+            style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
             </div>
             <div class="carehome-card-content">
-              <h4><%= carehome.name %></h4>
+              <h5><%= carehome.name %></h5>
               <p><%= carehome.address %></p>
             </div>
             <div class="carehome-card-icons">
+              <%= carehome.wifi? ? image_tag("wifi-solid.svg", class: "icon wifi") : "" %>
+              <%= carehome.bar? ? image_tag("mug-saucer-solid.svg", class: "icon bar") : "" %>
+              <%= carehome.wheelchair_access? ? image_tag("wheelchair-solid.svg", class: "icon wheelchair") : "" %>
+              <%= carehome.physiotherapist? ? image_tag("user-doctor-solid.svg", class: "icon physiotherapist") : "" %>
             </div>
           <% end %>
         </div>

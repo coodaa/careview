@@ -17,23 +17,24 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_095325) do
   create_table "carehomes", force: :cascade do |t|
     t.string "address"
     t.string "name"
-    t.integer "price_range"
+    t.integer "min_price"
+    t.integer "max_price"
     t.text "description"
     t.string "types"
-    t.string "activities"
-    t.string "pets_allowed"
-    t.string "wifi"
-    t.string "lift"
-    t.string "wheelchair_access"
-    t.string "security"
-    t.string "smoke_alarm"
-    t.string "tv"
-    t.string "parking"
-    t.string "hair_salon"
-    t.string "sauna"
-    t.string "bar"
-    t.string "air_conditioning"
-    t.string "physiotherapist"
+    t.boolean "activities"
+    t.boolean "pets_allowed"
+    t.boolean "wifi"
+    t.boolean "lift"
+    t.boolean "wheelchair_access"
+    t.boolean "security"
+    t.boolean "smoke_alarm"
+    t.boolean "tv"
+    t.boolean "parking"
+    t.boolean "hair_salon"
+    t.boolean "sauna"
+    t.boolean "bar"
+    t.boolean "air_conditioning"
+    t.boolean "physiotherapist"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -62,12 +63,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_095325) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "content"
-    t.string "rating"
-    t.string "food"
-    t.string "privacy"
-    t.string "staff"
-    t.string "hygiene"
-    t.string "atmosphere"
+    t.integer "rating"
+    t.integer "food"
+    t.integer "privacy"
+    t.integer "staff"
+    t.integer "hygiene"
+    t.integer "atmosphere"
     t.bigint "user_id", null: false
     t.bigint "carehome_id", null: false
     t.datetime "created_at", null: false
