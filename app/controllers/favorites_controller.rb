@@ -1,16 +1,21 @@
 class FavoritesController < ApplicationController
-
   def index
+    policy_scope(Favorite)
     @favorites_form = Favorite.new
     @carehome = Carehome.find(params[:carehome_id])
   end
 
   def create
     @favorite = Favorite.new(favorite_params)
-    @favorite.user = current_user
+    @rfavorite.user = current_user
     @carehome = Carehome.find(params[:carehome_id])
-    @favorite.carehome = @carehome
-    @favorite.save
+    @favorita.carehome = @carehome
+    if @favorite.save
+      redirect_to carehome_favorites_path(@carehome)
+    else
+      redirect_to carehomes_path(@carehome), status: :unprocessable_entity
+    end
+    authorize @favorite
   end
 
   private
