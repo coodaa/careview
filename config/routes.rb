@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-
+# the routes need to be changend
   resources :carehomes do
     resources :reviews
     resources :favorites

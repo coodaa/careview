@@ -18,5 +18,4 @@ class FavoritesController < ApplicationController
   def favorite_params
     params.require(:review).permit(:user_id, :carehome_id)
   end
-
 end
