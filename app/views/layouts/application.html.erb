@@ -14,8 +14,12 @@
   </head>
 
   <body>
-  <div class="page-container">
-      <%= render "shared/navbar" %>
+    <div class="page-container">
+      <% if request.path == "/" %>
+        <%= render "shared/navbar", locals: { home: true } %>
+      <% else  %>
+        <%= render "shared/navbar", locals: { home: false } %>
+      <% end %>
       <%= render "shared/flashes" %>
 
       <%= yield %>
