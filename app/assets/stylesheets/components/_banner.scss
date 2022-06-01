@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("background2.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("background1.jpg");
   background-size: cover;
   background-position: center;
   h1 {
@@ -18,7 +18,7 @@
     font-weight: lighter;
     margin-bottom: 30px;
   }
-  .btn {
-    padding: 15px 50px;
-  }
+  // .btn {
+  //   padding: 15px 50px;
+  // }
 }
