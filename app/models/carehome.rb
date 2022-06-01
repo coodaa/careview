@@ -5,7 +5,7 @@ class Carehome < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :chatrooms
 
-  pagination_per 10
+  paginates_per 10
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
