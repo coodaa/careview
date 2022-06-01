@@ -1,0 +1,12 @@
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), image-url("background-home.jpg");
+  background-position: center;
+  background-size: cover;
+  h1 {
+    color:white;
+    font-weight: bold;
+  }
+}
