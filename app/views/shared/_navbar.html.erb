@@ -1,6 +1,6 @@
-<div class="navbar-wagon">
+<div class="navbar-wagon <%= "navbar-home" if locals[:home] %> ">
 
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= yield(:navbar_class) %>">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <div class="container-fluid">
       <%= link_to "#", class: "navbar-brand" do %>
         <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>

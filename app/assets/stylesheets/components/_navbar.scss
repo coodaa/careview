@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgb(237, 11, 11);
+}
+.navbar-wagon {
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  background-color: $bg-color;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,6 +16,9 @@
   width: 40px;
 }
 
+.nav-link {
+  color: white !important;
+}
 
 .navbar-home {
   // background: unset;
