@@ -31,6 +31,9 @@ gem "faker"
 
 gem "pundit"
 
+# Pagination gem
+gem 'kaminari'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

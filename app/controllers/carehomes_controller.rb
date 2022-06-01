@@ -2,9 +2,8 @@ class CarehomesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @carehomes = policy_scope(Carehome)
-    @carehomes_all = Carehome.all
-    @markers = @carehomes_all.geocoded.map do |carehome|
+    @carehomes = policy_scope(Carehome).page params[:page]
+    @markers = @carehomes.geocoded.map do |carehome|
       {
         lat: carehome.latitude,
         lng: carehome.longitude,
