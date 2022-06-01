@@ -1,22 +1,12 @@
-<%= content_for(:navbar_class, "navbar-home") %>
-
-<%# <div class="banner">
-  <div class="banner-content text-center">
-
-      <h1>Find a carehome that fits your needs</h1>
-      <p>Careview shares real life experiences from residents</p>
-
-  </div>
-
-
-</div> %>
-
 
 <div class="banner">
   <div class="banner-content text-center">
-    <h1>Change your life: learn to code!</h1>
-    <p>Le Wagon brings technical skills to creative people</p>
-    <%= link_to "Start now", new_user_session_path, class: "btn btn-lg btn-primary"  %>
+    <div class="text-shadow">
+      <h1>Find a carehome that fits your needs</h1>
+      <p>Careview shares real life experiences from residents</p>
+      
+      <button class="submit">SEE ALL CARE HOMES</button>
+    </div>
   </div>
 </div>
 
@@ -25,4 +15,3 @@
 
 <%# <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
 <%# <%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger" %>
-

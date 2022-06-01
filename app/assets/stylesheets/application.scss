@@ -2,6 +2,7 @@
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+@import "config/buttons";
 
 // External libraries
 @import "bootstrap/scss/bootstrap";
@@ -16,4 +17,8 @@
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+}
+
+.text-shadow {
+  text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
 }
