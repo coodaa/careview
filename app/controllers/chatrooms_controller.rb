@@ -25,5 +25,4 @@ class ChatroomsController < ApplicationController
   def chatroom_params
     params.require(:chatroom).permit(:carehome_id, :user_id)
   end
-
 end
