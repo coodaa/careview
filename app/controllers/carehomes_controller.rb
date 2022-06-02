@@ -12,7 +12,7 @@ class CarehomesController < ApplicationController
       }
     end
     if params[:query].present?
-      @carehomes = Carehome.search(params[:query])
+      @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
     else
       @carehomes
     end
@@ -26,7 +26,6 @@ class CarehomesController < ApplicationController
       lng: @carehome.longitude,
       image_url: helpers.asset_url("/assets/mapin.png")
     }
-    @reviews = @carehome.reviews
   end
 
   def new
