@@ -38,9 +38,11 @@
                 <p><%= carehome.address %></p>
               </div>
               <div class="carehome-card-rating">
-                <p><%= carehome.reviews.average(:rating)
-                  image_tag("star-solid.svg", class: "icon-rating")
-                %></p>
+                <% avg_rating_float = carehome.reviews.average(:rating).to_f %>
+                <% if avg_rating_float > 0 %>
+                  <p><%= avg_rating_float.round(1) %></p>
+                  <%= image_tag("star-solid.svg", class: "icon-rating") %>
+                <% end %>
               </div>
             </div>
             <div class="carehome-card-footer d-flex justify-content-between">

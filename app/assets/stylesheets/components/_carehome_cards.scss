@@ -48,7 +48,12 @@
 .carehome-card-rating {
   display: flex;
   align-items:flex-start;
+  justify-content: center;
   margin-top: 3px;
+  width: 20%;
+  p {
+    color: $secondary-color;
+  }
 }
 
 .carehome-card-icons {
@@ -78,7 +83,7 @@
 .icon-rating {
   height: 15px;
   width: 15px;
-  margin: 10px;
+  margin: 4px;
   filter: invert(72%) sepia(86%) saturate(391%) hue-rotate(347deg) brightness(101%) contrast(101%);
 }
 
