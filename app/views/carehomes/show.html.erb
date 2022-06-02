@@ -1,13 +1,49 @@
+<div class="carehome-photos">
+    <img class="main-photo" src="https://www.bondcare.co.uk/wp-content/uploads/2018/01/CK3_5089-2000x1000.jpg" alt="main photo">
+
+  <div class="gallery-photos">
+
+  </div>
+</div>
+
 <div class="carehome-view">
   <div class="carehome-infos">
-    <%= @carehome.name %>
+    <h2><%= @carehome.name %></h2>
+    <p></p>
   </div>
+
   <div class="carehome-favorite">
     <p>Add to favs</p>
   </div>
+
   <div id="show-map"
       data-controller="map-view"
       data-map-view-marker-value="<%= @marker.to_json %>"
       data-map-view-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+  <div class="carehome-details">
+    <div class="general-details">
+      <p>General</p>
+      <p>Garder etc. to be set with the booleans</p>
     </div>
+    <div class="accessibility-details">
+      <p>Accessibility</p>
+    </div>
+    <div class="food-details">
+      <p>Food and Catering</p>
+    </div>
+    <div class="internet-details">
+      <p>Internet</p>
+    </div>
+  </div>
+
+  <div class="carehome-reviews">
+    <p>REVIEWS</p>
+  </div>
+
+  <div class="carehome-contact">
+    <p><%= @carehome.address %></p>
+    <%= button_to 'Contact', action: 'index'  %>
+  </div>
 </div>
