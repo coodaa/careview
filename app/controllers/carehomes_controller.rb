@@ -11,6 +11,11 @@ class CarehomesController < ApplicationController
         image_url: helpers.asset_url("/assets/mapin.png")
       }
     end
+    if params[:query].present?
+      @carehomes = Carehome.search(params[:query])
+    else
+      @carehomes
+    end
   end
 
   def show

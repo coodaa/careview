@@ -31,6 +31,10 @@ gem "faker"
 
 gem "pundit"
 
+gem "elasticsearch", "< 7.14"
+
+gem "searchkick", "~> 4.0"
+
 # Pagination gem
 gem 'kaminari'
 
