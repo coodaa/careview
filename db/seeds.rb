@@ -55,4 +55,22 @@ puts 'Creating new Carehomes ...'
   )
 end
 
+puts 'Creating reviews ...'
+carehomes = Carehome.all
+rate = (1..5).to_a
+
+40.times do
+  Review.create!(
+    content: Faker::Restaurant.review,
+    carehome: carehomes.sample,
+    user: all_user.sample,
+    rating: rate.sample,
+    food: rate.sample,
+    privacy: rate.sample,
+    staff: rate.sample,
+    hygiene: rate.sample,
+    atmosphere: rate.sample
+  )
+end
+
 puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
