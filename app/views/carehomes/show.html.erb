@@ -1,5 +1,13 @@
-<div>
-  <h1><%= @carehome.name %></h1>
-  <%= @carehome.address %>
-  <%= @carehome.description %>
+<div class="carehome-view">
+  <div class="carehome-infos">
+    <%= @carehome.name %>
+  </div>
+  <div class="carehome-favorite">
+    <p>Add to favs</p>
+  </div>
+  <div id="show-map"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 </div>
