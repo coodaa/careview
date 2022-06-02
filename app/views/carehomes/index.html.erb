@@ -6,19 +6,23 @@
       </div>
     </div>
   </div>
-<div class="search-form-control form-group">
-  <div>
-    <%= form_tag carehomes_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control string required",
-    placeholder: "Find a Carehome"
-    %>
-  <%= submit_tag "Search", class: "btn btn-flat"%>
-<% end %>
+<div class="d-flex mt-5 justify-content-center">
+  <div class="search-form-control form-group">
+    <div>
+      <%= form_tag carehomes_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control string required",
+        placeholder: "Find a Carehome"
+        %>
+        <%= submit_tag "Search", class: "btn btn-flat"%>
+      <% end %>
+    </div>
   </div>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-controller="modalfilters">Filters <%= image_tag("filter-solid.svg", class: "icon-filter") %></button>
+    <%= render "partials/modalfilters" %>
 </div>
-<br>
+
   <div class="d-flex mt-5 justify-content-center">
     <div class="carehomes-cards">
       <% @carehomes.each do |carehome| %>
