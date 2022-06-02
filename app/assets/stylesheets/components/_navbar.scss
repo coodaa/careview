@@ -5,7 +5,12 @@
   position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-  background-color: red !important;
+  background-color: $bg-color;
+  border-bottom: 2px solid #EBEBEB;
+
+  h1 {
+    color: $secondary-color;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,17 +22,22 @@
 }
 
 .nav-link {
-  color: white !important;
+  color: $secondary-color !important;
 }
 
 .navbar-home {
-  // background: unset;
   position: absolute;
   width: 100%;
   background: transparent;
   box-shadow: none;
+  border-bottom: none;
   .navbar-wagon-link {
     color: white;
     font-weight: bold;
+    // text-shadow: 5px 5px 10px rgba(0,0,0,0.8) !important;
+  }
+  h1 {
+    color: white;
+    // text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
   }
 }
