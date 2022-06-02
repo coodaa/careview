@@ -3,10 +3,11 @@
     <div class="text-shadow">
       <h1>Find a carehome that fits your needs</h1>
       <p>Careview shares real life experiences from residents</p>
-      <button class="submit">SEE ALL CARE HOMES</button><br><br>
 
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
-    <%= render "partials/modalmessage" %>
+
+      <%= link_to carehomes_path do %>
+      <button class="submit">SEE ALL CARE HOMES</button>
+      <% end %>
     </div>
   </div>
 </div>
