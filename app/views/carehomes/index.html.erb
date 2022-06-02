@@ -1,32 +1,41 @@
 <div class="color-for-font">
   <div class="container-md">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 mt-3">
         <h1>Our homes in your region</h1>
       </div>
     </div>
   </div>
-
-  <div class="d-flex">
-    <div class="carehomes-container col-8 d-flex flex-wrap justify-content-around">
-        <% @carehomes.each do |carehome| %>
-          <div class="carehome-card">
-            <%= link_to carehome_path(carehome) do %>
+  <div class="d-flex mt-5 justify-content-center">
+    <div class="carehomes-cards">
+      <% @carehomes.each do |carehome| %>
+        <div class="carehome-card">
+          <%= link_to carehome_path(carehome) do %>
             <div
-              class="carehome-card-image"
-              style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
+            class="carehome-card-image"
+            style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
             </div>
-
-            <div class="carehome-card-content">
-              <h5><%= carehome.name %></h5>
-              <p><%= carehome.address %></p>
+            <div class="carehome-card-header d-flex justify-content-between">
+              <div class="carehome-card-content">
+                <h5><%= carehome.name %></h5>
+                <p><%= carehome.address %></p>
+              </div>
+              <div class="carehome-card-rating">
+                <p><%= carehome.reviews.average(:rating)
+                  image_tag("star-solid.svg", class: "icon-rating")
+                %></p>
+              </div>
             </div>
-
-            <div class="carehome-card-icons">
-              <%= carehome.wifi? ? image_tag("wifi-solid.svg", class: "icon wifi") : "" %>
-              <%= carehome.bar? ? image_tag("mug-saucer-solid.svg", class: "icon bar") : "" %>
-              <%= carehome.wheelchair_access? ? image_tag("wheelchair-solid.svg", class: "icon wheelchair") : "" %>
-              <%= carehome.physiotherapist? ? image_tag("user-doctor-solid.svg", class: "icon physiotherapist") : "" %>
+            <div class="carehome-card-footer d-flex justify-content-between">
+              <div class="carehome-card-icons">
+                <%= carehome.wifi? ? image_tag("wifi-solid.svg", class: "icon wifi") : "" %>
+                <%= carehome.bar? ? image_tag("mug-saucer-solid.svg", class: "icon bar") : "" %>
+                <%= carehome.wheelchair_access? ? image_tag("wheelchair-solid.svg", class: "icon wheelchair") : "" %>
+                <%= carehome.physiotherapist? ? image_tag("user-doctor-solid.svg", class: "icon physiotherapist") : "" %>
+              </div>
+              <div class="carehome-card-price-range">
+                <%= render "carehomes/price_range", locals: { carehome: carehome } %>
+              </div>
             </div>
           <% end %>
         </div>
@@ -40,6 +49,6 @@
       data-map-markers-value="<%= @markers.to_json %>"
       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-    <%= paginate @carehomes %>
   </div>
+  <%= paginate @carehomes %>
 </div>
