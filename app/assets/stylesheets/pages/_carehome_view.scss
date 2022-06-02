@@ -1,0 +1,54 @@
+.carehome-photos {
+  background-color: aqua;
+  display: flex;
+  height: 500px;
+  width: 90vw;
+  margin: 0 auto;
+}
+.main-photo {
+  width: 50%;
+  object-fit: cover;
+}
+
+
+.carehome-view {
+  width: 100%;
+  height: 80vh;
+  background-color: $bg-color;
+  display: inline-grid;
+  grid-template: 1fr 1fr 1fr 1fr / 5vw 1fr 1fr 1fr 5vw;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.carehome-infos {
+  grid-area: 1 / 2 / 2 / 4;
+
+  h2 {
+    font-size: $headers-font;
+  }
+}
+
+.carehome-favorite {
+  background-color: aquamarine;
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+#show-map {
+  grid-area: 2 / 4 / 4 / 5;
+}
+
+.carehome-details {
+  background-color: purple;
+  grid-area: 2 / 2 / 4 / 4;
+}
+
+.carehome-reviews {
+  background-color: yellow;
+  grid-area: 4 / 2 / 5 / 4;
+}
+
+.carehome-contact {
+  background-color: bisque;
+  grid-area: 4 / 4 / 4 / 5;
+}

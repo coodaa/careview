@@ -11,11 +11,21 @@ class CarehomesController < ApplicationController
         image_url: helpers.asset_url("/assets/mapin.png")
       }
     end
+    if params[:query].present?
+      @carehomes = Carehome.search(params[:query])
+    else
+      @carehomes
+    end
   end
 
   def show
     @carehome = Carehome.find(params[:id])
     authorize @carehome
+    @marker = {
+      lat: @carehome.latitude,
+      lng: @carehome.longitude,
+      image_url: helpers.asset_url("/assets/mapin.png")
+    }
   end
 
   def new

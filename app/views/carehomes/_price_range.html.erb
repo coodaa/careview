@@ -1,0 +1,11 @@
+<% if locals[:carehome].max_price < 1200 %>
+    <%= image_tag("euro-sign-solid.svg", class: "icon-price") %>
+<% elsif locals[:carehome].max_price > 2000 %>
+    <% 3.times do %>
+      <%= image_tag("euro-sign-solid.svg", class: "icon-price") %>
+    <% end %>
+<% else %>
+    <% 2.times do %>
+      <%= image_tag("euro-sign-solid.svg", class: "icon-price") %>
+    <% end %>
+<% end %>

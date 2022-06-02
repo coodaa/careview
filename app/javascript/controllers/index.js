@@ -15,3 +15,6 @@ application.register("modal", ModalController)
 
 import ModalmessageController from "./modalmessage_controller.js"
 application.register("modalmessage", ModalmessageController)
+
+import MapViewController from "./map_view_controller.js"
+application.register("map-view", MapViewController)
