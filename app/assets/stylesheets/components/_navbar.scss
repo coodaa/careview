@@ -7,6 +7,10 @@
 	top: 0;
   background-color: $bg-color;
   border-bottom: 2px solid #EBEBEB;
+
+  h1 {
+    color: $secondary-color;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,7 +22,7 @@
 }
 
 .nav-link {
-  color: white !important;
+  color: $secondary-color !important;
 }
 
 .navbar-home {
