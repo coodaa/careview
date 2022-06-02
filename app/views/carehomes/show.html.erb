@@ -3,7 +3,7 @@
 
   <div class="gallery-photos">
   <%# for demo  %>
-  
+
     <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmV0aXJlbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="photos-for-demo">
     <img src="https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" class="photos-for-demo">
     <img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="photos-for-demo">
@@ -65,11 +65,16 @@
     <% end %>
   </div>
 
+  <div class="carehome-ratings">
+    <h3>Ratings</h3>
+      <p>Rating : <%= @reviews.last.rating %></p>
+      <p>Food : <%= @reviews.last.food %></p>
+      <p>Privacy : <%= @reviews.last.privacy %></p>
+  </div>
+
   <div class="carehome-reviews">
     <h3>Reviews</h3>
-    <% @reviews.each do |review| %>
-      <p><%= review.content %></p>
-    <% end %>
+      <p><%= @reviews.last.content %></p>
   </div>
 
   <div class="carehome-contact">
