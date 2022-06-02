@@ -38,7 +38,7 @@
 }
 
 .carehome-card-content {
-  padding: 5px;
+  padding: 10px;
   text-decoration: none;
   border-bottom: 1px solid lightgrey;
   color: $secondary-color;
@@ -58,11 +58,21 @@
   margin-right: 5px;
 }
 
+// .carehome-card-price-range {
+//   display: flex;
+//   align-items: center;
+//   padding: 5px;
+// }
+
 .icon-price {
   height: 15px;
   width: 15px;
   margin: -5px;
   filter: invert(72%) sepia(86%) saturate(391%) hue-rotate(347deg) brightness(101%) contrast(101%);
+}
+
+.carehome-card-price-range {
+  margin-right: 15px;
 }
 
 a {
