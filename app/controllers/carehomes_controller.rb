@@ -19,10 +19,8 @@ class CarehomesController < ApplicationController
     @marker = {
       lat: @carehome.latitude,
       lng: @carehome.longitude,
-      info_window: render_to_string(partial: "info_window", locals: { carehome: @carehome }),
       image_url: helpers.asset_url("/assets/mapin.png")
     }
-    raise
   end
 
   def new
