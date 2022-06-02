@@ -68,7 +68,7 @@
   border-bottom: 1px solid lightgrey;
 }
 
-.icon-price {
+.icon-price, .icon-filter {
   height: 15px;
   width: 15px;
   margin: -5px;
@@ -92,4 +92,10 @@ a {
 
 .color-for-font {
   color: $secondary-color;
+}
+
+.btn-filter {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
 }
