@@ -1,14 +1,13 @@
-.carehomes-container {
-  display: flex;
-  width: 100%;
-}
+// .carehomes-container {
+//   display: flex;
+//   width: 50%;
+// }
 
 .carehomes-cards {
   width: 50%;
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-around;
 }
 
 .carehome-card {
@@ -57,6 +56,13 @@
   width: 25px;
   filter: invert(15%) sepia(32%) saturate(3501%) hue-rotate(221deg) brightness(92%) contrast(85%);
   margin-right: 5px;
+}
+
+.icon-price {
+  height: 15px;
+  width: 15px;
+  margin: -5px;
+  filter: invert(72%) sepia(86%) saturate(391%) hue-rotate(347deg) brightness(101%) contrast(101%);
 }
 
 a {
