@@ -16,6 +16,11 @@ class CarehomesController < ApplicationController
   def show
     @carehome = Carehome.find(params[:id])
     authorize @carehome
+    @marker = {
+      lat: @carehome.latitude,
+      lng: @carehome.longitude,
+      image_url: helpers.asset_url("/assets/mapin.png")
+    }
   end
 
   def new

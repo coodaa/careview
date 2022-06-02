@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
+
+import MapViewController from "./map_view_controller.js"
+application.register("map-view", MapViewController)
