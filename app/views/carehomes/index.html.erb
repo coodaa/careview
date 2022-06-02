@@ -15,9 +15,16 @@
             class="carehome-card-image"
             style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
             </div>
-            <div class="carehome-card-content">
-              <h5><%= carehome.name %></h5>
-              <p><%= carehome.address %></p>
+            <div class="carehome-card-header d-flex justify-content-between">
+              <div class="carehome-card-content">
+                <h5><%= carehome.name %></h5>
+                <p><%= carehome.address %></p>
+              </div>
+              <div class="carehome-card-rating">
+                <p><%= carehome.reviews.average(:rating)
+                  image_tag("star-solid.svg", class: "icon-rating")
+                %></p>
+              </div>
             </div>
             <div class="carehome-card-footer d-flex justify-content-between">
               <div class="carehome-card-icons">
