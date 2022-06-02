@@ -2,4 +2,25 @@
 .modal-content
 {
   margin-top: 13% !important;
+  background-color: $bg-color !important;
+  border-radius: 5px !important;
+  color: $secondary-color !important;
+  font-family: $body-font !important;
+
+  .modal-title {
+    font-family: $body-font !important;
+    font-weight: bold !important;
+  }
+
+  a {
+    font-family: $body-font !important;
+    color: $secondary-color !important;
+  }
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $secondary-color !important;
+  border-color: $secondary-color !important;
 }
