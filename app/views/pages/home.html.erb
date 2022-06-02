@@ -1,18 +1,12 @@
-
 <div class="banner">
   <div class="banner-content text-center">
     <div class="text-shadow">
       <h1>Find a carehome that fits your needs</h1>
       <p>Careview shares real life experiences from residents</p>
+      <button class="submit">SEE ALL CARE HOMES</button><br><br>
 
-      <button class="submit">SEE ALL CARE HOMES</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
+    <%= render "partials/modalmessage" %>
     </div>
   </div>
 </div>
-
-
-
-
-
-<%# <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
-<%# <%= link_to "Sign up", new_user_registration_path, class: "btn btn-danger" %>
