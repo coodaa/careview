@@ -1,13 +1,28 @@
 .carehome-photos {
-  background-color: aqua;
   display: flex;
   height: 500px;
   width: 90vw;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .main-photo {
   width: 60%;
   object-fit: cover;
+  border-radius: 15px;
+}
+
+.gallery-photos {
+  width: 40%;
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  img {
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 22px;
+    padding: 10px;
+  }
 }
 
 
@@ -36,8 +51,28 @@
 }
 
 .carehome-favorite {
-  background-color: aquamarine;
   grid-area: 1 / 4 / 2 / 5;
+  position: relative;
+}
+
+#favorite-false {
+  filter: $primary-svg-darker;
+  width: 4rem;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  transition: 0.3s ease-out;
+  &:hover{
+    filter: $primary-svg;
+  }
+}
+
+#favorite-true {
+  filter: $primary-svg;
+  width: 5rem;
+  position: absolute;
+  right: 25px;
+  top: 25px;
 }
 
 #show-map {
@@ -46,7 +81,11 @@
 }
 
 .carehome-details {
-  grid-area: 2 / 2 / 4 / 4;
+  background-color: rgba(227, 228, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 25px 60px;
+  grid-area: 2 / 2 / 3 / 4;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -61,10 +100,11 @@
 
 .carehome-reviews {
   background-color: $bg-color;
-  grid-area: 4 / 2 / 5 / 4;
+  grid-area: 3 / 2 / 4 / 4;
   h3 {
     font-family: $headers-font;
     font-weight: lighter;
+    padding: 25px 15px;
   }
 }
 

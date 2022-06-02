@@ -2,7 +2,12 @@
     <img class="main-photo" src="https://www.bondcare.co.uk/wp-content/uploads/2018/01/CK3_5089-2000x1000.jpg" alt="main photo">
 
   <div class="gallery-photos">
-
+  <%# for demo  %>
+  
+    <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmV0aXJlbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="photos-for-demo">
+    <img src="https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" class="photos-for-demo">
+    <img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="photos-for-demo">
+    <img src="https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="photos-for-demo">
   </div>
 </div>
 
@@ -14,7 +19,11 @@
   </div>
 
   <div class="carehome-favorite">
-    <p>Add to favs</p>
+  <% if @carehome.favorites.include?(current_user) %>
+    <%= image_tag("star-solid.svg", id: "favorite-true") %>
+  <% else %>
+    <%= image_tag("star-solid.svg", id: "favorite-false") %>
+  <% end %>
   </div>
 
   <div id="show-map"
@@ -49,7 +58,7 @@
       <p><%= image_tag("mug-saucer-solid.svg", class: "icon bar") %> Bar</p>
     <% end %>
     <% if @carehome.air_conditioning? %>
-      <p><%= image_tag("fan.svg", class: "icon fan") %> Air conditioning</p>
+      <p><%= image_tag("fan-solid.svg", class: "icon fan") %> Air conditioning</p>
     <% end %>
     <% if @carehome.physiotherapist? %>
       <p><%= image_tag("user-doctor-solid.svg", class: "icon physiotherapist") %> Physiotherapist</p>
