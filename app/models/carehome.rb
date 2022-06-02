@@ -1,5 +1,5 @@
 class Carehome < ApplicationRecord
-  searchkick highlight: [:name]
+  searchkick word_middle: [:name, :address]
   belongs_to :user
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
