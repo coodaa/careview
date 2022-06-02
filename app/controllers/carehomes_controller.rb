@@ -21,6 +21,7 @@ class CarehomesController < ApplicationController
       lng: @carehome.longitude,
       image_url: helpers.asset_url("/assets/mapin.png")
     }
+    @reviews = @carehome.reviews
   end
 
   def new

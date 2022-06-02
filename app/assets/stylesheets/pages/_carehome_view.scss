@@ -6,14 +6,14 @@
   margin: 0 auto;
 }
 .main-photo {
-  width: 50%;
+  width: 60%;
   object-fit: cover;
 }
 
 
 .carehome-view {
   width: 100%;
-  height: 80vh;
+  // height: 80vh;
   background-color: $bg-color;
   display: inline-grid;
   grid-template: 1fr 1fr 1fr 1fr / 5vw 1fr 1fr 1fr 5vw;
@@ -23,9 +23,15 @@
 
 .carehome-infos {
   grid-area: 1 / 2 / 2 / 4;
+  padding: 20px 15px;
 
   h2 {
-    font-size: $headers-font;
+    font-family: $headers-font;
+    color: $secondary-color;
+  }
+
+  a {
+    margin-bottom: 5px;
   }
 }
 
@@ -36,19 +42,37 @@
 
 #show-map {
   grid-area: 2 / 4 / 4 / 5;
+  border-radius: 15px;
 }
 
 .carehome-details {
-  background-color: purple;
   grid-area: 2 / 2 / 4 / 4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    min-width: 250px;
+    color: $secondary-color;
+    font-size: large;
+    padding: 10px 10px;
+  }
 }
 
 .carehome-reviews {
-  background-color: yellow;
+  background-color: $bg-color;
   grid-area: 4 / 2 / 5 / 4;
+  h3 {
+    font-family: $headers-font;
+    font-weight: lighter;
+  }
 }
 
 .carehome-contact {
-  background-color: bisque;
   grid-area: 4 / 4 / 4 / 5;
+  p {
+    font-weight: 600;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
 }
