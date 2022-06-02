@@ -9,3 +9,9 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
+
+import ModalController from "./modal_controller.js"
+application.register("modal", ModalController)
+
+import ModalmessageController from "./modalmessage_controller.js"
+application.register("modalmessage", ModalmessageController)
