@@ -6,7 +6,7 @@
 	position: sticky;
 	top: 0;
   background-color: $bg-color;
-  border-bottom: 2px solid #31326fa9;
+  border-bottom: 2px solid #EBEBEB;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -22,7 +22,6 @@
 }
 
 .navbar-home {
-  // background: unset;
   position: absolute;
   width: 100%;
   background: transparent;
@@ -31,5 +30,10 @@
   .navbar-wagon-link {
     color: white;
     font-weight: bold;
+    // text-shadow: 5px 5px 10px rgba(0,0,0,0.8) !important;
+  }
+  h1 {
+    color: white;
+    // text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
   }
 }
