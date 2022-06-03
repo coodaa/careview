@@ -23,4 +23,7 @@
     font-size: 12px;
     padding: 10px;
   }
+  button:hover {
+    color: $secondary-color !important;
+  }
 }
