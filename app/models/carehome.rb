@@ -1,5 +1,4 @@
 class Carehome < ApplicationRecord
-  searchkick word_middle: [:name, :address]
   belongs_to :user
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
