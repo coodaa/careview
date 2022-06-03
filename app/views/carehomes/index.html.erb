@@ -2,17 +2,19 @@
   <div class="container-md">
     <div class="row">
       <div class="col-12 mt-3">
-        <h1>Our homes in your region</h1>
+        <h3>Our homes in your region</h3>
       </div>
     </div>
   </div>
-  <div class="d-flex mt-5 justify-content-center">
+  <div class="d-flex mt-3 justify-content-between search-and-filter">
     <%= render "partials/searchbar" %>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-controller="modalfilters">Filters <%= image_tag("filter-solid.svg", class: "icon-filter") %></button>
-    <%= render "partials/modalfilters" %>
+    <div class="button-filter">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-controller="modalfilters"><p>Filters</p><%= image_tag("filter-solid.svg", class: "icon-filter") %></button>
+      <%= render "partials/modalfilters" %>
+    </div>
   </div>
 
-  <div class="d-flex mt-5 justify-content-center">
+  <div class="d-flex mt-2 justify-content-center">
     <div class="carehomes-cards">
       <% @carehomes.each do |carehome| %>
         <div class="carehome-card">
