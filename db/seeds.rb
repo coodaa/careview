@@ -25,8 +25,23 @@ User.create(email: 'aa@bb.com', password: 'qwertz12')
 end
 
 all_user = User.all
-carehome_type = ['Care Home', 'Nursing Home', 'Care homes with dementia care', 'Dual-registered care homes']
-german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin', 'Danziger Str. 245, 10407 Berlin', 'Am Friedrichshain 18, 10407 Berlin', 'Büschingstraße 29, 10249 Berlin', 'Am Friedrichshain 18, 10407 Berlin', 'Büschingstraße 29, 10249 Berlin', 'Volkradstraße 28, 10319 Berlin', 'Neumühlen 37, 22763 Hamburg', 'Mellenbergweg 19, 22359 Hamburg', 'Stückenstraße 1, 22081 Hamburg', 'Weitlstraße 66, 80935 München', 'Hans-Mielich-Straße 4, 81543 München']
+carehome_type = ['Care Home', 'Nursing Home', 'Care home with dementia care', 'Dual-registered care home']
+german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
+                           'Danziger Str. 245, 10407 Berlin Germany',
+                           'Am Friedrichshain 18, 10407 Berlin Germany',
+                           'Büschingstraße 29, 10249 Berlin Germany',
+                           'Am Friedrichshain 18, 10407 Berlin Germany',
+                           'Büschingstraße 29, 10249 Berlin Germany',
+                           'Volkradstraße 28, 10319 BerlinGermany',
+                           'Neumühlen 37, 22763 Hamburg Germany',
+                           'Mellenbergweg 19, 22359 Hamburg Germany',
+                           'Stückenstraße 1, 22081 Hamburg Germany',
+                           'Weitlstraße 66, 80935 München Germany',
+                           'Hans-Mielich-Straße 4, 81543 München Germany',
+                           'Carl-Benz-Straße 10, 68167 Mannheim Germany',
+                           'Max-Joseph-Straße 46-48, 68167 Mannheim Germany',
+                           'Minneburgstraße 66, 68219 Mannheim Germany',
+                           'Viehhofstraße 25-27, 68165 Mannheim Germany']
 
 puts 'Creating new Carehomes ...'
 15.times do
@@ -72,5 +87,29 @@ rate = (1..5).to_a
     atmosphere: rate.sample
   )
 end
+
+Carehome.create!(
+  address: 'Liebigstrasse 12 10247 Berlin Germany',
+  name: "No review carehome",
+  activities: 'Add extra activities here !',
+  types: 'Care Home',
+  pets_allowed: [true, false].sample,
+  wifi: [true, false].sample,
+  lift: [true, false].sample,
+  wheelchair_access: [true, false].sample,
+  security: [true, false].sample,
+  smoke_alarm: [true, false].sample,
+  tv: [true, false].sample,
+  parking: [true, false].sample,
+  hair_salon: [true, false].sample,
+  sauna: [true, false].sample,
+  bar: [true, false].sample,
+  air_conditioning: [true, false].sample,
+  physiotherapist: [true, false].sample,
+  min_price: (250...800).to_a.sample,
+  max_price: (1000...2500).to_a.sample,
+  description: Faker::Restaurant.description,
+  user: all_user.sample
+)
 
 puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
