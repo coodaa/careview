@@ -13,7 +13,7 @@
 
 <div class="carehome-view">
   <div class="carehome-infos">
-    <h2><%= @carehome.name %></h2>
+    <h2><%= @carehome.name %> <p class="carehome-infos-type"> - <%= @carehome.types %></p></h2>
     <%= link_to 'Back to list', url_for(:back), class: 'btn-back' %>
     <p><%= @carehome.description %></p>
   </div>
@@ -25,7 +25,6 @@
       <p>Add to favorite</p>
       <%= image_tag("star-solid.svg", id: "favorite-false") %>
     <% end %>
-    <p class="carehome-infos-type">Carehome type : <%= @carehome.types %></p>
   </div>
 
   <div id="show-map"

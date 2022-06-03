@@ -63,12 +63,10 @@
   background: linear-gradient(90deg, #ffbe1a 0%, #FFC93C 100%);
   border: none;
   border-radius: 0.25rem;
-  box-shadow: 12px 12px 24px #31326f65;
+  box-shadow: 5px 5px 15px #0000001a;
   transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-  outline: none;
   position: relative;
-  padding: 10px;
+  padding: 15px;
   }
 
 .btn-contact:hover, .btn-contact:focus {
