@@ -13,4 +13,6 @@ $light-gray: #F4F4F4;
 $primary-color: #FFC93C;
 $secondary-color: #31326F;
 $bg-color: #F7F7F7;
-
+// to set color on a svg - use filter: $primary-svg;
+$primary-svg: invert(89%) sepia(40%) saturate(5399%) hue-rotate(324deg) brightness(104%) contrast(112%);
+$primary-svg-darker: invert(89%) sepia(40%) saturate(5399%) hue-rotate(324deg) brightness(50%) contrast(112%);
