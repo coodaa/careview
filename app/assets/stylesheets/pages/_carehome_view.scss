@@ -21,8 +21,8 @@
   flex-wrap: wrap;
   justify-content:space-around;
   img {
-    width: 270px;
-    height: 250px;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     border-radius: 22px;
     padding: 10px;
@@ -67,14 +67,22 @@
 .carehome-favorite {
   grid-area: 1 / 4 / 2 / 5;
   position: relative;
+  p {
+    position: absolute;
+    right: 46%;
+    top: 18%;
+    color: $secondary-color;
+    font-weight: unset;
+    font-size: 1.2rem;
+  }
 }
 
 #favorite-false {
   filter: $primary-svg-darker;
-  width: 4rem;
+  width: 3rem;
   position: absolute;
-  right: 45px;
-  top: 45px;
+  right: 30%;
+  top: 15%;
   transition: 0.3s ease-out;
   &:hover{
     filter: $primary-svg;
@@ -83,10 +91,10 @@
 
 #favorite-true {
   filter: $primary-svg;
-  width: 5rem;
+  width: 4rem;
   position: absolute;
-  right: 45px;
-  top: 45px;
+  right: 30%;
+  top: 15%;
 }
 
 #show-map {
@@ -157,8 +165,15 @@
     flex-flow: column;
   }
 
+  .carehome-rating-stars {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
   .ratings-star-show {
-    width: 15px;
+    width: 1.4rem;
     filter: $primary-svg;
   }
 }
@@ -166,6 +181,7 @@
 .carehome-contact {
   grid-area: 4 / 4 / 4 / 5;
   p {
+    color: $secondary-color;
     font-weight: 600;
     padding-bottom: 15px;
     padding-left: 20px;
