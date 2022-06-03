@@ -20,9 +20,8 @@
       <% else  %>
         <%= render "shared/navbar", locals: { home: false } %>
       <% end %>
-      <%= render "shared/flashes" %>
       <%= turbo_frame_tag "modal" %>
-
+      <%= render "shared/flashes" %>
       <%= yield %>
       <%= render "shared/footer" unless @skip_footer %>
     </div>
