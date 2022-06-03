@@ -1,4 +1,6 @@
 <% @carehome.reviews.each do |review| %>
-  <li><i><%= review.content %></i></li>
+  <li><i><%= review.content %></i>
+      <i><%= review.rating %></i>
+  </li>
 <%end %>
 <%= render "shared/reviewforms" %>
