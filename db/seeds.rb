@@ -74,10 +74,10 @@ rate = (1..5).to_a
 end
 
 Carehome.create!(
-  address: german_carehome_address.sample,
+  address: 'Liebigstrasse 12 10247 Berlin Germany',
   name: "No review carehome",
   activities: 'Add extra activities here !',
-  types: carehome_type.sample,
+  types: 'Care Home',
   pets_allowed: [true, false].sample,
   wifi: [true, false].sample,
   lift: [true, false].sample,

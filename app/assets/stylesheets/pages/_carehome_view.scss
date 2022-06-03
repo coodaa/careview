@@ -178,6 +178,17 @@
   }
 }
 
+.carehome-no-reviews {
+  grid-area: 3 / 2 / end / 4;
+  justify-self: center;
+  align-self: center;
+  color: $secondary-color;
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
 .carehome-contact {
   grid-area: 4 / 4 / 4 / 5;
   p {
