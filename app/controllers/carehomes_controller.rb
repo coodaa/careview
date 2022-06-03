@@ -13,7 +13,8 @@ class CarehomesController < ApplicationController
     end
 
     if params[:query].present?
-      @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
+      @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
+      # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
       @carehomes = filter_homes(@carehomes)
     else
       @carehomes = filter_homes(@carehomes)
@@ -50,10 +51,10 @@ class CarehomesController < ApplicationController
 
   def filter_homes(homes)
     if params[:wifi].present?
-      homes = homes.search(where: {wifi: true})
+      homes = homes.where(wifi: true)
     end
     if params[:bar].present?
-      homes = homes.search(where: {bar: true})
+      homes = homes.where(bar: true)
     end
     homes
   end
