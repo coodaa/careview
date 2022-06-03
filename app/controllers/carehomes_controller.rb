@@ -27,6 +27,8 @@ class CarehomesController < ApplicationController
       lng: @carehome.longitude,
       image_url: helpers.asset_url("/assets/mapin.png")
     }
+    # do not remove, if there is an error it is because the carehome does not have review
+    @reviews = @carehome.reviews
   end
 
   def new

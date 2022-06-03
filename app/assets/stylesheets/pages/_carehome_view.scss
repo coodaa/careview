@@ -1,13 +1,36 @@
 .carehome-photos {
-  background-color: aqua;
   display: flex;
   height: 500px;
   width: 90vw;
-  margin: 0 auto;
+  margin: 20px auto;
 }
+
 .main-photo {
   width: 60%;
   object-fit: cover;
+  border-radius: 15px;
+  transition: 0.5s ease-in-out;
+  &:hover{
+    filter: sepia(0.2);
+  }
+}
+
+.gallery-photos {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  img {
+    width: 270px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 22px;
+    padding: 10px;
+  }
+
+  img:hover {
+    filter: sepia(0.4);
+  }
 }
 
 
@@ -33,11 +56,37 @@
   a {
     margin-bottom: 5px;
   }
+
+  p {
+    color: $secondary-color;
+    padding: 20px;
+    font-size: 1.2rem;
+  }
 }
 
 .carehome-favorite {
-  background-color: aquamarine;
   grid-area: 1 / 4 / 2 / 5;
+  position: relative;
+}
+
+#favorite-false {
+  filter: $primary-svg-darker;
+  width: 4rem;
+  position: absolute;
+  right: 45px;
+  top: 45px;
+  transition: 0.3s ease-out;
+  &:hover{
+    filter: $primary-svg;
+  }
+}
+
+#favorite-true {
+  filter: $primary-svg;
+  width: 5rem;
+  position: absolute;
+  right: 45px;
+  top: 45px;
 }
 
 #show-map {
@@ -46,7 +95,11 @@
 }
 
 .carehome-details {
-  grid-area: 2 / 2 / 4 / 4;
+  background-color: rgba(227, 228, 255, 0.5);
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 25px 60px;
+  grid-area: 2 / 2 / 3 / 4;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -61,10 +114,52 @@
 
 .carehome-reviews {
   background-color: $bg-color;
-  grid-area: 4 / 2 / 5 / 4;
+  grid-area: 4 / 2 / end / 4;
   h3 {
+    color: $secondary-color;
     font-family: $headers-font;
     font-weight: lighter;
+    padding: 25px 15px;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    padding: 25px;
+    width: 70%;
+  }
+}
+
+.carehome-ratings {
+  grid-area: 3 / 2 / 4 / 4;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  h3 {
+    display: inline-block;
+    width: 100%;
+    height: 25%;
+    color: $secondary-color;
+    font-family: $headers-font;
+    font-weight: lighter;
+    padding: 25px 15px;
+  }
+
+  p {
+    color: $secondary-color;
+    font-size: 1.4rem;
+    font-weight: bold;
+    min-width: 300px;
+    max-height: 50px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .ratings-star-show {
+    width: 15px;
+    filter: $primary-svg;
   }
 }
 
@@ -74,5 +169,8 @@
     font-weight: 600;
     padding-bottom: 15px;
     padding-left: 20px;
+  }
+  button {
+    margin: 50px 50px;
   }
 }

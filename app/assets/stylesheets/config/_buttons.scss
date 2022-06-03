@@ -48,3 +48,34 @@
     color: rgb(134, 134, 134);
   }
 }
+
+
+// button contact carehom
+
+.btn-contact {
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: white;
+  background: $secondary-color;
+  background: linear-gradient(90deg, rgb(51, 43, 161) 0%, rgb(24, 1, 156) 100%);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 12px 12px 24px #31326f65;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.btn-contact:hover, .btn-contact:focus {
+  transform: translateY(-6px);
+}
+
+.btn-contact:hover::before, btn-contact:focus::before {
+  opacity: 1;
+}
