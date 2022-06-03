@@ -23,3 +23,25 @@
   display: flex;
   justify-content: center;
 }
+
+.search-and-filter {
+  margin-left: 10%;
+  margin-right: 9%;
+}
+
+.btn-primary {
+  background-color: $primary-color !important;
+//   width: 100px;
+  border: none !important;
+//   display: flex !important;
+//   justify-content: center;
+//   align-items: center;
+  color: $secondary-color !important;
+  width: 125px;
+}
+
+.icon-filter {
+  height: 15px;
+  width: 15px;
+  filter: invert(15%) sepia(32%) saturate(3501%) hue-rotate(221deg) brightness(92%) contrast(85%);
+}
