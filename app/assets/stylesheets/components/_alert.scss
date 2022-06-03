@@ -1,14 +1,18 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
+  position: absolute;
+  // top:;
   right: 16px;
-  z-index: 1000;
+  z-index: 30;
+  background-color: transparent !important;
 }
 
 
-.alert-info {
+.alert-info,
+.alert-dismissible {
   color: blue !important;
-  background-color: #a83e95 !important;
-  border-color: #bee5eb;
+  background-color: red !important;
+  border-color: transparent !important;
   margin-top: 60px !important;
+  position: relative;
+  top: 38px;
 }
