@@ -73,4 +73,28 @@ rate = (1..5).to_a
   )
 end
 
+Carehome.create!(
+  address: german_carehome_address.sample,
+  name: "No review carehome",
+  activities: 'Add extra activities here !',
+  types: carehome_type.sample,
+  pets_allowed: [true, false].sample,
+  wifi: [true, false].sample,
+  lift: [true, false].sample,
+  wheelchair_access: [true, false].sample,
+  security: [true, false].sample,
+  smoke_alarm: [true, false].sample,
+  tv: [true, false].sample,
+  parking: [true, false].sample,
+  hair_salon: [true, false].sample,
+  sauna: [true, false].sample,
+  bar: [true, false].sample,
+  air_conditioning: [true, false].sample,
+  physiotherapist: [true, false].sample,
+  min_price: (250...800).to_a.sample,
+  max_price: (1000...2500).to_a.sample,
+  description: Faker::Restaurant.description,
+  user: all_user.sample
+)
+
 puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
