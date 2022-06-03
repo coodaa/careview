@@ -19,12 +19,13 @@
   </div>
 
   <div class="carehome-favorite">
-  <% if @carehome.favorites.include?(current_user) %>
-    <%= image_tag("star-solid.svg", id: "favorite-true") %>
-  <% else %>
-    <p>Add to favorite</p>
-    <%= image_tag("star-solid.svg", id: "favorite-false") %>
-  <% end %>
+    <% if @carehome.favorites.include?(current_user) %>
+      <%= image_tag("star-solid.svg", id: "favorite-true") %>
+    <% else %>
+      <p>Add to favorite</p>
+      <%= image_tag("star-solid.svg", id: "favorite-false") %>
+    <% end %>
+    <p class="carehome-infos-type">Carehome type : <%= @carehome.types %></p>
   </div>
 
   <div id="show-map"
@@ -67,67 +68,67 @@
   </div>
 
   <% unless @reviews.empty? %>
-  <div class="carehome-ratings">
-    <h3>Ratings</h3>
-      <div class="carehome-rating">
-        <p>Rating</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.rating.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-      <div class="carehome-rating">
-        <p>Food</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.food.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-      <div class="carehome-rating">
-        <p>Privacy</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.privacy.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-      <div class="carehome-rating">
-        <p>Staff</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.staff.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-      <div class="carehome-rating">
-        <p>Hygiene</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.hygiene.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-      <div class="carehome-rating">
-        <p>Atmosphere</p>
-          <div class="carehome-rating-stars">
-            <% @reviews.last.atmosphere.times do %>
-              <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-            <% end %>
-          </div>
-      </div>
-  </div>
-
-  <div class="carehome-reviews">
-    <h3>Reviews</h3>
-      <p><%= @reviews.last.content %></p>
-  </div>
-  <% else %>
-    <div class="carehome-no-reviews">
-      <h3>No reviews yet</h3>
-        <%= link_to 'Give the first review !', url_for('#'), class: 'submit' %>
+    <div class="carehome-ratings">
+      <h3>Ratings</h3>
+        <div class="carehome-rating">
+          <p>Rating</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.rating.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Food</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.food.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Privacy</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.privacy.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Staff</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.staff.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Hygiene</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.hygiene.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Atmosphere</p>
+            <div class="carehome-rating-stars">
+              <% @reviews.last.atmosphere.times do %>
+                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+              <% end %>
+            </div>
+        </div>
     </div>
+
+    <div class="carehome-reviews">
+      <h3>Reviews</h3>
+        <p><%= @reviews.last.content %></p>
+    </div>
+  <% else %>
+      <div class="carehome-no-reviews">
+        <h3>No reviews yet</h3>
+          <%= link_to 'Give the first review !', url_for('#'), class: 'submit' %>
+      </div>
   <% end %>
 
   <div class="carehome-contact">

@@ -75,6 +75,13 @@
     font-weight: unset;
     font-size: 1.2rem;
   }
+  .carehome-infos-type {
+    position: absolute;
+    left: 5%;
+    display: inline-block;
+    top: 84%;
+    font-size: 1.1rem;
+  }
 }
 
 #favorite-false {
@@ -107,6 +114,7 @@
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   padding: 25px 60px;
+  margin-right: 10px;
   grid-area: 2 / 2 / 3 / 4;
   display: flex;
   flex-wrap: wrap;
@@ -179,7 +187,7 @@
 }
 
 .carehome-no-reviews {
-  grid-area: 3 / 2 / end / 4;
+  grid-area: 2 / 2 / end / 4;
   justify-self: center;
   align-self: center;
   color: $secondary-color;
