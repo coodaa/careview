@@ -67,9 +67,18 @@
 
   <div class="carehome-ratings">
     <h3>Ratings</h3>
-      <p>Rating : <%= @reviews.last.rating %></p>
+      <p>Rating
+        <div>
+          <% @reviews.last.rating.times do %>
+            <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
+          <% end %>
+        </div>
+      </p>
       <p>Food : <%= @reviews.last.food %></p>
       <p>Privacy : <%= @reviews.last.privacy %></p>
+      <p>Staff : <%= @reviews.last.staff %></p>
+      <p>Hygiene : <%= @reviews.last.hygiene %></p>
+      <p>Atmosphere : <%= @reviews.last.atmosphere %></p>
   </div>
 
   <div class="carehome-reviews">
