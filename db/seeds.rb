@@ -26,7 +26,22 @@ end
 
 all_user = User.all
 carehome_type = ['Care Home', 'Nursing Home', 'Care home with dementia care', 'Dual-registered care home']
-german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin', 'Danziger Str. 245, 10407 Berlin', 'Am Friedrichshain 18, 10407 Berlin', 'Büschingstraße 29, 10249 Berlin', 'Am Friedrichshain 18, 10407 Berlin', 'Büschingstraße 29, 10249 Berlin', 'Volkradstraße 28, 10319 Berlin', 'Neumühlen 37, 22763 Hamburg', 'Mellenbergweg 19, 22359 Hamburg', 'Stückenstraße 1, 22081 Hamburg', 'Weitlstraße 66, 80935 München', 'Hans-Mielich-Straße 4, 81543 München']
+german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
+                           'Danziger Str. 245, 10407 Berlin Germany',
+                           'Am Friedrichshain 18, 10407 Berlin Germany',
+                           'Büschingstraße 29, 10249 Berlin Germany',
+                           'Am Friedrichshain 18, 10407 Berlin Germany',
+                           'Büschingstraße 29, 10249 Berlin Germany',
+                           'Volkradstraße 28, 10319 BerlinGermany',
+                           'Neumühlen 37, 22763 Hamburg Germany',
+                           'Mellenbergweg 19, 22359 Hamburg Germany',
+                           'Stückenstraße 1, 22081 Hamburg Germany',
+                           'Weitlstraße 66, 80935 München Germany',
+                           'Hans-Mielich-Straße 4, 81543 München Germany',
+                           'Carl-Benz-Straße 10, 68167 Mannheim Germany',
+                           'Max-Joseph-Straße 46-48, 68167 Mannheim Germany',
+                           'Minneburgstraße 66, 68219 Mannheim Germany',
+                           'Viehhofstraße 25-27, 68165 Mannheim Germany']
 
 puts 'Creating new Carehomes ...'
 15.times do
