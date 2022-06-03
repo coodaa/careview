@@ -14,17 +14,19 @@
   </head>
 
   <body>
+
     <div class="page-container">
+
       <% if request.path == "/" %>
         <%= render "shared/navbar", locals: { home: true } %>
       <% else  %>
         <%= render "shared/navbar", locals: { home: false } %>
       <% end %>
-      <%= render "shared/flashes" %>
+      <%# <%= render "shared/flashes"%>
       <%= turbo_frame_tag "modal" %>
-
       <%= yield %>
       <%= render "shared/footer" unless @skip_footer %>
+
     </div>
   </body>
 </html>

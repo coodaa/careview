@@ -4,9 +4,11 @@
       <h1>Find a carehome that fits your needs</h1>
       <p>Careview shares real life experiences from residents</p>
 
-
+      <%= render "partials/searchbar" %>
       <%= link_to carehomes_path do %>
-      <button class="submit">SEE ALL CARE HOMES</button>
+        <div class="display-button">
+          <button class="submit">SEE ALL CARE HOMES</button>
+        </div>
       <% end %>
     </div>
   </div>

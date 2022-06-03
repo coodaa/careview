@@ -21,8 +21,8 @@
   flex-wrap: wrap;
   justify-content:space-around;
   img {
-    width: 270px;
-    height: 250px;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     border-radius: 22px;
     padding: 10px;
@@ -62,19 +62,31 @@
     padding: 20px;
     font-size: 1.2rem;
   }
+
+  .carehome-infos-type {
+    font-size: 1.1rem;
+  }
 }
 
 .carehome-favorite {
   grid-area: 1 / 4 / 2 / 5;
   position: relative;
+  p {
+    position: absolute;
+    right: 46%;
+    top: 18%;
+    color: $secondary-color;
+    font-weight: unset;
+    font-size: 1.2rem;
+  }
 }
 
 #favorite-false {
   filter: $primary-svg-darker;
-  width: 4rem;
+  width: 3rem;
   position: absolute;
-  right: 45px;
-  top: 45px;
+  right: 30%;
+  top: 15%;
   transition: 0.3s ease-out;
   &:hover{
     filter: $primary-svg;
@@ -83,10 +95,10 @@
 
 #favorite-true {
   filter: $primary-svg;
-  width: 5rem;
+  width: 4rem;
   position: absolute;
-  right: 45px;
-  top: 45px;
+  right: 30%;
+  top: 15%;
 }
 
 #show-map {
@@ -99,6 +111,7 @@
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   padding: 25px 60px;
+  margin-right: 10px;
   grid-area: 2 / 2 / 3 / 4;
   display: flex;
   flex-wrap: wrap;
@@ -157,15 +170,34 @@
     flex-flow: column;
   }
 
+  .carehome-rating-stars {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
   .ratings-star-show {
-    width: 15px;
+    width: 1.4rem;
     filter: $primary-svg;
+  }
+}
+
+.carehome-no-reviews {
+  grid-area: 2 / 2 / end / 4;
+  justify-self: center;
+  align-self: center;
+  color: $secondary-color;
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
 .carehome-contact {
   grid-area: 4 / 4 / 4 / 5;
   p {
+    color: $secondary-color;
     font-weight: 600;
     padding-bottom: 15px;
     padding-left: 20px;
