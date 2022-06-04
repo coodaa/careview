@@ -29,7 +29,16 @@ class CarehomesController < ApplicationController
       lng: @carehome.longitude,
       image_url: helpers.asset_url("/assets/mapin.png")
     }
-    # do not remove, if there is an error it is because the carehome does not have review
+
+    @ratings = {
+      rating: @carehome.reviews.average(:rating).to_f.round(2),
+      food: @carehome.reviews.average(:food).to_f.round(2),
+      privacy: @carehome.reviews.average(:privacy).to_f.round(2),
+      staff: @carehome.reviews.average(:staff).to_f.round(2),
+      hygiene: @carehome.reviews.average(:hygiene).to_f.round(2),
+      atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(2)
+    }
+
     @reviews = @carehome.reviews
   end
 
