@@ -16,7 +16,6 @@ export default class extends Controller {
 
   connect() {
     const ratings = this.ratingsValue;
-    console.log(this.staffTarget);
     this.#drawRating(this.ratingTarget, ratings['rating']);
     this.#drawRating(this.foodTarget, ratings['food']);
     this.#drawRating(this.privacyTarget, ratings['privacy']);
@@ -26,7 +25,6 @@ export default class extends Controller {
   }
 
   #drawRating(target, rate) {
-    console.log(rate);
     const canvas = target;
     const ctx = canvas.getContext('2d');
     ctx.beginPath();
