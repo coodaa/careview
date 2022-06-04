@@ -11,11 +11,6 @@ class CarehomesController < ApplicationController
         image_url: helpers.asset_url("/assets/mapin.png")
       }
     end
-<<<<<<< HEAD
-    # Elastic search query
-=======
-
->>>>>>> 0d045293a3ea429608aaf60e83b2ddcb0de25f89
     if params[:query].present?
       @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
       # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)

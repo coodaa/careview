@@ -1,7 +1,7 @@
 
 <div class="carehome-show-card mt-3">
         <h4>Rate this Carehome</h4>
-        <%= simple_form_for([@carehome, @reviews_form]) do |f| %>
+        <%= simple_form_for([@carehome, @reviews_form], data: {insert_in_list_target: "form"}) do |f| %>
           <%= f.input :content %>
           <%= f.input :rating %>
           <%= f.input :food %>
