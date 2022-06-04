@@ -70,54 +70,44 @@
   </div>
 
   <% unless @reviews.empty? %>
-    <div class="carehome-ratings">
+    <div class="carehome-ratings"
+         data-controller="ratings-bar"
+         data-ratings-bar-ratings-value="<%= @ratings.to_json %>">
       <h3>Ratings</h3>
         <div class="carehome-rating">
           <p>Rating</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.rating.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="rating"></canvas>
             </div>
         </div>
         <div class="carehome-rating">
           <p>Food</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.food.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="food"></canvas>
             </div>
         </div>
         <div class="carehome-rating">
           <p>Privacy</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.privacy.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="privacy"></canvas>
             </div>
         </div>
         <div class="carehome-rating">
           <p>Staff</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.staff.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="staff"></canvas>
             </div>
         </div>
         <div class="carehome-rating">
           <p>Hygiene</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.hygiene.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="hygiene"></canvas>
             </div>
         </div>
         <div class="carehome-rating">
           <p>Atmosphere</p>
-            <div class="carehome-rating-stars">
-              <% @reviews.last.atmosphere.times do %>
-                <%= image_tag("star-solid.svg", class: "ratings-star-show") %>
-              <% end %>
+            <div class="carehome-rating-progress">
+              <canvas data-ratings-bar-target="atmosphere"></canvas>
             </div>
         </div>
     </div>
