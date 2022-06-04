@@ -48,7 +48,7 @@ puts 'Creating new Carehomes ...'
   Carehome.create!(
     address: german_carehome_address.sample,
     name: Faker::Company.name,
-    activities: 'Add extra activities here !',
+    activities: [true, false].sample,
     types: carehome_type.sample,
     pets_allowed: [true, false].sample,
     wifi: [true, false].sample,
@@ -91,7 +91,7 @@ end
 Carehome.create!(
   address: 'Liebigstrasse 12 10247 Berlin Germany',
   name: "No review carehome",
-  activities: 'Add extra activities here !',
+  activities: [true, false].sample,
   types: 'Care Home',
   pets_allowed: [true, false].sample,
   wifi: [true, false].sample,

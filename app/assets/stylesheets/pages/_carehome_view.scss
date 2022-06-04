@@ -71,13 +71,29 @@
 .carehome-favorite {
   grid-area: 1 / 4 / 2 / 5;
   position: relative;
-  p {
+  .carehome-add-fav {
     position: absolute;
     right: 46%;
     top: 18%;
     color: $secondary-color;
     font-weight: unset;
     font-size: 1.2rem;
+  }
+
+  .carehome-address {
+    bottom: 0%;
+    margin: 0;
+    left: 0%;
+    color: $secondary-color;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    position: absolute;
+  }
+  .btn-contact {
+    position: absolute;
+    top: 65%;
+    left: 10%;
   }
 }
 
@@ -145,6 +161,7 @@
 
 .carehome-ratings {
   grid-area: 3 / 2 / 4 / 4;
+  padding: 20px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -152,7 +169,7 @@
   h3 {
     display: inline-block;
     width: 100%;
-    height: 25%;
+    height: 20%;
     color: $secondary-color;
     font-family: $headers-font;
     font-weight: lighter;
@@ -170,16 +187,18 @@
     flex-flow: column;
   }
 
-  .carehome-rating-stars {
-    width: 50%;
+  .carehome-rating-progress {
+    width: 75%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
+    background-color: $secondary-color;
+    height: 1.5rem;
+    border-radius: 5px;
   }
 
-  .ratings-star-show {
-    width: 1.4rem;
-    filter: $primary-svg;
+  canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
   }
 }
 
@@ -194,15 +213,16 @@
   }
 }
 
-.carehome-contact {
+.carehome-pricing {
   grid-area: 4 / 4 / 4 / 5;
-  p {
-    color: $secondary-color;
-    font-weight: 600;
-    padding-bottom: 15px;
-    padding-left: 20px;
+  color: $secondary-color;
+
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
-  button {
-    margin: 50px 50px;
+
+  p {
+    padding: 0.5rem 0rem 0rem 1rem;
   }
 }
