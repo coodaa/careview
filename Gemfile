@@ -38,6 +38,9 @@ gem "searchkick", "~> 4.0"
 # Pagination gem
 gem 'kaminari'
 
+# Cloudinary hosting images
+gem "cloudinary"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
