@@ -5,6 +5,15 @@
   margin: 20px auto;
 }
 
+#carousel {
+  height: 500px;
+  width: 90vw;
+  margin: 20px auto;
+  img {
+    
+  }
+}
+
 .main-photo {
   width: 60%;
   object-fit: cover;
@@ -15,7 +24,7 @@
   }
 }
 
-.gallery-photos {
+.gallery-photos-default {
   width: 40%;
   display: flex;
   flex-wrap: wrap;

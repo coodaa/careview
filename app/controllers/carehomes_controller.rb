@@ -50,14 +50,14 @@ class CarehomesController < ApplicationController
   def create
     @carehome = Carehome.new(carehome_params)
     @carehome.user = current_user
-    @carehome.save
+    @carehome.save!
     authorize @carehome
   end
 
   private
 
   def carehome_params
-    params.require(:carehome).permit(:address, :name, :price_range, :description, :types, :activities, :pets_allowed, :wifi, :lift, :wheelchair_access, :security, :smoke_alarm, :tv, :parking, :hair_salon, :sauna, :bar, :air_conditioning, :physiotherapist)
+    params.require(:carehome).permit(:address, :name, :min_price, :max_price, :description, :types, :activities, :pets_allowed, :wifi, :lift, :wheelchair_access, :security, :smoke_alarm, :tv, :parking, :hair_salon, :sauna, :bar, :air_conditioning, :physiotherapist, photos: [])
   end
 
   def filter_homes(homes)
