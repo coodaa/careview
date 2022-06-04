@@ -71,13 +71,29 @@
 .carehome-favorite {
   grid-area: 1 / 4 / 2 / 5;
   position: relative;
-  p {
+  .carehome-add-fav {
     position: absolute;
     right: 46%;
     top: 18%;
     color: $secondary-color;
     font-weight: unset;
     font-size: 1.2rem;
+  }
+
+  .carehome-address {
+    bottom: 0%;
+    margin: 0;
+    left: 0%;
+    color: $secondary-color;
+    font-weight: 600;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    position: absolute;
+  }
+  .btn-contact {
+    position: absolute;
+    top: 65%;
+    left: 10%;
   }
 }
 
@@ -194,15 +210,16 @@
   }
 }
 
-.carehome-contact {
+.carehome-pricing {
   grid-area: 4 / 4 / 4 / 5;
-  p {
-    color: $secondary-color;
-    font-weight: 600;
-    padding-bottom: 15px;
-    padding-left: 20px;
+  color: $secondary-color;
+
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
-  button {
-    margin: 50px 50px;
+
+  p {
+    padding: 0.5rem 0rem 0rem 1rem;
   }
 }

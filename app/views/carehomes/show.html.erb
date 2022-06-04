@@ -22,9 +22,12 @@
     <% if @carehome.favorites.include?(current_user) %>
       <%= image_tag("star-solid.svg", id: "favorite-true") %>
     <% else %>
-      <p>Add to favorite</p>
+      <p class="carehome-add-fav">Add to favorite</p>
       <%= image_tag("star-solid.svg", id: "favorite-false") %>
     <% end %>
+    <p class="carehome-address"><%= @carehome.address %></p>
+    <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
+    <%= render "partials/modalmessage" %>
   </div>
 
   <div id="show-map"
@@ -130,9 +133,9 @@
       </div>
   <% end %>
 
-  <div class="carehome-contact">
-    <p><%= @carehome.address %></p>
-    <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
-    <%= render "partials/modalmessage" %>
+  <div class="carehome-pricing">
+    <h4>Pricing</h4>
+    <p> Starting price per mounth <i><%= @carehome.min_price %></i> € </p>
+    <p> Up to <i><%= @carehome.max_price %></i> € </p>
   </div>
 </div>
