@@ -1,0 +1,11 @@
+.kaminari-pagination {
+  margin-left: 30%;
+}
+
+.kaminari-pagination a {
+  color: $secondary-color;
+  padding: 10px;
+  &:active {
+    font-weight: bold;
+  }
+}
