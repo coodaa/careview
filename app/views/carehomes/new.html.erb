@@ -21,6 +21,7 @@
           <%= f.input :bar, as: :boolean %>
           <%= f.input :air_conditioning, as: :boolean %>
           <%= f.input :physiotherapist, as: :boolean %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.submit %>
         <% end %>
       </div>
