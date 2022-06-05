@@ -9,7 +9,7 @@
   <div class="d-flex mt-3 justify-content-between search-and-filter">
     <%= render "partials/searchbar" %>
     <div class="button-filter">
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" data-controller="modalfilters"><p>Filters</p><%= image_tag("filter-solid.svg", class: "icon-filter") %></button>
+      <button type="button" class="btn btn-primary filter" data-bs-toggle="modal" data-bs-target="#exampleModal" data-controller="modalfilters"><p>Filters</p><%= image_tag("filter-solid.svg", class: "icon-filter") %></button>
       <%= render "partials/modalfilters" %>
     </div>
   </div>

@@ -4,7 +4,6 @@
 // }
 
 .carehomes-cards {
-  width: 50%;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-around;
@@ -96,11 +95,17 @@ a {
 }
 
 .color-for-font {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   color: $secondary-color;
 }
 
-.btn-filter {
-  background-color: $primary-color;
-  display: flex;
-  justify-content: space-between;
+.filter {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0 auto !important;
+  }
 }
