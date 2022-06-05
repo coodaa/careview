@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="modalmessage"
 export default class extends Controller {
   connect() {
-    console.log("hello")
+    // console.log("hello")
     // const exampleModal = document.getElementById('exampleModal')
     // exampleModal.addEventListener('show.bs.modal', event => {
     //   // Button that triggered the modal
