@@ -1,18 +1,42 @@
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Select filters</h5>
+        <h5 class="modal-title">Select filters</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-          <span>&times;</span>
+          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-         <%= form_tag carehomes_path, method: :get, data: { turbo: false }, class: "form-horizontal" do %>
+        <%= form_tag carehomes_path, method: :get, data: { turbo: false }, class: "form-horizontal" do %>
             <%= check_box_tag :wifi, params[:wifi] %>
             <%= label_tag 'wifi', 'Wifi', class: 'control-label' %>
             <%= check_box_tag :bar, params[:bar] %>
             <%= label_tag 'bar', 'Bar', class: 'control-label' %>
+            <%= check_box_tag :activities, params[:activities] %>
+            <%= label_tag 'activities', 'Activities', class: 'control-label' %>
+            <%= check_box_tag :pets_allowed, params[:pets_allowed] %>
+            <%= label_tag 'pets allowed', 'Pets allowed', class: 'control-label' %>
+            <%= check_box_tag :wheelchair_access, params[:wheelchair_access] %>
+            <%= label_tag 'wheelchair acess', 'Wheelchair access', class: 'control-label' %>
+            <%= check_box_tag :lift, params[:lift] %>
+            <%= label_tag 'lift', 'Elevator', class: 'control-label' %>
+            <%= check_box_tag :security, params[:security] %>
+            <%= label_tag 'security', 'Security', class: 'control-label' %>
+            <%= check_box_tag :smoke_alarm, params[:smoke_alarm] %>
+            <%= label_tag 'smoke alarm', 'Smoke alarm', class: 'control-label' %>
+            <%= check_box_tag :tv, params[:tv] %>
+            <%= label_tag 'tv', 'TV', class: 'control-label' %>
+            <%= check_box_tag :parking, params[:parking] %>
+            <%= label_tag 'parking', 'Parking', class: 'control-label' %>
+            <%= check_box_tag :hair_salon, params[:hair_salon] %>
+            <%= label_tag 'hair salon', 'Hair salon', class: 'control-label' %>
+            <%= check_box_tag :sauna, params[:sauna] %>
+            <%= label_tag 'sauna', 'Sauna', class: 'control-label' %>
+            <%= check_box_tag :air_conditioning, params[:air_conditioning] %>
+            <%= label_tag 'air_conditioning', 'Air conditioning', class: 'control-label' %>
+            <%= check_box_tag :physiotherapist, params[:physiotherapist] %>
+            <%= label_tag 'physiotherapist', 'Physiotherapist', class: 'control-label' %>
             <%= hidden_field_tag 'query', params[:query] %>
             <div class="modal-footer">
               <%= submit_tag "Save changes", name: nil, class: "btn btn-primary" %>

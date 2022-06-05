@@ -49,14 +49,14 @@ class CarehomesController < ApplicationController
   def create
     @carehome = Carehome.new(carehome_params)
     @carehome.user = current_user
-    @carehome.save
+    @carehome.save!
     authorize @carehome
   end
 
   private
 
   def carehome_params
-    params.require(:carehome).permit(:address, :name, :price_range, :description, :types, :activities, :pets_allowed, :wifi, :lift, :wheelchair_access, :security, :smoke_alarm, :tv, :parking, :hair_salon, :sauna, :bar, :air_conditioning, :physiotherapist)
+    params.require(:carehome).permit(:address, :name, :min_price, :max_price, :description, :types, :activities, :pets_allowed, :wifi, :lift, :wheelchair_access, :security, :smoke_alarm, :tv, :parking, :hair_salon, :sauna, :bar, :air_conditioning, :physiotherapist, photos: [])
   end
 
   def filter_homes(homes)
@@ -65,6 +65,42 @@ class CarehomesController < ApplicationController
     end
     if params[:bar].present?
       homes = homes.where(bar: true)
+    end
+    if params[:activities].present?
+      homes = homes.where(activities: true)
+    end
+    if params[:pets_allowed].present?
+      homes = homes.where(pets_allowed: true)
+    end
+    if params[:wheelchair_access].present?
+      homes = homes.where(wheelchair_access: true)
+    end
+    if params[:lift].present?
+      homes = homes.where(lift: true)
+    end
+    if params[:security].present?
+      homes = homes.where(security: true)
+    end
+    if params[:smoke_alarm].present?
+      homes = homes.where(smoke_alarm: true)
+    end
+    if params[:tv].present?
+      homes = homes.where(tv: true)
+    end
+    if params[:parking].present?
+      homes = homes.where(parking: true)
+    end
+    if params[:hair_salon].present?
+      homes = homes.where(hair_salon: true)
+    end
+    if params[:sauna].present?
+      homes = homes.where(sauna: true)
+    end
+    if params[:air_conditioning].present?
+      homes = homes.where(air_conditioning: true)
+    end
+    if params[:physiotherapist].present?
+      homes = homes.where(physiotherapist: true)
     end
     homes
   end

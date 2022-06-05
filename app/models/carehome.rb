@@ -3,6 +3,7 @@ class Carehome < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :chatrooms
+  has_many_attached :photos
 
   paginates_per 10
   geocoded_by :address
