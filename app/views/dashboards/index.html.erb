@@ -1,11 +1,13 @@
 <div class="dashboard-user">
     <div class="dashboard-info">
       <h2>Hi <%= current_user.first_name %>, this is your dashboard.</h2>
-      <%= current_user.first_name %>
-      <%= current_user.last_name %>
-      <%= current_user.email %>
-      <%= current_user.phone_number %>
-
+      <div class="dashboard-info-text">
+        <p> <%= current_user.first_name %>
+          <%= current_user.last_name %>
+        </p> <br>
+        <p> <%= current_user.email %> </p>
+        <p> <%= current_user.phone_number %> </p>
+      </div>
       <%= link_to 'Edit', '#', class: 'btn-back' %>
     </div>
 
@@ -26,7 +28,9 @@
     </div>
 
     <div class="dashboard-input">
-      <p>my message ...</p>
+      <div class="dashboard-input-window">
+        <p>my message ...</p>
+      </div>
       <%= link_to 'Send', '#', class: 'submit' %>
     </div>
 </div>
