@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def index
     policy_scope(Review)
-    @reviews_form = Review.new
+    @review = Review.new
     @carehome = Carehome.find(params[:carehome_id])
   end
 
