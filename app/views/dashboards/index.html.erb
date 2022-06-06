@@ -1,14 +1,20 @@
 <div class="dashboard-user">
     <div class="dashboard-info">
-      <h2>My infos</h2>
+      <h2>Hi <%= current_user.first_name %>, this is your dashboard.</h2>
       <%= current_user.first_name %>
       <%= current_user.last_name %>
       <%= current_user.email %>
       <%= current_user.phone_number %>
+
+      <%= link_to 'Edit', '#', class: 'btn-back' %>
     </div>
 
     <div class="dashboard-favorite">
-      <h3>My favorites</h3>
+      <% if current_user.favorites.empty? %>
+        <h3>No favorites yet.</h3>
+      <% else %>
+
+      <% end %>
     </div>
 
     <div class="dashboard-chatrooms-all">
@@ -17,5 +23,10 @@
 
     <div class="dashboard-chatroom">
       <p>CHATROOM</p>
+    </div>
+
+    <div class="dashboard-input">
+      <p>my message ...</p>
+      <%= link_to 'Send', '#', class: 'submit' %>
     </div>
 </div>
