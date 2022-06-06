@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
   def index
-    @carehomes = Carehome.where(user: current_user)
+    # @chatrooms = policy_scope(Chatroom)
     @carehomes = policy_scope(Carehome)
   end
 end

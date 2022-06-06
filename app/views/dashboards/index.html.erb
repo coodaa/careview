@@ -1,2 +1,21 @@
-<h1>Hello dashboard</h1>
-<%= current_user.email %>
+<div class="dashboard-user">
+    <div class="dashboard-info">
+      <h2>My infos</h2>
+      <%= current_user.first_name %>
+      <%= current_user.last_name %>
+      <%= current_user.email %>
+      <%= current_user.phone_number %>
+    </div>
+
+    <div class="dashboard-favorite">
+      <h3>My favorites</h3>
+    </div>
+
+    <div class="dashboard-chatrooms-all">
+      <p>LIST OF ALL CHATROOMS</p>
+    </div>
+
+    <div class="dashboard-chatroom">
+      <p>CHATROOM</p>
+    </div>
+</div>
