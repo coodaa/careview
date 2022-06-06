@@ -1,6 +1,6 @@
-<div class="container" data-controller="insert-in-list">
+<div class="container">
   <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
-  <div data-insert-in-list>
+  <div>
     <% @carehome.reviews.each do |review| %>
       <li><i><%= review.content %></i>
           <i><%= review.rating %></i>
