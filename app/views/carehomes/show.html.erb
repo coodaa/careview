@@ -186,7 +186,7 @@
 
 <% unless @reviews.count <= 1 %>
   <div class="carehome-reviews-preview">
-    <% @reviews.drop(2).each do |review| %>
+    <% @reviews.each do |review| %>
         <p> <%= review.content %> <br>
           <span class="carehome-reviews-justify"><%= review.user.email %></span>
         </p>
