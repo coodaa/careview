@@ -9,6 +9,7 @@
       </div>
       <div class="modal-body">
         <%= form_tag carehomes_path, method: :get, data: { turbo: false }, class: "form-horizontal" do %>
+          <div class="checkbox-tags">
             <%= check_box_tag :wifi, params[:wifi] %>
             <%= label_tag 'wifi', 'Wifi', class: 'control-label' %>
             <%= check_box_tag :bar, params[:bar] %>
@@ -38,9 +39,10 @@
             <%= check_box_tag :physiotherapist, params[:physiotherapist] %>
             <%= label_tag 'physiotherapist', 'Physiotherapist', class: 'control-label' %>
             <%= hidden_field_tag 'query', params[:query] %>
-            <div class="modal-footer">
-              <%= submit_tag "Save changes", name: nil, class: "btn btn-primary" %>
-            </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <%= submit_tag "Save changes", name: nil, class: "btn btn-primary" %>
+          </div>
         <% end %>
       </div>
     </div>
