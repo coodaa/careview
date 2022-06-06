@@ -23,7 +23,8 @@ User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Josette', las
     password: Faker::Alphanumeric.alphanumeric(number: 10),
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    phone_number: Faker::PhoneNumber
+    phone_number: Faker::PhoneNumber,
+    image_url: Faker::LoremFlickr.unique.image,
   )
 end
 
