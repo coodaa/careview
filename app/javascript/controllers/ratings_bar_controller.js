@@ -26,16 +26,20 @@ export default class extends Controller {
   }
 
   #drawRating(target, rate) {
-    const canvas = target;
     const height = this.frameTarget.clientHeight;
-    console.log(rate, height);
-    const ctx = canvas.getContext('2d');
+    const width = this.frameTarget.clientWidth;
+    target.height = height;
+    target.width = width;
+    const ctx = target.getContext('2d');
     ctx.beginPath();
     ctx.fillStyle = '#FFC93C';
-    const progress = (rate * 45);
+    const step = (width / 5);
+    const progress = (rate * step);
     ctx.fillRect(0, 0, progress, height);
 
-    ctx.font = 'bold 120px serif Lora';
-    ctx.fillText(`${ rate}`, progress + 50, 15);
+    ctx.fillStyle = '#31326F';
+    console.log(step);
+    ctx.font = 'bold 12px Open Sans';
+    ctx.fillText(`${rate}`, (progress - (step / 1.)), (height / 1.4));
   }
 }
