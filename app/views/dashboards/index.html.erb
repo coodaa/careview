@@ -1,0 +1,36 @@
+<div class="dashboard-user">
+    <div class="dashboard-info">
+      <h2>Hi <%= current_user.first_name %>, this is your dashboard.</h2>
+      <div class="dashboard-info-text">
+        <p> <%= current_user.first_name %>
+          <%= current_user.last_name %>
+        </p> <br>
+        <p> <%= current_user.email %> </p>
+        <p> <%= current_user.phone_number %> </p>
+      </div>
+      <%= link_to 'Edit', '#', class: 'btn-back' %>
+    </div>
+
+    <div class="dashboard-favorite">
+      <% if current_user.favorites.empty? %>
+        <h3>No favorites yet.</h3>
+      <% else %>
+
+      <% end %>
+    </div>
+
+    <div class="dashboard-chatrooms-all">
+      <p>LIST OF ALL CHATROOMS</p>
+    </div>
+
+    <div class="dashboard-chatroom">
+      <p>CHATROOM</p>
+    </div>
+
+    <div class="dashboard-input">
+      <div class="dashboard-input-window">
+        <p>my message ...</p>
+      </div>
+      <%= link_to 'Send', '#', class: 'submit' %>
+    </div>
+</div>

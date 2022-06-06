@@ -1,40 +1,22 @@
 <div class="container">
-  <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
+
+  <div class="carehome-infos">
+    <h2><%= @carehome.name %> <p class="carehome-infos-type"></p></h2>
+    <%= link_to 'Back to list', url_for(:back), class: 'btn-back' %>
+  </div>
+
+  <h5><%= pluralize @carehome.reviews.size, "Review" %></h5>
   <div>
     <% @carehome.reviews.each do |review| %>
+    <%= image_tag "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512", class: "avatar" %>
+    <div class="card-product">
+      <div class="card-product-infos">
+      <%= review.user.email %>
       <li><i><%= review.content %></i>
-          <i><%= review.rating %></i>
+        <i><%= review.rating %></i>
       </li>
-    <%end %>
+      </div>
+    </div>
+    <%end%>
   </div>
-    <div class="carehome-show-card mt-3">
-        <h4>Rate this Carehome</h4>
-        <%= simple_form_for([@carehome, @review]) do |f| %>
-          <%= f.input :content, label: "Leave a Review"%>
-          <div class="flex-container">
-            <div class="flex-item">
-              <br>
-              <%= f.input :rating, collection: (1..5).to_a, label: "Rate your Carehome" %>
-              <br>
-              <%= f.input :food, collection: (1..5).to_a, label: "Rate the food in the Carehome" %>
-            </div>
-            <div class="flex-item">
-              <br>
-              <%= f.input :privacy, collection: (1..5).to_a, label: "Rate the privacy in the Carehome" %>
-              <br>
-              <%= f.input :staff, collection: (1..5).to_a, label: "Rate the staff in the Carehome" %>
-            </div>
-            <div class="flex-item">
-              <br>
-              <%= f.input :hygiene, collection: (1..5).to_a, label: "Rate the hygiene in the Carehome" %>
-              <br>
-              <%= f.input :atmosphere, collection: (1..5).to_a, label: "Rate the atmosphere in the Carehome" %>
-            </div>
-            <br>
-          </div>
-          <br>
-          <%= f.submit  "Send your review"%>
-        <% end %>
-        <br>
-</div>
 </div>

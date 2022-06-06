@@ -171,7 +171,7 @@
     <div class="carehome-reviews">
       <h3>Reviews</h3>
         <p><%= @reviews.last.content %></p>
-        <p class="carehome-reviews-justify"><%= @reviews.last.user.email %></p>
+        <p class="carehome-reviews-justify"><%= @reviews.last.user.first_name %></p>
     <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
     </div>
   <% else %>
@@ -180,6 +180,11 @@
           <%= link_to 'Give the first review !', carehome_reviews_path(@carehome), class: 'submit' %>
       </div>
   <% end %>
+
+    <%# Florian TEST CODE %>
+           <%# <div class="carehome-no-reviews">
+                <%= link_to 'Write review !', carehome_reviews_path(@carehome), class: 'submit' %>
+           <%# </div>  %>
 
   <div class="carehome-pricing">
     <h4>Pricing</h4>
@@ -191,9 +196,9 @@
 
 <% unless @reviews.count <= 1 %>
   <div class="carehome-reviews-preview">
-    <% @reviews.drop(2).each do |review| %>
+    <% @reviews.each do |review| %>
         <p> <%= review.content %> <br>
-          <span class="carehome-reviews-justify"><%= review.user.email %></span>
+          <span class="carehome-reviews-justify"><%= review.user.first_name %></span>
         </p>
     <% end %>
     </div>
