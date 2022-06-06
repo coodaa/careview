@@ -30,12 +30,12 @@ class CarehomesController < ApplicationController
     }
 
     @ratings = {
-      rating: @carehome.reviews.average(:rating).to_f.round(2),
-      food: @carehome.reviews.average(:food).to_f.round(2),
-      privacy: @carehome.reviews.average(:privacy).to_f.round(2),
-      staff: @carehome.reviews.average(:staff).to_f.round(2),
-      hygiene: @carehome.reviews.average(:hygiene).to_f.round(2),
-      atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(2)
+      rating: @carehome.reviews.average(:rating).to_f.round(1),
+      food: @carehome.reviews.average(:food).to_f.round(1),
+      privacy: @carehome.reviews.average(:privacy).to_f.round(1),
+      staff: @carehome.reviews.average(:staff).to_f.round(1),
+      hygiene: @carehome.reviews.average(:hygiene).to_f.round(1),
+      atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(1)
     }
 
     @reviews = @carehome.reviews
