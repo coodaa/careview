@@ -1,12 +1,12 @@
-// .carehomes-container {
-//   display: flex;
-//   width: 50%;
-// }
+.index-title {
+  padding: 0 !important;
+}
 
 .carehomes-cards {
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-right: 35px;
 }
 
 .carehome-card {
