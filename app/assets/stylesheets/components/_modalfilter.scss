@@ -1,0 +1,14 @@
+.checkbox-tags input[type= "checkbox"] {
+  width: 20px;
+  position: relative;
+  left: 200px;
+  vertical-align: middle;
+}
+
+.checkbox-tags .control-label {
+  width: 200px;
+  position: relative;
+  left: -20px;
+  display: inline-block;
+  vertical-align: middle;
+}
