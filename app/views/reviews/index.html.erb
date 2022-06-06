@@ -1,4 +1,11 @@
-<% @carehome.reviews.each do |review| %>
-  <li><i><%= review.content %></i></li>
-<%end %>
-<%= render "shared/reviewforms" %>
+<div class="container">
+  <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
+  <div>
+    <% @carehome.reviews.each do |review| %>
+      <li><i><%= review.content %></i>
+          <i><%= review.rating %></i>
+      </li>
+    <%end %>
+  </div>
+  <%= render "shared/reviewforms" %>
+</div>
