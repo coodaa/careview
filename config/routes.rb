@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get '/page/:page', action: :index, on: :collection
   end
 
+  resources :dashboards, only: %i[index]
+
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
