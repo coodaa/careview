@@ -1,4 +1,12 @@
+# frozen_string_literal: true
+
 class Favorite < ApplicationRecord
-  belongs_to :user
-  belongs_to :carehome
+  extend ActsAsFavoritor::FavoriteScopes
+
+  belongs_to :favoritable, polymorphic: true
+  belongs_to :favoritor, polymorphic: true
+
+  def block!
+    update!(blocked: true)
+  end
 end

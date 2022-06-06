@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :chatrooms
   has_many :messages
+  acts_as_favoritor
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

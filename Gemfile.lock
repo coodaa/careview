@@ -74,6 +74,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    acts_as_favoritor (6.0.0)
+      activerecord (>= 5.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (10.4.7.0)
@@ -336,6 +338,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  acts_as_favoritor
   autoprefixer-rails
   bootsnap
   capybara
@@ -369,4 +372,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.14
+   2.3.8

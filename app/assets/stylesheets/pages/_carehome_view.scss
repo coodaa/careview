@@ -89,24 +89,18 @@
   }
 }
 
-#favorite-false {
-  filter: $primary-svg-darker;
-  width: 3rem;
-  position: absolute;
-  right: 30%;
-  top: 15%;
-  transition: 0.3s ease-out;
-  &:hover{
-    filter: $primary-svg;
-  }
+.favorited {
+  filter: $primary-svg !important;
 }
 
-#favorite-true {
-  filter: $primary-svg;
+#favorite-btn {
+  filter: $primary-svg-darker;
   width: 4rem;
+  height: 30px;
   position: absolute;
   right: 30%;
-  top: 15%;
+  // top: 15%;
+  transition: 0.3s ease-out;
 }
 
 #show-map {
@@ -245,5 +239,13 @@
 
   p {
     padding: 0.5rem 0rem 0rem 1rem;
+  }
+}
+
+.carehome-add-favorite {
+  display: flex;
+  align-items: center;
+  p {
+    text-decoration: none;
   }
 }

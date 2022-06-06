@@ -69,12 +69,17 @@
     <p><%= @carehome.description %></p>
   </div>
 
-  <div class="carehome-favorite">
-    <% if @carehome.favorites.include?(current_user) %>
-      <%= image_tag("star-solid.svg", id: "favorite-true") %>
-    <% else %>
-      <p class="carehome-add-fav">Add to favorite</p>
-      <%= image_tag("star-solid.svg", id: "favorite-false") %>
+  <div class="carehome-favorite" data-controller="toggle-favorite">
+    <%= link_to toggle_favorite_carehome_path(@carehome), data: { "turbo-method": :post, "action": "toggle-favorite#toggleRating" } do %>
+      <div class="carehome-add-favorite" >
+        <% if current_user.favorited?(@carehome) %>
+          <p data-toggle-favorite-target="text">Remove from your favorites</p>
+          <%= image_tag("star-solid.svg", id: "favorite-btn", class: "favorited", data: { "toggle-favorite-target": "star"} ) %>
+        <% else %>
+          <p data-toggle-favorite-target="text">Add to your favorites</p>
+          <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
+        <% end %>
+      </div>
     <% end %>
     <p class="carehome-address"><%= @carehome.address %></p>
     <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
