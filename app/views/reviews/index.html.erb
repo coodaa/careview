@@ -8,10 +8,11 @@
   <h5><%= pluralize @carehome.reviews.size, "Review" %></h5>
   <div>
     <% @carehome.reviews.each do |review| %>
-    <%= image_tag "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512", class: "avatar" %>
+    <%= image_tag review.user.image_url, class: "avatar" %>
     <div class="card-product">
       <div class="card-product-infos">
-      <%= review.user.email %>
+      <%= review.user.first_name %>
+      <%= review.user.last_name %>
       <li><i><%= review.content %></i>
         <i><%= review.rating %></i>
       </li>

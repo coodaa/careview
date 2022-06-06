@@ -15,15 +15,26 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Josette', last_name: 'Decharme', phone_number: '06062565854')
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Oliver', last_name: 'Schmidt', phone_number: '06062565854', image_url: "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512")
+
+profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+  'https://images.unsplash.com/photo-1534126416832-a88fdf2911c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+  'https://images.unsplash.com/photo-1555703473-5601538f3fd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1116&q=80',
+  'https://images.unsplash.com/photo-1485290334039-a3c69043e517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+  'https://images.unsplash.com/photo-1506551109886-6101f48c1ab9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
+]
 
 5.times do
+  # sleep 2
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    phone_number: Faker::PhoneNumber
+    phone_number: Faker::PhoneNumber,
+    image_url: profile_pics.sample,
   )
 end
 
