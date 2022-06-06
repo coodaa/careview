@@ -136,6 +136,7 @@
 .carehome-reviews {
   background-color: $bg-color;
   grid-area: 4 / 2 / end / 4;
+  position: relative;
   h3 {
     color: $secondary-color;
     font-family: $headers-font;
@@ -147,7 +148,37 @@
     color: $secondary-color;
     font-size: 1.2rem;
     padding: 25px;
-    width: 70%;
+    width: 40%;
+  }
+
+  a {
+    position: absolute;
+    right: 25%;
+    top: 40%;
+  }
+}
+
+.carehome-reviews-justify {
+  text-align: end;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.carehome-reviews-preview {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90vw;
+  color: $secondary-color;
+  font-size: 2rem;
+  margin: 0 auto;
+
+  p {
+    color: $secondary-color;
+    font-size: 1.2rem;
+    padding: 25px;
+    width: 25%;
   }
 }
 
@@ -185,11 +216,10 @@
     background-color: $secondary-color;
     height: 1.5rem;
     border-radius: 5px;
+    position: relative;
   }
 
   canvas {
-    width: 100%;
-    height: 100%;
     border-radius: 4px;
   }
 }

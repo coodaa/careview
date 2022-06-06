@@ -11,7 +11,8 @@ export default class extends Controller {
     "privacy",
     "staff",
     "hygiene",
-    "atmosphere"
+    "atmosphere",
+    "frame"
   ]
 
   connect() {
@@ -26,10 +27,15 @@ export default class extends Controller {
 
   #drawRating(target, rate) {
     const canvas = target;
+    const height = this.frameTarget.clientHeight;
+    console.log(rate, height);
     const ctx = canvas.getContext('2d');
     ctx.beginPath();
     ctx.fillStyle = '#FFC93C';
-    const progress = (rate * 80) - 50;
-    ctx.fillRect(0, 0, progress, 300);
+    const progress = (rate * 45);
+    ctx.fillRect(0, 0, progress, height);
+
+    ctx.font = 'bold 120px serif Lora';
+    ctx.fillText(`${ rate}`, progress + 50, 15);
   }
 }

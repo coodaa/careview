@@ -127,7 +127,7 @@
       <h3>Ratings</h3>
         <div class="carehome-rating">
           <p>Rating</p>
-            <div class="carehome-rating-progress">
+            <div class="carehome-rating-progress" data-ratings-bar-target="frame">
               <canvas data-ratings-bar-target="rating"></canvas>
             </div>
         </div>
@@ -166,11 +166,13 @@
     <div class="carehome-reviews">
       <h3>Reviews</h3>
         <p><%= @reviews.last.content %></p>
+        <p class="carehome-reviews-justify"><%= @reviews.last.user.email %></p>
+    <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
     </div>
   <% else %>
       <div class="carehome-no-reviews">
         <h3>No reviews yet</h3>
-          <%= link_to 'Give the first review !', url_for('#'), class: 'submit' %>
+          <%= link_to 'Give the first review !', carehome_reviews_path(@carehome), class: 'submit' %>
       </div>
   <% end %>
 
@@ -180,3 +182,14 @@
     <p> Up to <i><%= @carehome.max_price %></i> € </p>
   </div>
 </div>
+
+
+<% unless @reviews.count <= 1 %>
+  <div class="carehome-reviews-preview">
+    <% @reviews.drop(2).each do |review| %>
+        <p> <%= review.content %> <br>
+          <span class="carehome-reviews-justify"><%= review.user.email %></span>
+        </p>
+    <% end %>
+    </div>
+<% end %>
