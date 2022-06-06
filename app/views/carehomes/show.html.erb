@@ -62,15 +62,15 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-<div class="carehome-view">
-  <div class="carehome-infos">
-    <h2><%= @carehome.name %> <p class="carehome-infos-type"> - <%= @carehome.types %></p></h2>
-    <%= link_to 'Back to list', url_for(:back), class: 'btn-back' %>
-    <p><%= @carehome.description %></p>
-  </div>
+  <div class="carehome-view">
+    <div class="carehome-infos">
+      <h2><%= @carehome.name %> <p class="carehome-infos-type"> - <%= @carehome.types %></p></h2>
+      <%= link_to 'Back to list', url_for(:back), class: 'btn-back' %>
+      <p><%= @carehome.description %></p>
+    </div>
 
-  <div class="carehome-favorite" data-controller="toggle-favorite">
-    <%= link_to toggle_favorite_carehome_path(@carehome), data: { "turbo-method": :post, "action": "toggle-favorite#toggleRating" } do %>
+    <div class="carehome-favorite" data-controller="toggle-favorite">
+      <%= link_to toggle_favorite_carehome_path(@carehome), data: { "turbo-method": :post, "action": "toggle-favorite#toggleRating" } do %>
       <div class="carehome-add-favorite" >
         <% if current_user.favorited?(@carehome) %>
           <p data-toggle-favorite-target="text">Remove from your favorites</p>
@@ -80,52 +80,52 @@
           <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
         <% end %>
       </div>
-    <% end %>
-    <p class="carehome-address"><%= @carehome.address %></p>
-    <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
-    <%= render "partials/modalmessage" %>
-  </div>
+      <% end %>
+      <p class="carehome-address"><%= @carehome.address %></p>
+      <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
+      <%= render "partials/modalmessage" %>
+    </div>
 
-  <div id="show-map"
+    <div id="show-map"
       data-controller="map-view"
       data-map-view-marker-value="<%= @marker.to_json %>"
       data-map-view-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+    </div>
 
-  <div class="carehome-details">
-    <p><%= image_tag("dog-solid.svg", class: "icon dog") %> Pet <%= @carehome.pets_allowed? ? 'allowed' : 'not allowed' %></p>
-    <p><%= image_tag("wifi-solid.svg", class: "icon wifi") %> <%= @carehome.wifi? ? 'Wifi in room' : 'No Wifi in room' %></p>
-    <p><%= image_tag("tv-solid.svg", class: "icon tv") %> <%= @carehome.tv? ? 'Tv in room' : 'No TV in room'%></p>
-    <p><%= image_tag("elevator-solid.svg", class: "icon elevator") %> <%= @carehome.lift? ? 'Elevators' : 'No elevators' %></p>
-    <p><%= image_tag("wheelchair-solid.svg", class: "icon wheelchair") %> <%= @carehome.wheelchair_access? ? 'Wheelchair acces' : 'No wheelchair access' %></p>
-    <p><%= image_tag("car-solid.svg", class: "icon car") %> <%= @carehome.parking? ? 'Parking' : 'No parking'%></p>
-    <% if @carehome.activities? %>
-      <p><%= image_tag("chess-board-solid.svg", class: "icon chess") %> Activities</p>
-    <% end %>
-    <% if @carehome.security? %>
-      <p><%= image_tag("building-shield-solid.svg", class: "icon building") %> High Security</p>
-    <% end %>
-    <% if @carehome.smoke_alarm? %>
-      <p><%= image_tag("fire-extinguisher-solid.svg", class: "icon extinguisher") %> Fire protection system</p>
-    <% end %>
-    <% if @carehome.hair_salon? %>
-      <p><%= image_tag("scissors-solid.svg", class: "icon scissor") %> Hair salon</p>
-    <% end %>
-    <% if @carehome.sauna? %>
-      <p><%= image_tag("temperature-arrow-up-solid.svg", class: "icon physiotherapist") %> Sauna</p>
-    <% end %>
-    <% if @carehome.bar? %>
-      <p><%= image_tag("mug-saucer-solid.svg", class: "icon bar") %> Bar</p>
-    <% end %>
-    <% if @carehome.air_conditioning? %>
-      <p><%= image_tag("fan-solid.svg", class: "icon fan") %> Air conditioning</p>
-    <% end %>
-    <% if @carehome.physiotherapist? %>
-      <p><%= image_tag("user-doctor-solid.svg", class: "icon physiotherapist") %> Physiotherapist</p>
-    <% end %>
-  </div>
+    <div class="carehome-details">
+      <p><%= image_tag("dog-solid.svg", class: "icon dog") %> Pet <%= @carehome.pets_allowed? ? 'allowed' : 'not allowed' %></p>
+      <p><%= image_tag("wifi-solid.svg", class: "icon wifi") %> <%= @carehome.wifi? ? 'Wifi in room' : 'No Wifi in room' %></p>
+      <p><%= image_tag("tv-solid.svg", class: "icon tv") %> <%= @carehome.tv? ? 'Tv in room' : 'No TV in room'%></p>
+      <p><%= image_tag("elevator-solid.svg", class: "icon elevator") %> <%= @carehome.lift? ? 'Elevators' : 'No elevators' %></p>
+      <p><%= image_tag("wheelchair-solid.svg", class: "icon wheelchair") %> <%= @carehome.wheelchair_access? ? 'Wheelchair acces' : 'No wheelchair access' %></p>
+      <p><%= image_tag("car-solid.svg", class: "icon car") %> <%= @carehome.parking? ? 'Parking' : 'No parking'%></p>
+      <% if @carehome.activities? %>
+        <p><%= image_tag("chess-board-solid.svg", class: "icon chess") %> Activities</p>
+      <% end %>
+      <% if @carehome.security? %>
+        <p><%= image_tag("building-shield-solid.svg", class: "icon building") %> High Security</p>
+      <% end %>
+      <% if @carehome.smoke_alarm? %>
+        <p><%= image_tag("fire-extinguisher-solid.svg", class: "icon extinguisher") %> Fire protection system</p>
+      <% end %>
+      <% if @carehome.hair_salon? %>
+        <p><%= image_tag("scissors-solid.svg", class: "icon scissor") %> Hair salon</p>
+      <% end %>
+      <% if @carehome.sauna? %>
+        <p><%= image_tag("temperature-arrow-up-solid.svg", class: "icon physiotherapist") %> Sauna</p>
+      <% end %>
+      <% if @carehome.bar? %>
+        <p><%= image_tag("mug-saucer-solid.svg", class: "icon bar") %> Bar</p>
+      <% end %>
+      <% if @carehome.air_conditioning? %>
+        <p><%= image_tag("fan-solid.svg", class: "icon fan") %> Air conditioning</p>
+      <% end %>
+      <% if @carehome.physiotherapist? %>
+        <p><%= image_tag("user-doctor-solid.svg", class: "icon physiotherapist") %> Physiotherapist</p>
+      <% end %>
+    </div>
 
-  <% unless @reviews.empty? %>
+    <% unless @reviews.empty? %>
     <div class="carehome-ratings"
          data-controller="ratings-bar"
          data-ratings-bar-ratings-value="<%= @ratings.to_json %>">
@@ -174,23 +174,23 @@
         <p class="carehome-reviews-justify"><%= @reviews.last.user.first_name %></p>
     <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
     </div>
-  <% else %>
+    <% else %>
       <div class="carehome-no-reviews">
         <h3>No reviews yet</h3>
           <%= link_to 'Give the first review !', carehome_reviews_path(@carehome), class: 'submit' %>
       </div>
-  <% end %>
+    <% end %>
 
     <%# Florian TEST CODE %>
            <%# <div class="carehome-no-reviews">
                 <%= link_to 'Write review !', carehome_reviews_path(@carehome), class: 'submit' %>
            <%# </div>  %>
 
-  <div class="carehome-pricing">
-    <h4>Pricing</h4>
-    <p> Starting price per mounth <i><%= @carehome.min_price %></i> € </p>
-    <p> Up to <i><%= @carehome.max_price %></i> € </p>
-  </div>
+    <div class="carehome-pricing">
+      <h4>Pricing</h4>
+      <p> Starting price per mounth <i><%= @carehome.min_price %></i> € </p>
+      <p> Up to <i><%= @carehome.max_price %></i> € </p>
+    </div>
 </div>
 
 
