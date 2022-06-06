@@ -40,6 +40,6 @@ export default class extends Controller {
     ctx.fillStyle = '#31326F';
     console.log(step);
     ctx.font = 'bold 12px Open Sans';
-    ctx.fillText(`${rate}`, (progress - (step / 1.)), (height / 1.4));
+    ctx.fillText(`${rate}`, (progress - (step / 1.2)), (height / 1.4));
   }
 }

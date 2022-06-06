@@ -18,6 +18,32 @@ class ReviewsController < ApplicationController
     authorize @review
   end
 
+  def show
+    @carehome = Carehome.find(params[:id])
+    authorize @carehome
+    @marker = {
+      lat: @carehome.latitude,
+      lng: @carehome.longitude,
+      image_url: helpers.asset_url("/assets/mapin.png")
+    }
+
+    @ratings = {
+      rating: @carehome.reviews.average(:rating).to_f.round(1),
+      food: @carehome.reviews.average(:food).to_f.round(1),
+      privacy: @carehome.reviews.average(:privacy).to_f.round(1),
+      staff: @carehome.reviews.average(:staff).to_f.round(1),
+      hygiene: @carehome.reviews.average(:hygiene).to_f.round(1),
+      atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(1)
+    }
+
+    @reviews = @carehome.reviews
+  end
+
+
+
+
+
+
   private
 
   def review_params
