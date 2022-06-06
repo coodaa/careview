@@ -1,0 +1,28 @@
+.dashboard-user {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template: 25vh 1fr 1fr 1fr 1fr 1fr / 5vw 1fr 1fr 1fr 1fr 1fr 5vw;
+}
+
+
+.dashboard-info {
+  width: 50%;
+  background-color: pink;
+  grid-area: 1 / 2 / 2 / 7;
+}
+
+.dashboard-favorite {
+  grid-area: 1 / 5 / 2 / 7;
+  background-color: green;
+}
+
+.dashboard-chatrooms-all {
+  grid-area: 2 / 2 / end / 2;
+  background-color: aqua;
+}
+
+.dashboard-chatroom {
+  grid-area: 2 / 3 / end / 7;
+  background-color: orange;
+}

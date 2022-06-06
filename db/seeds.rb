@@ -15,12 +15,15 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12')
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Josette', last_name: 'Decharme', phone_number: '06062565854')
 
 5.times do
   User.create!(
     email: Faker::Internet.email,
-    password: Faker::Alphanumeric.alphanumeric(number: 10)
+    password: Faker::Alphanumeric.alphanumeric(number: 10),
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    phone_number: Faker::PhoneNumber
   )
 end
 
