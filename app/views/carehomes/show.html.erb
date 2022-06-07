@@ -72,12 +72,14 @@
   <div class="carehome-favorite" data-controller="toggle-favorite">
     <%= link_to toggle_favorite_carehome_path(@carehome), data: { "turbo-method": :post, "action": "toggle-favorite#toggleRating" } do %>
       <div class="carehome-add-favorite" >
-        <% if current_user.favorited?(@carehome) %>
-          <p data-toggle-favorite-target="text">Remove from your favorites</p>
-          <%= image_tag("star-solid.svg", id: "favorite-btn", class: "favorited", data: { "toggle-favorite-target": "star"} ) %>
-        <% else %>
-          <p data-toggle-favorite-target="text">Add to your favorites</p>
-          <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
+        <% unless current_user.nil? %>
+          <% if current_user.favorited?(@carehome) %>
+            <p data-toggle-favorite-target="text">Remove from your favorites</p>
+            <%= image_tag("star-solid.svg", id: "favorite-btn", class: "favorited", data: { "toggle-favorite-target": "star"} ) %>
+          <% else %>
+            <p data-toggle-favorite-target="text">Add to your favorites</p>
+            <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
+          <% end %>
         <% end %>
       </div>
     <% end %>
