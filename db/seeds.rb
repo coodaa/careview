@@ -117,12 +117,13 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
 carehome_names = ['Marienstift', 'Seniorenstiftung', 'Pflegehaus','Seniorenzentrum Werner', 'Seniorenzentrum Tegel', 'Seniorenzentrum Mitte', 'Seniorenstift', 'Seniorenstift Mitte', 'Pflegeheim Pinecki', 'Pflegeheim Schmidt', 'Pflegeheim Käfer', 'Pflegeheim Sonne', 'Pflegeheim Sommer', 'Evangelisches Seniorenheim', 'Seniorendomizil Helga', 'Seniorendomizil Sommer', 'Haus Christophorus']
 
 description = [
-
-
-
-
-
-
+  'Our Home, is a thriving village community, situated in the beautiful City on the edge of the  Hills. We provide residential, nursing and dementia care and have all the amenities of a modern home. You will find first-class facilities with exciting activities, and plenty of places to relax or entertain',
+  'A stunning location, our home has all the amenities of a modern home. We provide residential support for elderly people living with different types of dementia, including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
+  'Located in the heart of the city, our Home has five individual self-contained specialist care communities where all the bedrooms are tastefully decorated and furnished to a high standard, each complete with en suite facilities. Our home has beautiful views of the large landscaped gardens, and there’s a summer house where we have outdoor activities. We provide high quality nursing and nursing dementia care including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
+  'Our purpose-built luxury care home provides residents with high quality nursing, residential and dementia care on a permanent and short stay basis, giving you peace of mind that if your care needs change we can support you. Our own fully trained nurses have specialist expertise and are chosen for their compassion and experience.',
+  'We enjoy an enviable reputation for delivering the very highest standards of residential and residential dementia care for up to 19 elderly people in a homely and friendly environment. Tastefully converted to retain charming original features, including wooden beams and inglenook fireplaces. We’re in walking distance of everything the town has to offer, including a wealth of shops, cafes and pubs, as well as the museum and theatre so residents enjoy the convenience of having everything on their doorstep.',
+  'Our award-winning purpose-built luxury care home, provides residents with high quality dementia, residential and nursing care on a permanent and short stay basis. There’s plenty of places to relax and entertain including our own bistro, hair salon and cinema plus a library, music room and choice of comfortable lounges. Our home is surrounded by lovely patio gardens for all residents to access and enjoy. We’re close to local shops and cafes where residents enjoy getting out and about and we often take trips to local places of interest.',
+  'This Home is in a peaceful and secluded location. You’ll find first-class facilities with exciting activities, and plenty of places to relax or entertain. Many of the rooms offer picturesque views across the extensive landscaped gardens. With over five acres of grounds, there is always something to explore, whether it be walks',
 ]
 
 puts 'Creating new Carehomes ...'
@@ -156,9 +157,28 @@ puts 'Creating reviews ...'
 carehomes = Carehome.all
 rate = (1..5).to_a
 
+content_for_review = [
+  'My mother has been cared for by the team for nearly a year now. They understand the care she needs with her dementia',
+  'My mam has been in this care home for three years and has always been very happy. Very professionally run. I leave in the knowledge my mam is content and well cared for.',
+  'I am happy with the care of my dad.',
+  'Very pleasant staff. Well cared for. Lovely rooms. Enjoy visiting.',
+  'My sister always appears well cared for and the room clean and comfortable.',
+  'Very caring and efficient care home. Myself and my family would recommend this care home to others.',
+  'This is an excellent home. The staff are very friendly, professional and caring. Mam couldnt be in a better home.',
+  'The staff at this care home have been excellent with my stepdad. He is very happy here and he takes part in the activities provided. The facilities are also excellent.',
+  'It is an excellent home. It has very good facilities and is attractively furnished. The best part of the service is the staff who are always friendly, kind and considerate. It is a very well managed care home.',
+  'I am so happy with everything my mother receives. The care is absolutely brilliant, my mother is so happy being there.',
+  'My mother settled really well, making friends with other residents. Was well looked after by all the staff.',
+  'Dad appears to be very happy and settled. He likes his food and I feel that the staff are very attentive and see to his needs. He is generally clean and that is all we are looking for. He tends to stay in his room and this is always looked after.'
+  'When I come to visit my mum she always seems happy and she eats very well. I have no concerns about her care.',
+  'I think that overall, everything is ok. However, I have noticed when visiting mum at lunchtime, a vegetarian option never seems to be available.',
+  'I am very happy that my uncle is here, in a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.'
+]
+
+
 40.times do
   Review.create!(
-    content: Faker::Restaurant.review,
+    content: content_for_review.sample,
     carehome: carehomes.sample,
     user: all_user.sample,
     rating: rate.sample,
@@ -190,7 +210,7 @@ Carehome.create!(
   physiotherapist: [true, false].sample,
   min_price: (250...800).to_a.sample,
   max_price: (1000...2500).to_a.sample,
-  description: Faker::Restaurant.description,
+  description: description.sample,
   user: all_user.sample
 )
 
