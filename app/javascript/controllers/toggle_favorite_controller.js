@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = [ "star", "text" ]
 
   connect() {
-    console.log("Hello from our first Stimulus controller")
+    // console.log("Hello from our first Stimulus controller")
   }
 
   toggleRating(event) {

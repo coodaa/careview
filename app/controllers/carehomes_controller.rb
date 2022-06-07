@@ -4,6 +4,13 @@ class CarehomesController < ApplicationController
 
   def index
     @carehomes = policy_scope(Carehome).page params[:page]
+    if params[:query].present?
+      @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
+      # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
+      @carehomes = filter_homes(@carehomes)
+    else
+      @carehomes = filter_homes(@carehomes)
+    end
     @markers = @carehomes.geocoded.map do |carehome|
       {
         lat: carehome.latitude,
@@ -11,13 +18,6 @@ class CarehomesController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { carehome: carehome }),
         image_url: helpers.asset_url("/assets/mapin.png")
       }
-    end
-    if params[:query].present?
-      @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
-      # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
-      @carehomes = filter_homes(@carehomes)
-    else
-      @carehomes = filter_homes(@carehomes)
     end
   end
 

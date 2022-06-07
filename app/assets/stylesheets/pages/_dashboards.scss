@@ -30,8 +30,46 @@
   padding: 1rem;
   margin: 1rem;
   grid-area: 1 / 5 / 2 / 7;
-  h2 {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #ffc83c7c;
+  h3 {
     font-size: 1.7rem;
+  }
+}
+
+.dashboard-fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $bg-color;
+  margin: 5px;
+  border: solid 0.2rem $secondary-color;
+  border-radius: 0.2rem;
+  transition: 0.5s ease-in-out;
+  border-radius: 1rem;
+  border: 0.3rem solid $secondary-color;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) -2px -2px 5px inset;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0rem 2rem;
+    border: 0.2rem solid $secondary-color;
+  }
+
+  p {
+    padding: 0rem 2rem;
+    text-align: center;
+    font-weight: bolder;
+    color: $secondary-color;
+    margin: 0;
   }
 }
 
@@ -42,6 +80,8 @@
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .dashboard-chatroom {
