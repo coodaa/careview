@@ -161,7 +161,7 @@ rate = (1..5).to_a
 content_for_review = [
   'My mother has been cared for by the team for nearly a year now. They understand the care she needs with her dementia',
   'My mam has been in this care home for three years and has always been very happy. Very professionally run. I leave in the knowledge my mam is content and well cared for.',
-  'I am happy with the care of my dad.',
+  'I am very happy that my husband is here - a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.',
   'Very pleasant staff. Well cared for. Lovely rooms. Enjoy visiting.',
   'My sister always appears well cared for and the room clean and comfortable.',
   'Very caring and efficient care home. Myself and my family would recommend this care home to others.',
@@ -173,11 +173,19 @@ content_for_review = [
   'Dad appears to be very happy and settled. He likes his food and I feel that the staff are very attentive and see to his needs. He is generally clean and that is all we are looking for. He tends to stay in his room and this is always looked after.',
   'When I come to visit my mum she always seems happy and she eats very well. I have no concerns about her care.',
   'I think that overall, everything is ok. However, I have noticed when visiting mum at lunchtime, a vegetarian option never seems to be available.',
-  'I am very happy that my uncle is here, in a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.'
+  'I am very happy that my uncle is here, in a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.',
+  'Mam is now into her third year and staff have sensitively modified the nature and degree of care needed as her independence have increased. Care from all staff has been good with, in a smaller number of cases an outstanding level of commitment. Liaison and involvement of other agents (district nurses, GP etc) has been prompt and effective.
+  The atmosphere around Ashbourne Lodge is always friendly and positive.
+  I am always made to feel welcome. It feels like a community with a very positive ethos.',
+  'We chose due to its position next to the park and the reception we received when asking to look around. The friendly nature of the staff and willingness to accommodate requests impressed us from the start and continued to do so. My father isnt the most cooperative at times due to his condition and all the staff have tried their best to make him comfortable, always showing a pleasant and cheerful manner.',
+  'My Nan has fantastic care. This care is provided by a pleasant, hardworking caring staff who have my Nans best interests at heart. She is well looked after and is always well turned out and clean. It gives me peace of mind that my Nan is in a safe, secure environment.',
+  'Staff were understanding of my needs as the daughter and of my mothers needs. The staff treated mum with respect and tenderness, clearly aware of her needs and habits. Very grateful for the care they are taking of my mum.',
+  'I am happy in the home. I am looked after well and get on well with the staff. I enjoy the meals provided. Often I have health problems, they are quickly dealt with. I enjoy the entertainment provided during the week but would like more trips out.',
+  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.',
 ]
 
 
-40.times do
+60.times do
   Review.create!(
     content: content_for_review.sample,
     carehome: carehomes.sample,
