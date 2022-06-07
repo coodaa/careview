@@ -15,7 +15,9 @@
       <% if current_user.favorites.empty? %>
         <h3>No favorites yet.</h3>
       <% else %>
-
+        <% current_user.favorites.each do |favorite| %>
+          <%= favorite %>
+        <% end %>
       <% end %>
     </div>
 

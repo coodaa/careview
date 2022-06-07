@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-# the routes need to be changend
+  # the routes need to be changend
   resources :carehomes do
+    member do
+      post 'toggle_favorite', to: "carehomes#toggle_favorite"
+    end
     resources :reviews
     resources :favorites
     resources :chatrooms

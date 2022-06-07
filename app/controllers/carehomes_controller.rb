@@ -1,5 +1,6 @@
 class CarehomesController < ApplicationController
   skip_before_action :authenticate_user!
+  before_action :authenticate_user!, only: :toggle_favorite
 
   def index
     @carehomes = policy_scope(Carehome).page params[:page]
@@ -18,6 +19,12 @@ class CarehomesController < ApplicationController
     else
       @carehomes = filter_homes(@carehomes)
     end
+  end
+
+  def toggle_favorite
+    @carehome = Carehome.find(params[:id])
+    current_user.favorited?(@carehome) ? current_user.unfavorite(@carehome) : current_user.favorite(@carehome)
+    authorize @carehome
   end
 
   def show
@@ -39,6 +46,7 @@ class CarehomesController < ApplicationController
     }
 
     @reviews = @carehome.reviews
+    @reviews_last = @reviews.drop(2)
   end
 
   def new
