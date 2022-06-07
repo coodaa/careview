@@ -15,7 +15,7 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "user.image_url")
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
 User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
@@ -36,7 +36,6 @@ User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Toni', last_na
 User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Nina', last_name: 'Hackenbroich', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U0160CHLQ14-c8e3ee5c6d61-512")
 
 User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Barack', last_name: 'Obama', phone_number: '+49 173 4728021', image_url: "https://www.silicon.co.uk/wp-content/uploads/2012/01/obamasquare2.png")
-
 
 male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
@@ -60,7 +59,7 @@ male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca
     first_name: Faker::Name.male_first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber,
-    image_url: male_profile_pics.sample,
+    image_url: male_profile_pics.sample
   )
 end
 
@@ -147,7 +146,7 @@ description = [
   'Our award-winning purpose-built luxury care home, provides residents with high quality dementia, residential and nursing care on a permanent and short stay basis. There’s plenty of places to relax and entertain including our own bistro, hair salon and cinema plus a library, music room and choice of comfortable lounges. Our home is surrounded by lovely patio gardens for all residents to access and enjoy. We’re close to local shops.',
   'This Home is in a peaceful and secluded location. You’ll find first-class facilities with exciting activities, and plenty of places to relax or entertain. Many of the rooms offer picturesque views across the extensive landscaped gardens. With over five acres of grounds, there is always something to explore, whether it be walks. We just love it so much here! It is an amazing home.',
   '5 months ago my husband, who was bedridden with severe dementia, went to La Fontana for a months respite care. It was soon evident that he was receiving excellent care and seemed happy, so he became a permanent resident. He was unable to make use of all the facilities but we had every confidence in the care he received. He was monitored regularly and the staff were friendly, caring and attentive. They were always helpful and communicative.',
-  'This home has been the best I have encountered. Its always friendly, lots of activities for the residents to do such as quizzes, singing, word search, the list goes on. The staff are extremely friendly, I visit very often and he is always ready and he is clean, washed and shaven. The food is also very good with bowls of fresh fruit for the residents. The manager is also exceptionally caring and always there to help and leads a great team. Very impressed.',
+  'This home has been the best I have encountered. Its always friendly, lots of activities for the residents to do such as quizzes, singing, word search, the list goes on. The staff are extremely friendly, I visit very often and he is always ready and he is clean, washed and shaven. The food is also very good with bowls of fresh fruit for the residents. The manager is also exceptionally caring and always there to help and leads a great team. Very impressed.'
 ]
 
 puts 'Creating new Carehomes ...'
@@ -202,9 +201,8 @@ content_for_review = [
   'My Nan has fantastic care. This care is provided by a pleasant, hardworking caring staff who have my Nans best interests at heart. She is well looked after and is always well turned out and clean. It gives me peace of mind that my Nan is in a safe, secure environment.',
   'Staff were understanding of my needs as the daughter and of my mothers needs. The staff treated mum with respect and tenderness, clearly aware of her needs and habits. Very grateful for the care they are taking of my mum.',
   'I am happy in the home. I am looked after well and get on well with the staff. I enjoy the meals provided. Often I have health problems, they are quickly dealt with. I enjoy the entertainment provided during the week but would like more trips out.',
-  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.',
+  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.'
 ]
-
 
 200.times do
   Review.create!(
@@ -219,29 +217,5 @@ content_for_review = [
     atmosphere: rate.sample
   )
 end
-
-Carehome.create!(
-  address: 'Liebigstrasse 12 10247 Berlin Germany',
-  name: "No review carehome",
-  activities: [true, false].sample,
-  types: 'Care Home',
-  pets_allowed: [true, false].sample,
-  wifi: [true, false].sample,
-  lift: [true, false].sample,
-  wheelchair_access: [true, false].sample,
-  security: [true, false].sample,
-  smoke_alarm: [true, false].sample,
-  tv: [true, false].sample,
-  parking: [true, false].sample,
-  hair_salon: [true, false].sample,
-  sauna: [true, false].sample,
-  bar: [true, false].sample,
-  air_conditioning: [true, false].sample,
-  physiotherapist: [true, false].sample,
-  min_price: (250...800).to_a.sample,
-  max_price: (1000...2500).to_a.sample,
-  description: description.sample,
-  user: all_user.sample
-)
 
 puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
