@@ -3,26 +3,16 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="ratings-bar"
 export default class extends Controller {
   static values = {
-    ratings: Object
+    ratings: Number
   }
   static targets = [
     "rating",
-    "food",
-    "privacy",
-    "staff",
-    "hygiene",
-    "atmosphere",
     "frame"
   ]
 
   connect() {
-    const ratings = this.ratingsValue;
-    this.#drawRating(this.ratingTarget, ratings['rating']);
-    this.#drawRating(this.foodTarget, ratings['food']);
-    this.#drawRating(this.privacyTarget, ratings['privacy']);
-    this.#drawRating(this.staffTarget, ratings['staff']);
-    this.#drawRating(this.hygieneTarget, ratings['hygiene']);
-    this.#drawRating(this.atmosphereTarget, ratings['atmosphere']);
+    this.#drawRating(this.ratingTarget, this.ratingsValue);
+
   }
 
   #drawRating(target, rate) {
@@ -38,7 +28,7 @@ export default class extends Controller {
     ctx.fillRect(0, 0, progress, height);
 
     ctx.fillStyle = '#31326F';
-    // console.log(step);
+    console.log(step);
     ctx.font = 'bold 12px Open Sans';
     ctx.fillText(`${rate}`, 15, (height / 1.4));
   }

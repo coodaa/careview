@@ -25,5 +25,8 @@ application.register("modalmessage", ModalmessageController)
 import RatingsBarController from "./ratings_bar_controller.js"
 application.register("ratings-bar", RatingsBarController)
 
+import ReviewController from "./review_controller.js"
+application.register("review", ReviewController)
+
 import ToggleFavoriteController from "./toggle_favorite_controller.js"
 application.register("toggle-favorite", ToggleFavoriteController)

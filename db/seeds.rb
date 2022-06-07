@@ -15,7 +15,13 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'John', last_name: 'Schmidt', phone_number: '+49 173 4728021', image_url: "user.image_url")
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "user.image_url")
+
+User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
+
+User.create(email: 'f@bb.com', password: 'qwertz12', first_name: 'León', last_name: 'Langhoff', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FM6HF2S1-1dda31f4f94d-512")
+
+User.create(email: 'hk@bb.com', password: 'qwertz12', first_name: 'Adam', last_name: 'Tomczyk', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U027U71SASU-fba7a0beae17-512")
 
 male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
@@ -23,7 +29,7 @@ male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca
 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
 'https://images.unsplash.com/photo-1562124638-724e13052daf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
 'https://images.unsplash.com/photo-1567476445327-705d1b3780de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1561688711-a98d0cfd30a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60'
+'https://images.unsplash.com/photo-1561688711-a98d0cfd30a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
 'https://images.unsplash.com/photo-1603924498829-ce16c0da32aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
 'https://images.unsplash.com/photo-1608649672519-e8797a9560cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
 'https://images.unsplash.com/photo-1509399693673-755307bfc4e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
@@ -31,27 +37,28 @@ male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca
 ]
 
 # male names
-7.times do
+8.times do
   # sleep 2
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
-    first_name: fake.first_name_male,
+    first_name: Faker::Name.male_first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber,
     image_url: male_profile_pics.sample,
   )
 end
 
+
 female_profile_pics = [
   'https://images.unsplash.com/photo-1534954553104-88cb75be7648?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmVtYWxlJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1575042179444-2f5c4f87c0d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmVtYWxlJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
-  'https://images.unsplash.com/photo-1534105555282-7f69cbee08fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGZlbWFsZSUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60'
+  'https://images.unsplash.com/photo-1534105555282-7f69cbee08fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGZlbWFsZSUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1484186694682-a940e4b1a9f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fGZlbWFsZSUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
-  'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGZlbWFsZSUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60'
+  'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGZlbWFsZSUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1567336273898-ebbf9eb3c3bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZmVtYWxlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
   'https://images.unsplash.com/photo-1512518607807-17e94dc9a5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGZlbWFsZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
-  'https://images.unsplash.com/photo-1481261224858-2e88a19fc36c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdvbWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60'
+  'https://images.unsplash.com/photo-1481261224858-2e88a19fc36c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdvbWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1529983118521-c801f13d8cd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fHdvbWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1547212371-eb5e6a4b590c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdvbWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1530577197743-7adf14294584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHdvbWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
@@ -59,19 +66,17 @@ female_profile_pics = [
   ]
 
 # female names
-7.times do
+8.times do
   # sleep 2
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10),
-    first_name: fake.first_name_male,
+    first_name: Faker::Name.female_first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber,
     image_url: female_profile_pics.sample,
   )
 end
-
-
 
 all_user = User.all
 carehome_type = ['Care Home', 'Nursing Home', 'Care home with dementia care', 'Dual-registered care home']
@@ -93,10 +98,10 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                            'Viehhofstraße 27, 68165 Mannheim Germany',
                            'Potsdamer Str. 24, 14163 Berlin',
                           'Späthstraße 9, 12359 Berlin',
-                          'Hohensteiner Str. 6-12, 14197 Berlin'
+                          'Hohensteiner Str. 6-12, 14197 Berlin',
                           'Berkaer Str. 31-35, 14199 Berlin',
                           'Herbartstraße 24, 14057 Berlin',
-                          'Herbartstraße 24, 14057 Berlin'
+                          'Herbartstraße 24, 14057 Berlin',
                           'Lützowstraße 24, 10785 Berlin',
                           'Hauptstraße 121A, 10827 Berlin',
                           'Am Köhlerhof 6-8, 24576 Bad Bramstedt',
@@ -111,25 +116,30 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                           'Greinerberg 17, 81371 München',
                           'Weitlstraße 66, 80935 München',
                           'Klenzestraße 70, 80469 München',
-                          'Klugstraße 144, 80637 München'
+                          'Klugstraße 144, 80637 München',
+                          'Kleiberweg 115D, 22547 Hamburg',
+                          'Kleiner Schäferkamp 43, 20357 Hamburg',
+                          'St. Johannis 10, 20148 Hamburg',
+                          'Stückenstraße 1, 22081 Hamburg',
                           ]
 
 carehome_names = ['Marienstift', 'Seniorenstiftung', 'Pflegehaus','Seniorenzentrum Werner', 'Seniorenzentrum Tegel', 'Seniorenzentrum Mitte', 'Seniorenstift', 'Seniorenstift Mitte', 'Pflegeheim Pinecki', 'Pflegeheim Schmidt', 'Pflegeheim Käfer', 'Pflegeheim Sonne', 'Pflegeheim Sommer', 'Evangelisches Seniorenheim', 'Seniorendomizil Helga', 'Seniorendomizil Sommer', 'Haus Christophorus']
 
 description = [
-
-
-
-
-
-
+  'Our Home, is a thriving village community, situated in the beautiful City on the edge of the  Hills. We provide residential, nursing and dementia care and have all the amenities of a modern home. You will find first-class facilities with exciting activities, and plenty of places to relax or entertain',
+  'A stunning location, our home has all the amenities of a modern home. We provide residential support for elderly people living with different types of dementia, including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
+  'Located in the heart of the city, our Home has five individual self-contained specialist care communities where all the bedrooms are tastefully decorated and furnished to a high standard, each complete with en suite facilities. Our home has beautiful views of the large landscaped gardens, and there’s a summer house where we have outdoor activities. We provide high quality nursing and nursing dementia care including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
+  'Our purpose-built luxury care home provides residents with high quality nursing, residential and dementia care on a permanent and short stay basis, giving you peace of mind that if your care needs change we can support you. Our own fully trained nurses have specialist expertise and are chosen for their compassion and experience.',
+  'We enjoy an enviable reputation for delivering the very highest standards of residential and residential dementia care for up to 19 elderly people in a homely and friendly environment. Tastefully converted to retain charming original features, including wooden beams and inglenook fireplaces. We’re in walking distance of everything the town has to offer, including a wealth of shops, cafes and pubs, as well as the museum and theatre so residents enjoy the convenience of having everything on their doorstep.',
+  'Our award-winning purpose-built luxury care home, provides residents with high quality dementia, residential and nursing care on a permanent and short stay basis. There’s plenty of places to relax and entertain including our own bistro, hair salon and cinema plus a library, music room and choice of comfortable lounges. Our home is surrounded by lovely patio gardens for all residents to access and enjoy. We’re close to local shops and cafes where residents enjoy getting out and about and we often take trips to local places of interest.',
+  'This Home is in a peaceful and secluded location. You’ll find first-class facilities with exciting activities, and plenty of places to relax or entertain. Many of the rooms offer picturesque views across the extensive landscaped gardens. With over five acres of grounds, there is always something to explore, whether it be walks',
 ]
 
 puts 'Creating new Carehomes ...'
-50.times do
+55.times do
   Carehome.create!(
     address: german_carehome_address.sample,
-    name: carehomes.sample,
+    name: carehome_names.sample,
     activities: [true, false].sample,
     types: carehome_type.sample,
     pets_allowed: [true, false].sample,
@@ -156,9 +166,36 @@ puts 'Creating reviews ...'
 carehomes = Carehome.all
 rate = (1..5).to_a
 
-40.times do
+content_for_review = [
+  'My mother has been cared for by the team for nearly a year now. They understand the care she needs with her dementia',
+  'My mam has been in this care home for three years and has always been very happy. Very professionally run. I leave in the knowledge my mam is content and well cared for.',
+  'I am very happy that my husband is here - a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.',
+  'Very pleasant staff. Well cared for. Lovely rooms. Enjoy visiting.',
+  'My sister always appears well cared for and the room clean and comfortable.',
+  'Very caring and efficient care home. Myself and my family would recommend this care home to others.',
+  'This is an excellent home. The staff are very friendly, professional and caring. Mam couldnt be in a better home.',
+  'The staff at this care home have been excellent with my stepdad. He is very happy here and he takes part in the activities provided. The facilities are also excellent.',
+  'It is an excellent home. It has very good facilities and is attractively furnished. The best part of the service is the staff who are always friendly, kind and considerate. It is a very well managed care home.',
+  'I am so happy with everything my mother receives. The care is absolutely brilliant, my mother is so happy being there.',
+  'My mother settled really well, making friends with other residents. Was well looked after by all the staff.',
+  'Dad appears to be very happy and settled. He likes his food and I feel that the staff are very attentive and see to his needs. He is generally clean and that is all we are looking for. He tends to stay in his room and this is always looked after.',
+  'When I come to visit my mum she always seems happy and she eats very well. I have no concerns about her care.',
+  'I think that overall, everything is ok. However, I have noticed when visiting mum at lunchtime, a vegetarian option never seems to be available.',
+  'I am very happy that my uncle is here, in a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.',
+  'Mam is now into her third year and staff have sensitively modified the nature and degree of care needed as her independence have increased. Care from all staff has been good with, in a smaller number of cases an outstanding level of commitment. Liaison and involvement of other agents (district nurses, GP etc) has been prompt and effective.
+  The atmosphere around Ashbourne Lodge is always friendly and positive.
+  I am always made to feel welcome. It feels like a community with a very positive ethos.',
+  'We chose due to its position next to the park and the reception we received when asking to look around. The friendly nature of the staff and willingness to accommodate requests impressed us from the start and continued to do so. My father isnt the most cooperative at times due to his condition and all the staff have tried their best to make him comfortable, always showing a pleasant and cheerful manner.',
+  'My Nan has fantastic care. This care is provided by a pleasant, hardworking caring staff who have my Nans best interests at heart. She is well looked after and is always well turned out and clean. It gives me peace of mind that my Nan is in a safe, secure environment.',
+  'Staff were understanding of my needs as the daughter and of my mothers needs. The staff treated mum with respect and tenderness, clearly aware of her needs and habits. Very grateful for the care they are taking of my mum.',
+  'I am happy in the home. I am looked after well and get on well with the staff. I enjoy the meals provided. Often I have health problems, they are quickly dealt with. I enjoy the entertainment provided during the week but would like more trips out.',
+  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.',
+]
+
+
+150.times do
   Review.create!(
-    content: Faker::Restaurant.review,
+    content: content_for_review.sample,
     carehome: carehomes.sample,
     user: all_user.sample,
     rating: rate.sample,
@@ -190,7 +227,7 @@ Carehome.create!(
   physiotherapist: [true, false].sample,
   min_price: (250...800).to_a.sample,
   max_price: (1000...2500).to_a.sample,
-  description: Faker::Restaurant.description,
+  description: description.sample,
   user: all_user.sample
 )
 
