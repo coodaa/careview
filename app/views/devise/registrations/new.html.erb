@@ -18,6 +18,9 @@
                       required: false,
                       autofocus: true,
                       input_html: { autocomplete: "phone-number" }%>
+          <%= f.input :photo,
+                      required: true,
+                      as: :file %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
