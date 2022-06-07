@@ -36,8 +36,16 @@ class CarehomesController < ApplicationController
       image_url: helpers.asset_url("/assets/mapin.png")
     }
 
+    # Calculate average rating for the carehome
+    total_reviews = @carehome.reviews.count
+    count = 0
+    @carehome.reviews.each do |review|
+      count += review.average_ratings
+    end
+    average_rating = count / total_reviews
+
     @ratings = {
-      rating: @carehome.reviews.average(:rating).to_f.round(1),
+      rating: average_rating.round(1),
       food: @carehome.reviews.average(:food).to_f.round(1),
       privacy: @carehome.reviews.average(:privacy).to_f.round(1),
       staff: @carehome.reviews.average(:staff).to_f.round(1),
