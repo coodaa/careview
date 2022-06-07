@@ -15,14 +15,14 @@
       <% if current_user.favorites.empty? %>
         <h3>No favorites yet.</h3>
       <% else %>
+        <h3>Your favorites</h3>
         <% current_user.favorites_by_type('Carehome').each do |favorite| %>
           <%= link_to carehome_path(favorite.favoritable_id) do %>
               <div class="dashboard-fav">
-                <p> <%= favorite.favoritable.name %> </p> 
+                <p> <%= favorite.favoritable.name %> </p>
                 <% unless favorite.favoritable.photos.empty? %>
                   <%= cl_image_tag favorite.favoritable.photos[0].key, crop: :fill %>
                 <% end %>
-                <%# raise %>
               </div>
           <% end %>
         <% end %>

@@ -5,7 +5,14 @@
 .kaminari-pagination a {
   color: $secondary-color;
   padding: 10px;
-  &:active {
-    font-weight: bold;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: $primary-color;
   }
+}
+
+.kaminari-pagination .current {
+  color: $secondary-color;
+  font-weight: bolder;
 }
