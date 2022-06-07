@@ -38,7 +38,7 @@
        <%= @chatrooms[0].name %>
     </div>
 
-    <div class="dashboard-chatroom">
+    <div class="dashboard-chatroom" style="overflow:scroll">
       <div class="messages">
         <div class="messages" data-chatroom-subscription-target="messages">
           <% @chatrooms[0].messages.each do |message| %>
