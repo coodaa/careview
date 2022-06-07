@@ -40,11 +40,6 @@ class ReviewsController < ApplicationController
     @reviews_last = @reviews.drop(2)
   end
 
-
-
-
-
-
   private
 
   def review_params
