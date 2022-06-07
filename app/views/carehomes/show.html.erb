@@ -202,7 +202,7 @@
         <div class="carehome-reviews-header d-flex justify-content-between mb-3">
           <h2>Reviews (<%= @carehome.reviews.count %>)</h2>
           <%= link_to new_carehome_review_path(@carehome) do %>
-            <div class="display-button reviews">
+            <div class="display-button">
               <button class="submit">Leave a review</button>
             </div>
           <% end %>
@@ -222,10 +222,9 @@
     <% end %>
 
     <%= link_to carehome_reviews_path(@carehome) do %>
-      <div class="display-button reviews">
-        <button class="submit">See all reviews</button>
+      <div class="display-button">
+        <button class="review-btn">Show all reviews</button>
       </div>
     <% end %>
     </div>
-
-  </div>
+</div>
