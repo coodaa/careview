@@ -107,7 +107,7 @@
 
 .carehome-details-frame {
   background-color: rgba(227, 228, 255, 0.5);
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 25px 60px;
   // margin-right: 10px;
@@ -278,4 +278,5 @@
 
 #show-map {
   height: 100vh;
+  border-radius: 5px;
 }

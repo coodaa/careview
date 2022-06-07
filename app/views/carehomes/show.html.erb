@@ -193,16 +193,16 @@
         </div>
     </div>
 
-  <div class="carehome-reviews">
-    <h3>(<%= @carehome.reviews.count %>) Reviews</h3>
-      <p><%= @reviews.first.content %></p>
-      <p class="carehome-reviews-justify"><%= @reviews.last.user.first_name %></p>
-  <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
-  </div>
+    <div class="carehome-reviews">
+      <h3>Reviews</h3>
+        <p><%= @reviews.first.content %></p>
+        <p class="carehome-reviews-justify"><%= @reviews.last.user.first_name %></p>
+      <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
+    </div>
   <% else %>
     <div class="carehome-no-reviews">
       <h3>No reviews yet</h3>
-        <%= link_to 'Give the first review !', carehome_reviews_path(@carehome), class: 'submit' %>
+        <%= link_to 'Leave a first review', carehome_reviews_path(@carehome), class: 'submit' %>
     </div>
   <% end %>
 
