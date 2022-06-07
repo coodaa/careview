@@ -16,13 +16,15 @@
         <h3>No favorites yet.</h3>
       <% else %>
         <% current_user.favorites_by_type('Carehome').each do |favorite| %>
-          <div class="dashboard-fav">
-            <%= favorite.favoritable.name %>
-            <% unless favorite.favoritable.photos.empty? %>
-              <%= cl_image_tag favorite.favoritable.photos[0].key, crop: :fill %>
-            <% end %>
-          </div>
-
+          <%= link_to carehome_path(favorite.favoritable_id) do %>
+              <div class="dashboard-fav">
+                <p> <%= favorite.favoritable.name %> </p> 
+                <% unless favorite.favoritable.photos.empty? %>
+                  <%= cl_image_tag favorite.favoritable.photos[0].key, crop: :fill %>
+                <% end %>
+                <%# raise %>
+              </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>
