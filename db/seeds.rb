@@ -15,7 +15,13 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'John', last_name: 'Schmidt', phone_number: '+49 173 4728021', image_url: "user.image_url")
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "user.image_url")
+
+User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
+
+User.create(email: 'f@bb.com', password: 'qwertz12', first_name: 'León', last_name: 'Langhoff', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FM6HF2S1-1dda31f4f94d-512")
+
+User.create(email: 'hk@bb.com', password: 'qwertz12', first_name: 'Adam', last_name: 'Tomczyk', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U027U71SASU-fba7a0beae17-512")
 
 male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
@@ -31,7 +37,7 @@ male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca
 ]
 
 # male names
-7.times do
+8.times do
   # sleep 2
   User.create!(
     email: Faker::Internet.email,
@@ -60,7 +66,7 @@ female_profile_pics = [
   ]
 
 # female names
-7.times do
+8.times do
   # sleep 2
   User.create!(
     email: Faker::Internet.email,
@@ -71,8 +77,6 @@ female_profile_pics = [
     image_url: female_profile_pics.sample,
   )
 end
-
-
 
 all_user = User.all
 carehome_type = ['Care Home', 'Nursing Home', 'Care home with dementia care', 'Dual-registered care home']
@@ -113,6 +117,10 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                           'Weitlstraße 66, 80935 München',
                           'Klenzestraße 70, 80469 München',
                           'Klugstraße 144, 80637 München',
+                          'Kleiberweg 115D, 22547 Hamburg',
+                          'Kleiner Schäferkamp 43, 20357 Hamburg',
+                          'St. Johannis 10, 20148 Hamburg',
+                          'Stückenstraße 1, 22081 Hamburg',
                           ]
 
 carehome_names = ['Marienstift', 'Seniorenstiftung', 'Pflegehaus','Seniorenzentrum Werner', 'Seniorenzentrum Tegel', 'Seniorenzentrum Mitte', 'Seniorenstift', 'Seniorenstift Mitte', 'Pflegeheim Pinecki', 'Pflegeheim Schmidt', 'Pflegeheim Käfer', 'Pflegeheim Sonne', 'Pflegeheim Sommer', 'Evangelisches Seniorenheim', 'Seniorendomizil Helga', 'Seniorendomizil Sommer', 'Haus Christophorus']
@@ -128,7 +136,7 @@ description = [
 ]
 
 puts 'Creating new Carehomes ...'
-50.times do
+55.times do
   Carehome.create!(
     address: german_carehome_address.sample,
     name: carehome_names.sample,
@@ -185,7 +193,7 @@ content_for_review = [
 ]
 
 
-60.times do
+150.times do
   Review.create!(
     content: content_for_review.sample,
     carehome: carehomes.sample,
