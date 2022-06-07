@@ -242,15 +242,11 @@
 .carehome-summary-and-actions {
   display: flex;
   justify-content: space-between;
-  height: 300px;
 }
 
 .carehome-infos-header {
   display: flex;
   justify-content: space-between;
-  a {
-    margin-right: 5%;
-  }
 }
 
 .carehome-actions {
@@ -277,6 +273,11 @@
 }
 
 #show-map {
-  height: 100vh;
+  height: auto;
   border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.carehome-aligned {
+  padding-left: 0 !important;
 }
