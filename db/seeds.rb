@@ -23,6 +23,21 @@ User.create(email: 'f@bb.com', password: 'qwertz12', first_name: 'León', last_n
 
 User.create(email: 'hk@bb.com', password: 'qwertz12', first_name: 'Adam', last_name: 'Tomczyk', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U027U71SASU-fba7a0beae17-512")
 
+User.create(email: 'h@bb.com', password: 'qwertz12', first_name: 'Annemarie', last_name: 'van Ingen', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-UNV4EERRA-4e81d2b90d53-512")
+
+User.create(email: 'n@bb.com', password: 'qwertz12', first_name: 'David', last_name: 'Klören', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U01TBQ75U87-8c79dffcb36b-512")
+
+User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Germain', last_name: 'Loret', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U4XHR6L4F-cf524cb1abea-512")
+
+User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Nic', last_name: 'Pina', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U01JA83LP89-5c86991c7106-512")
+
+User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Toni', last_name: 'Panacek', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U7G7E99T8-a3d656e2d8e0-512")
+
+User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Nina', last_name: 'Hackenbroich', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U0160CHLQ14-c8e3ee5c6d61-512")
+
+User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Barack', last_name: 'Obama', phone_number: '+49 173 4728021', image_url: "https://www.silicon.co.uk/wp-content/uploads/2012/01/obamasquare2.png")
+
+
 male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
 'https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
@@ -48,7 +63,6 @@ male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca
     image_url: male_profile_pics.sample,
   )
 end
-
 
 female_profile_pics = [
   'https://images.unsplash.com/photo-1534954553104-88cb75be7648?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZmVtYWxlJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
@@ -119,24 +133,25 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                           'Klugstraße 144, 80637 München',
                           'Kleiberweg 115D, 22547 Hamburg',
                           'Kleiner Schäferkamp 43, 20357 Hamburg',
-                          'St. Johannis 10, 20148 Hamburg',
                           'Stückenstraße 1, 22081 Hamburg',
                           ]
 
 carehome_names = ['Marienstift', 'Seniorenstiftung', 'Pflegehaus','Seniorenzentrum Werner', 'Seniorenzentrum Tegel', 'Seniorenzentrum Mitte', 'Seniorenstift', 'Seniorenstift Mitte', 'Pflegeheim Pinecki', 'Pflegeheim Schmidt', 'Pflegeheim Käfer', 'Pflegeheim Sonne', 'Pflegeheim Sommer', 'Evangelisches Seniorenheim', 'Seniorendomizil Helga', 'Seniorendomizil Sommer', 'Haus Christophorus']
 
 description = [
-  'Our Home, is a thriving village community, situated in the beautiful City on the edge of the  Hills. We provide residential, nursing and dementia care and have all the amenities of a modern home. You will find first-class facilities with exciting activities, and plenty of places to relax or entertain',
-  'A stunning location, our home has all the amenities of a modern home. We provide residential support for elderly people living with different types of dementia, including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
-  'Located in the heart of the city, our Home has five individual self-contained specialist care communities where all the bedrooms are tastefully decorated and furnished to a high standard, each complete with en suite facilities. Our home has beautiful views of the large landscaped gardens, and there’s a summer house where we have outdoor activities. We provide high quality nursing and nursing dementia care including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome.',
+  'Our Home, is a thriving village community, situated in the beautiful City on the edge of the  Hills. We provide residential, nursing and dementia care and have all the amenities of a modern home. You will find first-class facilities with exciting activities, and plenty of places to relax or entertain. In here it is just some text. We just love it so much here! It is an amazing home. ',
+  'A stunning location, our home has all the amenities of a modern home. We provide residential support for elderly people living with different types of dementia, including Alzheimer’s disease, vascular dementia and Korsakoff’s syndrome. We just love it so much here! It is an amazing home. In here it is just some text. We just love it so much here! It is an amazing home.',
+  'Located in the heart of the city, our Home has five individual self-contained specialist care communities where all the bedrooms are tastefully decorated and furnished to a high standard, each complete with en suite facilities. Our home has beautiful views of the large landscaped gardens, and there’s a summer house where we have outdoor activities. ',
   'Our purpose-built luxury care home provides residents with high quality nursing, residential and dementia care on a permanent and short stay basis, giving you peace of mind that if your care needs change we can support you. Our own fully trained nurses have specialist expertise and are chosen for their compassion and experience.',
-  'We enjoy an enviable reputation for delivering the very highest standards of residential and residential dementia care for up to 19 elderly people in a homely and friendly environment. Tastefully converted to retain charming original features, including wooden beams and inglenook fireplaces. We’re in walking distance of everything the town has to offer, including a wealth of shops, cafes and pubs, as well as the museum and theatre so residents enjoy the convenience of having everything on their doorstep.',
-  'Our award-winning purpose-built luxury care home, provides residents with high quality dementia, residential and nursing care on a permanent and short stay basis. There’s plenty of places to relax and entertain including our own bistro, hair salon and cinema plus a library, music room and choice of comfortable lounges. Our home is surrounded by lovely patio gardens for all residents to access and enjoy. We’re close to local shops and cafes where residents enjoy getting out and about and we often take trips to local places of interest.',
-  'This Home is in a peaceful and secluded location. You’ll find first-class facilities with exciting activities, and plenty of places to relax or entertain. Many of the rooms offer picturesque views across the extensive landscaped gardens. With over five acres of grounds, there is always something to explore, whether it be walks',
+  'We enjoy an enviable reputation for delivering the very highest standards of residential and residential dementia care for up to 19 elderly people in a homely and friendly environment. Tastefully converted to retain charming original features, including wooden beams and inglenook fireplaces. We’re in walking distance of everything the town has to offer.',
+  'Our award-winning purpose-built luxury care home, provides residents with high quality dementia, residential and nursing care on a permanent and short stay basis. There’s plenty of places to relax and entertain including our own bistro, hair salon and cinema plus a library, music room and choice of comfortable lounges. Our home is surrounded by lovely patio gardens for all residents to access and enjoy. We’re close to local shops.',
+  'This Home is in a peaceful and secluded location. You’ll find first-class facilities with exciting activities, and plenty of places to relax or entertain. Many of the rooms offer picturesque views across the extensive landscaped gardens. With over five acres of grounds, there is always something to explore, whether it be walks. We just love it so much here! It is an amazing home.',
+  '5 months ago my husband, who was bedridden with severe dementia, went to La Fontana for a months respite care. It was soon evident that he was receiving excellent care and seemed happy, so he became a permanent resident. He was unable to make use of all the facilities but we had every confidence in the care he received. He was monitored regularly and the staff were friendly, caring and attentive. They were always helpful and communicative.',
+  'This home has been the best I have encountered. Its always friendly, lots of activities for the residents to do such as quizzes, singing, word search, the list goes on. The staff are extremely friendly, I visit very often and he is always ready and he is clean, washed and shaven. The food is also very good with bowls of fresh fruit for the residents. The manager is also exceptionally caring and always there to help and leads a great team. Very impressed.',
 ]
 
 puts 'Creating new Carehomes ...'
-55.times do
+60.times do
   Carehome.create!(
     address: german_carehome_address.sample,
     name: carehome_names.sample,
@@ -182,9 +197,7 @@ content_for_review = [
   'When I come to visit my mum she always seems happy and she eats very well. I have no concerns about her care.',
   'I think that overall, everything is ok. However, I have noticed when visiting mum at lunchtime, a vegetarian option never seems to be available.',
   'I am very happy that my uncle is here, in a caring and cheerful staff have helped him cope with infections and mobility problems and I am confident that he will be looked after to the best of their abilities at all times.',
-  'Mam is now into her third year and staff have sensitively modified the nature and degree of care needed as her independence have increased. Care from all staff has been good with, in a smaller number of cases an outstanding level of commitment. Liaison and involvement of other agents (district nurses, GP etc) has been prompt and effective.
-  The atmosphere around Ashbourne Lodge is always friendly and positive.
-  I am always made to feel welcome. It feels like a community with a very positive ethos.',
+  'Mam is now into her third year and staff have sensitively modified the nature and degree of care needed as her independence have increased. Care from all staff has been good with, in a smaller number of cases an outstanding level of commitment. Liaison and involvement of other agents (district nurses, GP etc) has been prompt and effective.',
   'We chose due to its position next to the park and the reception we received when asking to look around. The friendly nature of the staff and willingness to accommodate requests impressed us from the start and continued to do so. My father isnt the most cooperative at times due to his condition and all the staff have tried their best to make him comfortable, always showing a pleasant and cheerful manner.',
   'My Nan has fantastic care. This care is provided by a pleasant, hardworking caring staff who have my Nans best interests at heart. She is well looked after and is always well turned out and clean. It gives me peace of mind that my Nan is in a safe, secure environment.',
   'Staff were understanding of my needs as the daughter and of my mothers needs. The staff treated mum with respect and tenderness, clearly aware of her needs and habits. Very grateful for the care they are taking of my mum.',
@@ -193,7 +206,7 @@ content_for_review = [
 ]
 
 
-150.times do
+200.times do
   Review.create!(
     content: content_for_review.sample,
     carehome: carehomes.sample,
