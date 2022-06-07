@@ -32,7 +32,9 @@
   grid-area: 1 / 5 / 2 / 7;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #ffc83c7c;
+  border-top: 4px solid $secondary-color;
+  border-bottom: 4px solid $secondary-color;
+  background-color: $bg-color;
   h3 {
     font-size: 1.7rem;
   }
@@ -45,10 +47,10 @@
   background-color: $bg-color;
   margin: 5px;
   border: solid 0.2rem $secondary-color;
-  border-radius: 0.2rem;
+  border-radius: 3rem;
   transition: 0.5s ease-in-out;
   border-radius: 1rem;
-  border: 0.3rem solid $secondary-color;
+  border: 0.15rem solid $secondary-color;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) -2px -2px 5px inset;
 
   &:hover {
@@ -60,8 +62,9 @@
     height: 5rem;
     object-fit: cover;
     border-radius: 50%;
-    margin: 0rem 2rem;
-    border: 0.2rem solid $secondary-color;
+    // margin: 0rem 2rem;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(49,50,111,0.7) 94%);
   }
 
   p {
