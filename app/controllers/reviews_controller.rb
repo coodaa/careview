@@ -50,11 +50,12 @@ class ReviewsController < ApplicationController
     @reviews_last = @reviews.drop(2)
   end
 
-
-
-
   def new
-    @reviews = Review.new
+    @review = Review.new
+    @carehome = Carehome.last
+    # change it to params 
+    authorize @review
+    authorize @carehome
   end
 
   private
