@@ -36,14 +36,24 @@ class CarehomesController < ApplicationController
       image_url: helpers.asset_url("/assets/mapin.png")
     }
 
-    @ratings = {
-      rating: @carehome.reviews.average(:rating).to_f.round(1),
-      food: @carehome.reviews.average(:food).to_f.round(1),
-      privacy: @carehome.reviews.average(:privacy).to_f.round(1),
-      staff: @carehome.reviews.average(:staff).to_f.round(1),
-      hygiene: @carehome.reviews.average(:hygiene).to_f.round(1),
-      atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(1)
-    }
+    # Calculate average rating for the carehome
+    unless @carehome.reviews.empty?
+      total_reviews = @carehome.reviews.count
+      count = 0
+      @carehome.reviews.each do |review|
+        count += review.average_ratings
+      end
+      average_rating = count / total_reviews
+
+      @ratings = {
+        rating: average_rating.round(1),
+        food: @carehome.reviews.average(:food).to_f.round(1),
+        privacy: @carehome.reviews.average(:privacy).to_f.round(1),
+        staff: @carehome.reviews.average(:staff).to_f.round(1),
+        hygiene: @carehome.reviews.average(:hygiene).to_f.round(1),
+        atmosphere: @carehome.reviews.average(:atmosphere).to_f.round(1)
+      }
+    end
 
     @reviews = @carehome.reviews
     @reviews_last = @reviews.drop(2)
