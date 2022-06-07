@@ -42,8 +42,9 @@ class ReviewsController < ApplicationController
 
 
 
-
-
+  def new
+    @reviews = Review.new
+  end
 
   private
 

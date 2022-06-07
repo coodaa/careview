@@ -1,14 +1,22 @@
 <div class="container">
 
-   <div class="carehome-infos-header-review">
+  <div class="carehome-infos-header-review">
     <h2><%= @carehome.name %></h2>
+    <div class="carehome-no-reviews">
+      <%= link_to 'Write review !', new_carehome_review_path(@carehome), class: 'submit' %>
+    </div>
+  </div>
+
+  <div class="move-back-btn">
     <%= link_to 'Back to Carehome', carehomes_path , class: 'btn-back' %>
   </div>
 
-  <h5 class="blue"><%= pluralize @carehome.reviews.size, "Review" %></h5>
+  <div class="space-between-btn">
+    <h5 class="blue"><%= pluralize @carehome.reviews.size, "Review" %></h5>
+  </div>
+
   <div>
     <% @carehome.reviews.each do |review| %>
-
 
     <div class="card-product">
         <%= image_tag review.user.image_url, class: "avatar" %>
@@ -33,6 +41,7 @@
 
       <i><%= review.content %></i>
       <%# <i><%= review.rating %></i>
+
 
       </div>
     </div>
