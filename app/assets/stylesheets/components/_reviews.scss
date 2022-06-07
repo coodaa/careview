@@ -53,3 +53,48 @@
   font-size: .9rem;
   color: #31326faa;
 }
+
+.small-rating-bar {
+  height: 20px !important;
+}
+
+.carehome-ratings-small {
+  grid-area: 3 / 2 / 4 / 4;
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // h3 {
+  //   display: inline-block;
+  //   width: 100%;
+  //   height: 20%;
+  //   color: $secondary-color;
+  //   font-family: $headers-font;
+  //   font-weight: lighter;
+  //   padding: 25px 15px;
+  // }
+
+  p {
+    color: $secondary-color;
+    font-size: 1rem;
+    min-width: 300px;
+    max-height: 50px;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .carehome-rating-progress {
+    width: 75%;
+    margin: 0 auto;
+    background-color: $secondary-color;
+    height: 1rem;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  canvas {
+    border-radius: 4px;
+  }
+}

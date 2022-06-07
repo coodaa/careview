@@ -37,6 +37,7 @@ class ReviewsController < ApplicationController
     }
 
     @reviews = @carehome.reviews
+    @reviews_last = @reviews.drop(2)
   end
 
 
