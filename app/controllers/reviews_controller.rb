@@ -50,6 +50,13 @@ class ReviewsController < ApplicationController
     @reviews_last = @reviews.drop(2)
   end
 
+
+
+
+  def new
+    @reviews = Review.new
+  end
+
   private
 
   def review_params

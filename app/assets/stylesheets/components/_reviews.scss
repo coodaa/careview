@@ -17,8 +17,8 @@
   display: inline-grid;
   display: flex;
   align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  // margin-top: 30px;
+  margin-bottom: 45px;
   color: $secondary-color;
   font-family: $body-font;
   border-radius: 5px;
@@ -116,8 +116,8 @@
 .carehome-infos-header-review {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  // padding-bottom: 20px;
+  padding-top: 25px;
   color: $secondary-color;
   // a {
   //   // margin-right: 5%;
@@ -130,4 +130,16 @@
 
 .blue, h5 {
   color: $secondary-color !important;
+}
+
+
+.space-between-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.move-back-btn {
+  // margin-top: 10px;
+  // margin-bottom: 10px;
 }
