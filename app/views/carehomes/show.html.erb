@@ -150,70 +150,72 @@
     </div>
   </div>
 
-  <% unless @reviews.empty? %>
-    <div class="carehome-ratings"
-          data-controller="ratings-bar"
-          data-ratings-bar-ratings-value="<%= @ratings.to_json %>">
-      <h3>Ratings</h3>
-        <div class="carehome-rating">
-          <p>Rating</p>
-            <div class="carehome-rating-progress" data-ratings-bar-target="frame">
-              <canvas data-ratings-bar-target="rating"></canvas>
+    <div class="ratings mb-20px">
+      <h2>Rating</h2>
+      <% unless @reviews.empty? %>
+        <div class="carehome-ratings"
+              data-controller="ratings-bar"
+              data-ratings-bar-ratings-value="<%= @ratings.to_json %>">
+            <div class="carehome-rating">
+              <p>Total</p>
+                <div class="carehome-rating-progress" data-ratings-bar-target="frame">
+                  <canvas data-ratings-bar-target="rating"></canvas>
+                </div>
             </div>
-        </div>
-        <div class="carehome-rating">
-          <p>Food</p>
-            <div class="carehome-rating-progress">
-              <canvas data-ratings-bar-target="food"></canvas>
+            <div class="carehome-rating">
+              <p>Food</p>
+                <div class="carehome-rating-progress">
+                  <canvas data-ratings-bar-target="food"></canvas>
+                </div>
             </div>
-        </div>
-        <div class="carehome-rating">
-          <p>Privacy</p>
-            <div class="carehome-rating-progress">
-              <canvas data-ratings-bar-target="privacy"></canvas>
+            <div class="carehome-rating">
+              <p>Privacy</p>
+                <div class="carehome-rating-progress">
+                  <canvas data-ratings-bar-target="privacy"></canvas>
+                </div>
             </div>
-        </div>
-        <div class="carehome-rating">
-          <p>Staff</p>
-            <div class="carehome-rating-progress">
-              <canvas data-ratings-bar-target="staff"></canvas>
+            <div class="carehome-rating">
+              <p>Staff</p>
+                <div class="carehome-rating-progress">
+                  <canvas data-ratings-bar-target="staff"></canvas>
+                </div>
             </div>
-        </div>
-        <div class="carehome-rating">
-          <p>Hygiene</p>
-            <div class="carehome-rating-progress">
-              <canvas data-ratings-bar-target="hygiene"></canvas>
+            <div class="carehome-rating">
+              <p>Hygiene</p>
+                <div class="carehome-rating-progress">
+                  <canvas data-ratings-bar-target="hygiene"></canvas>
+                </div>
             </div>
-        </div>
-        <div class="carehome-rating">
-          <p>Atmosphere</p>
-            <div class="carehome-rating-progress">
-              <canvas data-ratings-bar-target="atmosphere"></canvas>
+            <div class="carehome-rating">
+              <p>Atmosphere</p>
+                <div class="carehome-rating-progress">
+                  <canvas data-ratings-bar-target="atmosphere"></canvas>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="carehome-reviews">
-      <h3>Reviews</h3>
-        <p><%= @reviews.first.content %></p>
-        <p class="carehome-reviews-justify"><%= @reviews.last.user.first_name %></p>
-      <%= link_to 'Go to reviews', carehome_reviews_path(@carehome), class: 'submit' %>
-    </div>
-  <% else %>
-    <div class="carehome-no-reviews">
-      <h3>No reviews yet</h3>
-        <%= link_to 'Leave a first review', carehome_reviews_path(@carehome), class: 'submit' %>
-    </div>
-  <% end %>
+      <div class="carehome-reviews">
+        <h2>Reviews (<%= @carehome.reviews.count %>)</h2>
+        <div class="carehome-reviews-preview">
+          <% @reviews_last.each do |review| %>
+            <p> <%= review.content %> <br>
+              <span class="carehome-reviews-justify">- <%= review.user.first_name %></span>
+            </p>
+          <% end %>
+        </div>
+    <% else %>
+      <div class="carehome-no-reviews">
+        <h3>No reviews yet</h3>
+          <%= link_to 'Leave a first review', carehome_reviews_path(@carehome), class: 'submit' %>
+      </div>
+    <% end %>
 
-  <% unless @reviews.count <= 1 %>
-    <div class="carehome-reviews-preview">
-      <% @reviews_last.each do |review| %>
-        <p> <%= review.content %> <br>
-          <span class="carehome-reviews-justify"><%= review.user.first_name %></span>
-        </p>
-      <% end %>
+    <%= link_to carehome_reviews_path(@carehome) do %>
+      <div class="display-button reviews">
+        <button class="submit">See all reviews</button>
+      </div>
+    <% end %>
     </div>
-  <% end %>
 
   </div>

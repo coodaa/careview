@@ -111,7 +111,7 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   padding: 25px 60px;
   // margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   // grid-area: 2 / 2 / 3 / 4;
   h2 {
     border-bottom: 1px solid lightgray;
@@ -132,7 +132,8 @@
 }
 
 .carehome-reviews {
-  background-color: $bg-color;
+  // background-color: $bg-color;
+  margin-bottom: 35px;
   // grid-area: 4 / 2 / end / 4;
   position: relative;
   h3 {
@@ -149,9 +150,8 @@
   }
 
   a {
-    position: absolute;
-    right: 25%;
-    top: 40%;
+    display: flex;
+    justify-content: space-around;
   }
 }
 
@@ -162,11 +162,10 @@
 }
 
 .carehome-reviews-preview {
-  width: 90vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  width: 90vw;
+  margin-right: 20px;
   color: $secondary-color;
   font-size: 2rem;
   margin: 0 auto;
@@ -174,14 +173,15 @@
   p {
     color: $secondary-color;
     font-size: 1.2rem;
-    padding: 25px;
     width: 25%;
+    margin-right: 90px;
   }
 }
 
 .carehome-ratings {
   // grid-area: 3 / 2 / 4 / 4;
   padding: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
@@ -198,8 +198,8 @@
 
   p {
     color: $secondary-color;
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    // font-weight: bold;
     min-width: 300px;
     max-height: 50px;
     text-align: center;
@@ -242,7 +242,7 @@
 .carehome-summary-and-actions {
   display: flex;
   justify-content: space-between;
-  height: 350px;
+  height: 300px;
 }
 
 .carehome-infos-header {
