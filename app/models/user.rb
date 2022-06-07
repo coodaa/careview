@@ -6,10 +6,11 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :chatrooms
   has_many :messages
+  has_one_attached :photo
   acts_as_favoritor
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # validates :email, :encrypted_password, :first_name, :last_name, :phone_number, presence: true
+  validates :email, :encrypted_password, :first_name, :last_name, :phone_number, presence: true
 end

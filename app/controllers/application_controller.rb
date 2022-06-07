@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :turbo_frame_request_variant
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   include Pundit::Authorization
 
@@ -23,5 +24,9 @@ class ApplicationController < ActionController::Base
 
   def turbo_frame_request_variant
     request.variant = :turbo_frame if turbo_frame_request?
+  end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :phone_number, :photo])
   end
 end
