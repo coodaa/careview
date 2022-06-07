@@ -1,11 +1,11 @@
 <div class="container">
 
-  <div class="carehome-infos-small">
+   <div class="carehome-infos-header-review">
     <h2><%= @carehome.name %></h2>
-    <%= link_to 'Back', url_for(:back), class: 'btn-back' %>
+    <%= link_to 'Back to Carehome', carehomes_path , class: 'btn-back' %>
   </div>
 
-  <h5><%= pluralize @carehome.reviews.size, "Review" %></h5>
+  <h5 class="blue"><%= pluralize @carehome.reviews.size, "Review" %></h5>
   <div>
     <% @carehome.reviews.each do |review| %>
 
@@ -22,7 +22,7 @@
               data-controller="review"
               data-review-ratings-value="<%= review.rating %>">
               <div class="carehome-rating-small">
-                <%# Rating %>
+                <p>Overall Experience</p>
                 <div class="carehome-rating-progress" data-review-target="frame">
                   <canvas data-review-target="rating"></canvas>
                 </div>

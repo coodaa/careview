@@ -133,7 +133,6 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                           'Klugstraße 144, 80637 München',
                           'Kleiberweg 115D, 22547 Hamburg',
                           'Kleiner Schäferkamp 43, 20357 Hamburg',
-                          'St. Johannis 10, 20148 Hamburg',
                           'Stückenstraße 1, 22081 Hamburg',
                           ]
 
@@ -152,7 +151,7 @@ description = [
 ]
 
 puts 'Creating new Carehomes ...'
-55.times do
+60.times do
   Carehome.create!(
     address: german_carehome_address.sample,
     name: carehome_names.sample,
@@ -207,7 +206,7 @@ content_for_review = [
 ]
 
 
-150.times do
+200.times do
   Review.create!(
     content: content_for_review.sample,
     carehome: carehomes.sample,
