@@ -29,8 +29,9 @@
                 <p><%= carehome.address %></p>
               </div>
               <div class="carehome-card-rating">
-                <% if careview.rating > 0 %>
-                  <p><%= careview.rating.round(1) %></p>
+                <% unless carehome.reviews.empty? %>
+                <%# raise %>
+                  <p><%= carehome.reviews.average(:rating).to_f.round(1) %></p>
                   <%= image_tag("star-solid.svg", class: "icon-rating") %>
                 <% end %>
               </div>
