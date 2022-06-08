@@ -220,10 +220,13 @@
       </div>
     <% end %>
 
-    <%= link_to carehome_reviews_path(@carehome) do %>
-      <button type="button" class="review-btn">
+    <div data-controller="show-all-reviews">
+      <button type="button" class="review-btn" data-show-all-reviews-target="moreButton" data-action="show-all-reviews#showMore">
         <p>Show all reviews</p>
       </button>
-    <% end %>
+       <button type="button" class="review-btn" data-show-all-reviews-target="lessButton" data-action="show-all-reviews#showLess">
+        <p>Show less</p>
+      </button>
+    </div>
     </div>
 </div>
