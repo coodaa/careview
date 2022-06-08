@@ -28,8 +28,10 @@ class CarehomesController < ApplicationController
   end
 
   def show
+    @message = Message.new
     @chatrooms = policy_scope(Chatroom)
     @chatroom = Chatroom.new
+    authorize @chatroom
     @carehome = Carehome.find(params[:id])
     authorize @carehome
     @marker = {

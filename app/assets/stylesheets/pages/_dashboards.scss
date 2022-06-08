@@ -87,6 +87,35 @@
   overflow-y: auto;
 }
 
+.dashboard-chatrrom-all-item {
+  background-color: $secondary-color;
+  position: relative;
+  height: 20%;
+  color: $bg-color;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: 0.4s ease-in-out;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    right: 0.7rem;
+    top: 0.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0;
+  }
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
 .dashboard-chatroom {
   grid-area: 2 / 3 / 6 / 7;
   border: 0.2rem solid $secondary-color;
