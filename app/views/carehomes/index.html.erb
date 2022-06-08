@@ -29,9 +29,8 @@
                 <p><%= carehome.address %></p>
               </div>
               <div class="carehome-card-rating">
-                <% avg_rating_float = average_rating(carehome) %>
-                <% if avg_rating_float > 0 %>
-                  <p><%= avg_rating_float.round(1) %></p>
+                <% if careview.rating > 0 %>
+                  <p><%= careview.rating.round(1) %></p>
                   <%= image_tag("star-solid.svg", class: "icon-rating") %>
                 <% end %>
               </div>
