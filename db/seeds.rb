@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
 Faker::Config.locale = 'de'
@@ -209,13 +202,18 @@ content_for_review = [
     content: content_for_review.sample,
     carehome: carehomes.sample,
     user: all_user.sample,
-    rating: rate.sample,
     food: rate.sample,
     privacy: rate.sample,
     staff: rate.sample,
     hygiene: rate.sample,
     atmosphere: rate.sample
   )
+end
+
+reviews = Review.all
+reviews.each do |review|
+  review.rating = review.average_ratings
+  review.save
 end
 
 puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
