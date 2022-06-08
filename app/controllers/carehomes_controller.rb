@@ -19,6 +19,16 @@ class CarehomesController < ApplicationController
         image_url: helpers.asset_url("/assets/mapin.png")
       }
     end
+
+    def average_rating(carehome)
+      total_reviews = carehome.reviews.count
+      count = 0
+      carehome.reviews.each do |review|
+        count += review.average_ratings
+      end
+      avr_rating = count / total_reviews
+      return avr_rating.to_f.round(1)
+    end
   end
 
   def toggle_favorite
