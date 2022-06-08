@@ -9,7 +9,6 @@
       <div class="carousel-item active">
         <%= cl_image_tag @carehome.photos[0].key, crop: :fill, class: "d-block w-100" %>
       </div>
-
       <% @carehome.photos.drop(1).each do |photo| %>
         <div class="carousel-item">
           <%= cl_image_tag photo.key, crop: :fill, class: "d-block w-100" %>
@@ -36,15 +35,15 @@
       <div class="carousel-item active">
         <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmV0aXJlbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="d-block w-100">
       </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="d-block w-100">
-        </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="d-block w-100">
+      </div>
     </div>
     <a class="carousel-control-prev" href="#carehomeCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -60,7 +59,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 <div class="carehome-view">
   <div class="carehome-infos-header">
     <h2><%= @carehome.name %></h2>
@@ -75,30 +73,29 @@
     <div class="carehome-actions">
       <div class="carehome-favorite" data-controller="toggle-favorite">
         <%= link_to toggle_favorite_carehome_path(@carehome), data: { "turbo-method": :post, "action": "toggle-favorite#toggleRating" } do %>
-        <div class="carehome-add-favorite" >
-          <% unless current_user.nil? %>
-            <% if current_user.favorited?(@carehome) %>
-              <button type="button" class="btn-favorite">
-                <p data-toggle-favorite-target="text">Remove from your favorites</p>
-                <%= image_tag("star-solid.svg", id: "favorite-btn", class: "favorited", data: { "toggle-favorite-target": "star"} ) %>
-              </button>
-            <% else %>
-              <button type="button" class="btn-favorite">
-                <p data-toggle-favorite-target="text">Add to your favorites</p>
-                <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
-              </button>
+          <div class="carehome-add-favorite" >
+            <% unless current_user.nil? %>
+              <% if current_user.favorited?(@carehome) %>
+                <button type="button" class="btn-favorite">
+                  <p data-toggle-favorite-target="text">Remove from your favorites</p>
+                  <%= image_tag("star-solid.svg", id: "favorite-btn", class: "favorited", data: { "toggle-favorite-target": "star"} ) %>
+                </button>
+              <% else %>
+                <button type="button" class="btn-favorite">
+                  <p data-toggle-favorite-target="text">Add to your favorites</p>
+                  <%= image_tag("star-solid.svg", id: "favorite-btn", data: { "toggle-favorite-target": "star"} ) %>
+                </button>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
         <% end %>
       </div>
       <div>
-          <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
-          <%= render "partials/modalmessage" %>
+        <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
+        <%= render "partials/modalmessage" %>
       </div>
     </div>
   </div>
-
   <div class="carehome-summary-and-actions">
     <div class="col-8 carehome-aligned">
       <div class="carehome-details-frame">
@@ -143,7 +140,6 @@
         </div>
       </div>
     </div>
-
     <div id="show-map"
       class="col-4"
       data-controller="map-view"
@@ -151,82 +147,125 @@
       data-map-view-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
-
-    <div class="ratings mb-20px">
-      <h2>Rating</h2>
-      <% unless @reviews.empty? %>
-        <div class="carehome-ratings"
+  <div class="ratings mb-20px">
+    <h2>Rating</h2>
+    <% unless @reviews.empty? %>
+      <div class="carehome-ratings"
               data-controller="ratings-bar"
               data-ratings-bar-ratings-value="<%= @ratings.to_json %>">
-            <div class="carehome-rating">
-              <p>Total</p>
-                <div class="carehome-rating-progress" data-ratings-bar-target="frame">
-                  <canvas data-ratings-bar-target="rating"></canvas>
-                </div>
-            </div>
-            <div class="carehome-rating">
-              <p>Food</p>
-                <div class="carehome-rating-progress">
-                  <canvas data-ratings-bar-target="food"></canvas>
-                </div>
-            </div>
-            <div class="carehome-rating">
-              <p>Privacy</p>
-                <div class="carehome-rating-progress">
-                  <canvas data-ratings-bar-target="privacy"></canvas>
-                </div>
-            </div>
-            <div class="carehome-rating">
-              <p>Staff</p>
-                <div class="carehome-rating-progress">
-                  <canvas data-ratings-bar-target="staff"></canvas>
-                </div>
-            </div>
-            <div class="carehome-rating">
-              <p>Hygiene</p>
-                <div class="carehome-rating-progress">
-                  <canvas data-ratings-bar-target="hygiene"></canvas>
-                </div>
-            </div>
-            <div class="carehome-rating">
-              <p>Atmosphere</p>
-                <div class="carehome-rating-progress">
-                  <canvas data-ratings-bar-target="atmosphere"></canvas>
-                </div>
-            </div>
+        <div class="carehome-rating">
+          <p>Total</p>
+          <div class="carehome-rating-progress" data-ratings-bar-target="frame">
+            <canvas data-ratings-bar-target="rating"></canvas>
+          </div>
         </div>
+        <div class="carehome-rating">
+          <p>Food</p>
+          <div class="carehome-rating-progress">
+            <canvas data-ratings-bar-target="food"></canvas>
+          </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Privacy</p>
+          <div class="carehome-rating-progress">
+            <canvas data-ratings-bar-target="privacy"></canvas>
+          </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Staff</p>
+          <div class="carehome-rating-progress">
+            <canvas data-ratings-bar-target="staff"></canvas>
+          </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Hygiene</p>
+          <div class="carehome-rating-progress">
+            <canvas data-ratings-bar-target="hygiene"></canvas>
+          </div>
+        </div>
+        <div class="carehome-rating">
+          <p>Atmosphere</p>
+          <div class="carehome-rating-progress">
+            <canvas data-ratings-bar-target="atmosphere"></canvas>
+          </div>
+        </div>
+      </div>
     </div>
-
-      <div class="carehome-reviews">
-        <div class="carehome-reviews-header d-flex justify-content-between mb-3">
-          <h2>Reviews (<%= @carehome.reviews.count %>)</h2>
-          <%= link_to new_carehome_review_path(@carehome) do %>
-            <div class="display-button">
-              <button class="submit">Leave a review</button>
+    <div class="carehome-reviews">
+      <div class="carehome-reviews-header d-flex justify-content-between mb-3">
+        <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
+        <%= link_to new_carehome_review_path(@carehome) do %>
+          <div class="display-button">
+            <button class="submit">Leave a review</button>
+          </div>
+        <% end %>
+      </div>
+      <div class="carehome-reviews-preview">
+        <% @reviews_last.each do |review| %>
+          <div class="card-product">
+            <%= image_tag review.user.image_url, class: "avatar" %>
+            <div class="card-product-infos">
+              <b><%= review.user.first_name %>
+                <%= review.user.last_name %> </b><br>
+              <em class="small-grey"><%= review.created_at.strftime("%B %d, %Y") %></em><br>
+              <div class="small-rating-bar">
+                <div class="carehome-ratings-small"
+                    data-controller="review"
+                    data-review-ratings-value="<%= review.rating %>">
+                  <div class="carehome-rating-small">
+                    <p>Overall Experience</p>
+                    <div class="carehome-rating-progress" data-review-target="frame">
+                      <canvas data-review-target="rating" width="390"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          <% end %>
-        </div>
-        <div class="carehome-reviews-preview">
-          <% @reviews_last.each do |review| %>
-            <p> <%= review.content %> <br>
-              <span class="carehome-reviews-justify">- <%= review.user.first_name %></span>
-            </p>
-          <% end %>
-        </div>
+            <i><%= review.content %></i>
+          </div>
+        <% end %>
+      </div>
     <% else %>
       <div class="carehome-no-reviews">
         <h3>No reviews yet</h3>
-          <%= link_to 'Leave a first review', new_carehome_review_path(@carehome), class: 'submit' %>
+        <%= link_to 'Leave a first review', new_carehome_review_path(@carehome), class: 'submit' %>
       </div>
     <% end %>
-
+    <% if @carehome.reviews.count > 3 %>
     <div data-controller="show-all-reviews">
+      <div data-show-all-reviews-target="allReviews" style="visibility:hidden; height:0px;">
+        <% @reviews_rest.each do |review| %>
+          <%# code from Florian for reviews index => see partial _index_reviews %>
+          <div class="card-product">
+            <%= image_tag review.user.image_url, class: "avatar" %>
+            <div class="card-product-infos">
+              <b><%= review.user.first_name %>
+                <%= review.user.last_name %> </b><br>
+              <em class="small-grey"><%= review.created_at.strftime("%B %d, %Y") %></em><br>
+              <div class="small-rating-bar">
+                <div class="carehome-ratings-small"
+                    data-controller="review"
+                    data-review-ratings-value="<%= review.rating %>">
+                  <div class="carehome-rating-small">
+                    <p>Overall Experience</p>
+                    <div class="carehome-rating-progress" data-review-target="frame">
+                      <canvas data-review-target="rating"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <i><%= review.content %></i>
+          </div>
+        <% end %>
+      </div>
       <button type="button" class="review-btn" data-show-all-reviews-target="moreButton" data-action="show-all-reviews#showMore">
         <p>Show all reviews</p>
       </button>
-       <button type="button" class="review-btn" data-show-all-reviews-target="lessButton" data-action="show-all-reviews#showLess">
+      <button type="button" class="review-btn" data-show-all-reviews-target="lessButton" data-action="show-all-reviews#showLess">
         <p>Show less</p>
       </button>
     </div>
-    </div>
+    <% end %>
+  </div>
 </div>

@@ -53,7 +53,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     @carehome = Carehome.last
-    # change it to params 
+    # change it to params
     authorize @review
     authorize @carehome
   end

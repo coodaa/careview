@@ -159,6 +159,7 @@ GEM
     globalid (1.0.0)
       activesupport (>= 5.0)
     hashie (5.0.0)
+    htmlbeautifier (1.4.2)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -351,6 +352,7 @@ DEPENDENCIES
   faker
   font-awesome-sass (~> 6.1)
   geocoder
+  htmlbeautifier
   jbuilder
   jsbundling-rails
   kaminari
@@ -374,4 +376,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.14
+   2.3.8
