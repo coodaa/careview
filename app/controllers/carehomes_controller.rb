@@ -61,6 +61,7 @@ class CarehomesController < ApplicationController
 
     @reviews = @carehome.reviews
     @reviews_last = @reviews.last(3)
+    @reviews_rest = @reviews - @reviews_last
   end
 
   def new

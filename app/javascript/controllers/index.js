@@ -28,5 +28,8 @@ application.register("ratings-bar", RatingsBarController)
 import ReviewController from "./review_controller.js"
 application.register("review", ReviewController)
 
+import ShowAllReviewsController from "./show_all_reviews_controller.js"
+application.register("show-all-reviews", ShowAllReviewsController)
+
 import ToggleFavoriteController from "./toggle_favorite_controller.js"
 application.register("toggle-favorite", ToggleFavoriteController)
