@@ -3,8 +3,16 @@
   <div class="carehome-infos-header-review">
     <h2><%= @carehome.name %></h2>
     <div class="carehome-no-reviews">
-      <%= link_to 'Write review !', new_carehome_review_path(@carehome), class: 'submit', data: { turbo: false } %>
+      <%# <%= link_to 'Write review !', new_carehome_review_path(@carehome), class: 'submit', data: { turbo: false } %>
+
     </div>
+  <div class="button-filter">
+      <button type="button" class="btn btn-primary filter" data-bs-toggle="modal" data-bs-target="#exampleModal" data-controller="modalfilters"><p>Write Review</p>
+      </button>
+      <%= render "partials/modalreview" %>
+
+
+
   </div>
 
   <div class="move-back-btn">

@@ -1,15 +1,17 @@
-<!-- Large modal -->
-<%# <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> %>
-<%#
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
- %>
-<div class="container">
+      <div class="modal-header">
+        <h5 class="modal-title">Rate this Carehome</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
       <div class="carehome-show-card mt-3">
-        <h4>Rate this Carehome</h4>
+        <%# <h4>Rate this Carehome</h4> %>
         <%= simple_form_for([@carehome, @review]) do |f| %>
-          <%= f.input :content, label: "Leave a Review"%>
+          <%= f.input :content, label: "Your Review"%>
           <div class="flex-container">
             <div class="flex-item">
               <br>
@@ -32,17 +34,13 @@
             <br>
           </div>
           <br>
-          <%= f.submit  "Send your review"%>
+          <%= submit_tag "Save changes", name: nil, class: "btn btn-primary" %>
+          <%# <%= f.submit  "Send your review"%>
         <% end %>
         <br>
       </div>
-</div>
 
-
-
-
-<%#
-
+       </div>
     </div>
   </div>
-</div> %>
+</div>
