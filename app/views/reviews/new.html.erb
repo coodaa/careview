@@ -5,7 +5,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
  %>
-
+<div class="container">
       <div class="carehome-show-card mt-3">
         <h4>Rate this Carehome</h4>
         <%= simple_form_for([@carehome, @review]) do |f| %>
@@ -13,21 +13,21 @@
           <div class="flex-container">
             <div class="flex-item">
               <br>
-              <%= f.input :rating, collection: (1..5).to_a, label: "Rate your Carehome" %>
+              <%= f.input :rating, collection: (1..5).to_a, label: "Overall Experience" %>
               <br>
-              <%= f.input :food, collection: (1..5).to_a, label: "Rate the food in the Carehome" %>
+              <%= f.input :food, collection: (1..5).to_a, label: "Food" %>
             </div>
             <div class="flex-item">
               <br>
-              <%= f.input :privacy, collection: (1..5).to_a, label: "Rate the privacy in the Carehome" %>
+              <%= f.input :privacy, collection: (1..5).to_a, label: "Privacy" %>
               <br>
-              <%= f.input :staff, collection: (1..5).to_a, label: "Rate the staff in the Carehome" %>
+              <%= f.input :staff, collection: (1..5).to_a, label: "Staff" %>
             </div>
             <div class="flex-item">
               <br>
-              <%= f.input :hygiene, collection: (1..5).to_a, label: "Rate the hygiene in the Carehome" %>
+              <%= f.input :hygiene, collection: (1..5).to_a, label: "Hygiene" %>
               <br>
-              <%= f.input :atmosphere, collection: (1..5).to_a, label: "Rate the atmosphere in the Carehome" %>
+              <%= f.input :atmosphere, collection: (1..5).to_a, label: "Atmosphere" %>
             </div>
             <br>
           </div>
@@ -36,25 +36,7 @@
         <% end %>
         <br>
       </div>
-
-
-<div class="col">
-            <div class="box box-green box-example-pill">
-              <div class="box-header">Pill Rating</div>
-              <div class="box-body">
-                <select id="example-pill" name="rating" autocomplete="off">
-                  <option value="A">A</option>
-                  <option value="B">B</option>
-                  <option value="C">C</option>
-                  <option value="D">D</option>
-                  <option value="E">E</option>
-                  <option value="F">F</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-
+</div>
 
 
 
