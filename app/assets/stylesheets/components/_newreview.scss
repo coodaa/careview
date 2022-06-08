@@ -7,7 +7,7 @@
 
 .br-theme-bars-pill .br-widget a.br-active {
   background-color: #ffc83ccc;
-  color: white;
+  color: $secondary-color;
 }
 
 .br-theme-bars-pill .br-widget a.br-selected {
@@ -26,11 +26,11 @@
   margin-left: 11px;
 }
 
-.br-widget:last-child{
-  border-top-right-radius: 50% !important;
-  border-bottom-right-radius: 50% !important;
+// .br-widget:last-child{
+//   border-top-right-radius: 50% !important;
+//   border-bottom-right-radius: 50% !important;
 
-}
+// }
 
 .br-theme-bars-pill .br-widget a.br-selected:last-child {
   background-color: #FFC93C;
@@ -73,22 +73,34 @@
     a {
 
       &:first-child {
-        -webkit-border-top-left-radius: 5px;
-        -webkit-border-bottom-left-radius: 5px;
-        -moz-border-radius-topleft: 5px;
-        -moz-border-radius-bottomleft: 5px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        -webkit-border-top-left-radius: 1px;
+        -webkit-border-bottom-left-radius: 1px;
+        -moz-border-radius-topleft: 1px;
+        -moz-border-radius-bottomleft: 1px;
+        border-top-left-radius: 1px;
+        border-bottom-left-radius: 1px;
       }
       &:last-child {
-        -webkit-border-top-right-radius: 5px;
-        -webkit-border-bottom-right-radius: 5px;
-        -moz-border-radius-topright: 5px;
-        -moz-border-radius-bottomright: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        -webkit-border-top-right-radius: 1px;
+        -webkit-border-bottom-right-radius: 1px;
+        -moz-border-radius-topright: 1px;
+        -moz-border-radius-bottomright: 1px;
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
         margin-right: 10px;
       }
      }
     }
   }
+
+
+
+// a.br-selected.br-current {
+//   border-top-right-radius: 20px !important;
+//   border-bottom-right-radius: 20px !important;
+// }
+
+
+// .textarea.form-control {
+//   height: 30vh;
+// }
