@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import BarsPillController from "./bars_pill_controller.js"
-application.register("bars-pill", BarsPillController)
-
 import ChatroomSubscriptionController from "./chatroom_subscription_controller.js"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
