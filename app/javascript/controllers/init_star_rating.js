@@ -3,27 +3,27 @@ import $ from 'jquery';
 
 const initStarRating = () => {
   $('#review_rating').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 
   $('#review_food').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 
   $('#review_privacy').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 
   $('#review_staff').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 
   $('#review_hygiene').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 
   $('#review_atmosphere').barrating({
-    theme: 'css-stars'
+    theme: 'bars-pill'
   });
 };
 
