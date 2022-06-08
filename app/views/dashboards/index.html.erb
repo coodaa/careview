@@ -38,20 +38,21 @@
        <%= @chatrooms[0].name %>
     </div>
 
-    <div class="dashboard-chatroom" style="overflow:scroll">
-      <div class="messages">
-        <div class="messages" data-chatroom-subscription-target="messages">
-          <% @chatrooms[0].messages.each do |message| %>
-              <%= render "messages/message", message: message %>
-          <% end %>
-        </div>
+    <div class="dashboard-chatroom" style="overflow:scroll" data-chatroom-subscription-target="scroll">
+      <div class="messages" data-chatroom-subscription-target="messages">
+        <% @chatrooms[0].messages.each do |message| %>
+            <%= render "messages/message", message: message %>
+        <% end %>
       </div>
     </div>
 
-        <%= simple_form_for [@chatrooms[0], @message],html: {class: "dashboard-input"} do |f|%>
-          <%= f.input :content,label: false,placeholder: "Message ##{@chatrooms[0].name}",wrapper_html: {class: "dashboard-input-window"}%>
+      <%= simple_form_for [@chatrooms[0], @message],
+        html: { class: "dashboard-input", data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f|%>
+          <%= f.input :content,
+            label: false,placeholder: "Message ##{@chatrooms[0].name}",
+            wrapper_html: {class: "dashboard-input-window"}
+          %>
         <%= f.submit "Send", class: "btn btn-primary mb-3" %>
       <% end %>
   </div>
-  <div class="messages" data-chatroom-subscription-target="messages">
 </div>
