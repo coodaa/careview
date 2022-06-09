@@ -28,7 +28,6 @@ export default class extends Controller {
     ctx.fillRect(0, 0, progress, height);
 
     ctx.fillStyle = '#31326F';
-    console.log(step);
     ctx.font = 'bold 12px Open Sans';
     ctx.fillText(`${rate}`, 15, (height / 1.4));
   }
