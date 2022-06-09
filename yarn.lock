@@ -790,7 +790,7 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 sweetalert@^2.1.2:
   version "2.1.2"
-  resolved "https://registry.npmjs.org/sweetalert/-/sweetalert-2.1.2.tgz"
+  resolved "https://registry.yarnpkg.com/sweetalert/-/sweetalert-2.1.2.tgz#010baaa80d0dbdc86f96bfcaa96b490728594b79"
   integrity sha512-iWx7X4anRBNDa/a+AdTmvAzQtkN1+s4j/JJRWlHpYE8Qimkohs8/XnFcWeYHH2lMA8LRCa5tj2d244If3S/hzA==
   dependencies:
     es6-object-assign "^1.1.0"
