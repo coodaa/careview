@@ -143,7 +143,8 @@ description = [
 ]
 
 puts 'Creating new Carehomes ...'
-60.times do
+count_rnd_pic = 1
+20.times do
   Carehome.create!(
     address: german_carehome_address.sample,
     name: carehome_names.sample,
@@ -167,6 +168,11 @@ puts 'Creating new Carehomes ...'
     description: description.sample,
     user: all_user.sample
   )
+  Carehome.last.photos.attach(
+    io: File.open(Rails.root.join("app/assets/images/carehome_pic_demo/#{count_rnd_pic}.jpg")),
+    filename: "demo_carehome#{count_rnd_pic}.jpg",
+    content_type: "image/jpg")
+  count_rnd_pic += 1
 end
 
 puts 'Creating reviews ...'
