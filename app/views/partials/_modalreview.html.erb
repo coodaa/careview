@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body">
       <div class="carehome-show-card mt-3">
-        <%= simple_form_for([carehome, review] , data: { turbo: false } ) do |f| %>
+        <%= simple_form_for([carehome, review] , html: { data: { turbo: false }} ) do |f| %>
           <%= f.input :content, label: "Your Review"%>
           <div class="flex-container">
             <div class="flex-item">

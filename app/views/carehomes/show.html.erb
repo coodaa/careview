@@ -211,7 +211,9 @@
       <div class="carehome-reviews-preview">
         <% @reviews_last.each do |review| %>
           <div class="card-product">
-            <%= image_tag "https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", class: "avatar" %>
+            <%= image_tag review.user.image_url, class: "avatar" %>
+
+            <%# "https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", %>
             <div class="card-product-infos" id="<%= review.id %>">
               <b><%= review.user.first_name %>
                 <%= review.user.last_name %> </b><br>
@@ -245,7 +247,9 @@
         <% @reviews_rest.each do |review| %>
           <%# code from Florian for reviews index => see partial _index_reviews %>
           <div class="card-product">
-            <%= image_tag "https://pyxis.nymag.com/v1/imgs/74f/d91/f58e53dc74dd3ce4dac9586cede80106b7-04-angela-merkel.rsquare.w700.jpg", class: "avatar" %>
+            <%= image_tag review.user.image_url, class: "avatar" %>
+
+            <%# "https://pyxis.nymag.com/v1/imgs/74f/d91/f58e53dc74dd3ce4dac9586cede80106b7-04-angela-merkel.rsquare.w700.jpg" %>
             <div class="card-product-infos">
               <b><%= review.user.first_name %>
                 <%= review.user.last_name %> </b><br>
