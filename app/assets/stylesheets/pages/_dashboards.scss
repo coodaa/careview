@@ -8,7 +8,7 @@
   height: 90vh;
   width: 100vw;
   display: grid;
-  grid-template: 25vh 1fr 1fr 1fr 1fr 1fr / 5vw 1fr 1fr 1fr 1fr 1fr 5vw;
+  grid-template: 25vh 1fr 1fr 1fr 1fr 1fr / 5vw 0.7fr 0.5fr 1fr 1fr 1fr 5vw;
 }
 
 
@@ -75,6 +75,7 @@
     font-weight: bolder;
     color: $secondary-color;
     margin: 0;
+    padding-left: 3rem;
   }
 }
 
