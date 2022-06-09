@@ -1,4 +1,4 @@
-<div class="modal" id="reviewModal" tabindex="-1" role="dialog">
+<div class="modal" id="reviewModal" tabindex="-1" role="dialog",data: { turbo: false }>
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -9,7 +9,6 @@
       </div>
       <div class="modal-body">
       <div class="carehome-show-card mt-3">
-        <%# <h4>Rate this Carehome</h4> %>
         <%= simple_form_for([carehome, review]) do |f| %>
           <%= f.input :content, label: "Your Review"%>
           <div class="flex-container">
@@ -35,7 +34,6 @@
           </div>
           <br>
           <%= submit_tag "Save changes", name: nil, class: "btn btn-primary" %>
-          <%# <%= f.submit  "Send your review"%>
         <% end %>
         <br>
       </div>

@@ -1,3 +1,4 @@
+
 .br-theme-bars-pill .br-widget a {
   // padding: 7px 15px;
   background-color: $secondary-color;
@@ -24,11 +25,7 @@
   margin-left: 11px;
 }
 
-// .br-widget:last-child{
-//   border-top-right-radius: 50% !important;
-//   border-bottom-right-radius: 50% !important;
 
-// }
 
 .br-theme-bars-pill .br-widget a.br-selected:last-child {
   background-color: #FFC93C;
@@ -69,7 +66,6 @@
   .br-widget {
     white-space: nowrap;
     a {
-
       &:first-child {
         -webkit-border-top-left-radius: 1px;
         -webkit-border-bottom-left-radius: 1px;
@@ -87,18 +83,18 @@
         border-bottom-right-radius: 1px;
         margin-right: 10px;
       }
-     }
     }
   }
+}
 
 
+.textarea.form-control {
+    height: 20vh !important;
+    width: 59vh !important;
+}
 
-// a.br-selected.br-current {
-//   border-top-right-radius: 20px !important;
-//   border-bottom-right-radius: 20px !important;
-// }
-
-
-// .textarea.form-control {
-//   height: 30vh;
-// }
+.flex-item{
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+}
