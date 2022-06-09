@@ -50,7 +50,7 @@ class CarehomesController < ApplicationController
       @carehome.reviews.each do |review|
         count += review.average_ratings
       end
-      average_rating = count / total_reviews
+      average_rating = count.to_f.round(1) / total_reviews
 
       @ratings = {
         rating: average_rating.round(1),
