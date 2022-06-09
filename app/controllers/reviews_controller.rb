@@ -11,9 +11,9 @@ class ReviewsController < ApplicationController
     @carehome = Carehome.find(params[:carehome_id])
     @review.carehome = @carehome
     if @review.save
-      redirect_to carehome_reviews_path(@carehome)
+      redirect_to carehome_path(@carehome)
     else
-      render 'reviews/index', status: :unprocessable_entity
+      render 'carehome', status: :unprocessable_entity
     end
     authorize @review
   end
