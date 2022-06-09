@@ -41,7 +41,8 @@
     // text-shadow: 5px 5px 10px rgba(0,0,0,0.8);
   }
   a {
-    color: rgb(155, 221, 235) !important;
+    color: $secondary-color !important;
+    transition: 0.5s ease-in-out;
   }
 
   .color-for-nav {
