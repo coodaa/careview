@@ -5,7 +5,7 @@ class CarehomesController < ApplicationController
   def index
     @carehomes = policy_scope(Carehome).page params[:page]
     if params[:query].present?
-      @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
+      @carehomes = Carehome.where("address ILIKE ?", "%#{params[:query]}%").page params[:page]
       # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
       @carehomes = filter_homes(@carehomes)
     else
