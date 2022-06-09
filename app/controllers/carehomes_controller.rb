@@ -62,8 +62,8 @@ class CarehomesController < ApplicationController
       }
     end
 
-    @reviews = @carehome.reviews
-    @reviews_last = @reviews.last(3)
+    @reviews = @carehome.reviews.order(:created_at)
+    @reviews_last = @reviews.last(3).reverse
     @reviews_rest = @reviews - @reviews_last
   end
 

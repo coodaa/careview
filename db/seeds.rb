@@ -9,6 +9,7 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
+
 User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
 User.create(email: 'f@bb.com', password: 'qwertz12', first_name: 'León', last_name: 'Langhoff', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FM6HF2S1-1dda31f4f94d-512")
@@ -91,7 +92,7 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                            'Büschingstraße 29, 10249 Berlin Germany',
                            'Am Friedrichshain 18, 10407 Berlin Germany',
                            'Büschingstraße 29, 10249 Berlin Germany',
-                           'Volkradstraße 28, 10319 BerlinGermany',
+                           'Volkradstraße 28, 10319 Berlin Germany',
                            'Neumühlen 37, 22763 Hamburg Germany',
                            'Mellenbergweg 19, 22359 Hamburg Germany',
                            'Stückenstraße 1, 22081 Hamburg Germany',
