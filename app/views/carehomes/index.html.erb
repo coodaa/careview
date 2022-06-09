@@ -20,8 +20,8 @@
         <div class="carehome-card">
           <%= link_to carehome_path(carehome) do %>
             <div
-            class="carehome-card-image"
-            style= "background-image: url('<%= image_path("default-carehome.jpg") %>')">
+            class="carehome-card-image">
+              <%= cl_image_tag carehome.photos[0].key, crop: :fill %>
             </div>
             <div class="carehome-card-header d-flex justify-content-between">
               <div class="carehome-card-content">
@@ -30,7 +30,6 @@
               </div>
               <div class="carehome-card-rating">
                 <% unless carehome.reviews.empty? %>
-                <%# raise %>
                   <p><%= carehome.reviews.average(:rating).to_f.round(1) %></p>
                   <%= image_tag("star-solid.svg", class: "icon-rating") %>
                 <% end %>
