@@ -5,6 +5,6 @@ class Review < ApplicationRecord
   validates :content, presence: true
 
   def average_ratings
-    (food + privacy + staff + hygiene + atmosphere).to_f / 5
+    (food + privacy + staff + hygiene + atmosphere) / 5
   end
 end

@@ -5,7 +5,7 @@ class CarehomesController < ApplicationController
   def index
     @carehomes = policy_scope(Carehome).page params[:page]
     if params[:query].present?
-      @carehomes = Carehome.where("address LIKE ?", "%#{params[:query]}%").page params[:page]
+      @carehomes = Carehome.where("address ILIKE ?", "%#{params[:query]}%").page params[:page]
       # @carehomes = Carehome.search(params[:query], fields: [:name, :address], match: :word_middle)
       @carehomes = filter_homes(@carehomes)
     else
@@ -50,7 +50,7 @@ class CarehomesController < ApplicationController
       @carehome.reviews.each do |review|
         count += review.average_ratings
       end
-      average_rating = count / total_reviews
+      average_rating = count.to_f.round(1) / total_reviews
 
       @ratings = {
         rating: average_rating.round(1),
