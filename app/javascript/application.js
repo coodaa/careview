@@ -4,14 +4,14 @@ import "./controllers"
 import "bootstrap"
 
 import { initStarRating } from './controllers/init_star_rating';
-
+window.initStarRating = initStarRating
 initStarRating();
 
 import { initSweetalert } from './controllers/init_sweetalert';
 
 initSweetalert('#sweet-alert', {
   title: "Thanks",
-  text: "The Message was sent",
+  text: "Your message was sent",
   icon: "success"
 }, (value) => {
   console.log(value);
