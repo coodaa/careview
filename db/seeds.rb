@@ -1,4 +1,5 @@
 require 'faker'
+require "open-uri"
 
 Faker::Config.locale = 'de'
 
@@ -7,8 +8,6 @@ Carehome.destroy_all
 
 puts 'deleting current Users'
 User.destroy_all
-
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021',image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
 User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
@@ -227,10 +226,25 @@ content_for_review = [
   )
 end
 
+demo_user = User.create(email: 'aa@bb.com',
+    password: 'qwertz12',
+    first_name: 'Sebi',
+    last_name: 'Remm',
+    phone_number: '+49 173 4728021',
+    image_url: "https://ca.slack-edge.com/T02NE0241-U03AS5M8DCM-cc21860a9b0d-512")
+
+file = URI.open("https://ca.slack-edge.com/T02NE0241-U03AS5M8DCM-cc21860a9b0d-512")
+
+demo_user.photo.attach(
+  io: file,
+  filename: "demo_user.jpg",
+  content_type: "image/jpg")
+demo_user.save
+
 reviews = Review.all
 reviews.each do |review|
   review.rating = review.average_ratings
   review.save
 end
 
-puts 'User acount for testing - Email: aa@bb.com Password: qwertz12'
+puts 'User acount for DEMO - Email: aa@bb.com Password: qwertz12'
