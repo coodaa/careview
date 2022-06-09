@@ -92,7 +92,7 @@
       </div>
       <div>
         <button type="button" class="btn-contact" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo" data-controller="modalmessage">Send Message</button>
-        <%= render "partials/modalmessage" %>
+        <%= render "partials/modalmessagedashboard" %>
       </div>
     </div>
   </div>
@@ -201,14 +201,15 @@
         <%# <% end %>
 
         <div class="button-filter">
-          <button type="button" class="btn btn-primary submit filter", data: { turbo: false } data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
+          <button type="button" class="submit filter" data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters", data: { turbo: false }><p>Leave a Review</p>
           </button>
           <%= render "partials/modalreview", carehome: @carehome, review: @review%>
         </div>
 
+
       </div>
       <div class="carehome-reviews-preview">
-        <% @reviews_last.each do |review| %>
+        <% @reviews_last.reverse.each do |review| %>
           <div class="card-product">
             <%= image_tag review.user.image_url, class: "avatar" %>
             <div class="card-product-infos">
@@ -252,7 +253,7 @@
               <div class="small-rating-bar">
                 <div class="carehome-ratings-small"
                     data-controller="review"
-                    data-review-ratings-value="<%= review.rating %>">
+                    data-review-ratings-value="<%= review.average_ratings.to_f %>">
                   <div class="carehome-rating-small">
                     <p>Overall Experience</p>
                     <div class="carehome-rating-progress" data-review-target="frame" style="width: 390px;">

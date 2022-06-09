@@ -8,7 +8,7 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021',image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
 User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
@@ -31,16 +31,16 @@ User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Nina', last_na
 User.create(email: 'l@bb.com', password: 'qwertz12', first_name: 'Barack', last_name: 'Obama', phone_number: '+49 173 4728021', image_url: "https://www.silicon.co.uk/wp-content/uploads/2012/01/obamasquare2.png")
 
 male_profile_pics = ['https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80',
-'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1562124638-724e13052daf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1567476445327-705d1b3780de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
-'https://images.unsplash.com/photo-1561688711-a98d0cfd30a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
-'https://images.unsplash.com/photo-1603924498829-ce16c0da32aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
-'https://images.unsplash.com/photo-1608649672519-e8797a9560cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
-'https://images.unsplash.com/photo-1509399693673-755307bfc4e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
-'https://images.unsplash.com/photo-1524703733404-22ca50ae45ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbiUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60'
+  'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1562124638-724e13052daf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1567476445327-705d1b3780de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1561688711-a98d0cfd30a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
+  'https://images.unsplash.com/photo-1603924498829-ce16c0da32aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fG1hbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
+  'https://images.unsplash.com/photo-1608649672519-e8797a9560cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwb2xkfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=700&q=60',
+  'https://images.unsplash.com/photo-1509399693673-755307bfc4e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
+  'https://images.unsplash.com/photo-1524703733404-22ca50ae45ac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1hbiUyMG9sZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60'
 ]
 
 # male names
@@ -69,7 +69,7 @@ female_profile_pics = [
   'https://images.unsplash.com/photo-1547212371-eb5e6a4b590c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHdvbWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1530577197743-7adf14294584?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTh8fHdvbWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
   'https://images.unsplash.com/photo-1513091550446-33297bfca05b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fHdvbWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=700&q=60',
-  ]
+]
 
 # female names
 8.times do
@@ -80,7 +80,7 @@ female_profile_pics = [
     first_name: Faker::Name.female_first_name,
     last_name: Faker::Name.last_name,
     phone_number: Faker::PhoneNumber,
-    image_url: female_profile_pics.sample,
+    image_url: female_profile_pics.sample
   )
 end
 
@@ -102,31 +102,31 @@ german_carehome_address = ['Alfred-Jung-Straße 17, 10367 Berlin Germany',
                            'Max-Joseph-Straße 48, 68167 Mannheim Germany',
                            'Minneburgstraße 66, 68219 Mannheim Germany',
                            'Viehhofstraße 27, 68165 Mannheim Germany',
-                           'Potsdamer Str. 24, 14163 Berlin',
-                          'Späthstraße 9, 12359 Berlin',
-                          'Hohensteiner Str. 6-12, 14197 Berlin',
-                          'Berkaer Str. 31-35, 14199 Berlin',
-                          'Herbartstraße 24, 14057 Berlin',
-                          'Herbartstraße 24, 14057 Berlin',
-                          'Lützowstraße 24, 10785 Berlin',
-                          'Hauptstraße 121A, 10827 Berlin',
-                          'Am Köhlerhof 6-8, 24576 Bad Bramstedt',
-                          'Mellenbergweg 19, 22359 Hamburg',
-                          'Mittelweg 106, 20149 Hamburg',
-                          'Elfsaal 20, 22043 Hamburg',
-                          'Finkenau 11, 22081 Hamburg',
-                          'Gotthardstraße 138, 80689 München',
-                          'Berrschestraße 2, 81245 München',
-                          'Lorenz-Hagen-Weg 10, 81737 München',
-                          'Hiltenspergerstraße 76, 80796 München',
-                          'Greinerberg 17, 81371 München',
-                          'Weitlstraße 66, 80935 München',
-                          'Klenzestraße 70, 80469 München',
-                          'Klugstraße 144, 80637 München',
-                          'Kleiberweg 115D, 22547 Hamburg',
-                          'Kleiner Schäferkamp 43, 20357 Hamburg',
-                          'Stückenstraße 1, 22081 Hamburg',
-                          ]
+                           'Potsdamer Str. 24, 14163 Berlin Germany',
+                           'Späthstraße 9, 12359 Berlin Germany',
+                           'Hohensteiner Str. 6-12, 14197 Berlin Germany',
+                           'Berkaer Str. 31-35, 14199 Berlin Germany',
+                           'Herbartstraße 24, 14057 Berlin Germany',
+                           'Herbartstraße 24, 14057 Berlin Germany',
+                           'Lützowstraße 24, 10785 Berlin Germany',
+                           'Hauptstraße 121A, 10827 Berlin Germany',
+                           'Am Köhlerhof 6-8, 24576 Bad Bramstedt Germany',
+                           'Mellenbergweg 19, 22359 Hamburg Germany',
+                           'Mittelweg 106, 20149 Hamburg Germany',
+                           'Elfsaal 20, 22043 Hamburg Germany',
+                           'Finkenau 11, 22081 Hamburg Germany',
+                           'Gotthardstraße 138, 80689 München Germany',
+                           'Berrschestraße 2, 81245 München Germany',
+                           'Lorenz-Hagen-Weg 10, 81737 München Germany',
+                           'Hiltenspergerstraße 76, 80796 München Germany',
+                           'Greinerberg 17, 81371 München Germany',
+                           'Weitlstraße 66, 80935 München Germany',
+                           'Klenzestraße 70, 80469 München Germany',
+                           'Klugstraße 144, 80637 München Germany',
+                           'Kleiberweg 115D, 22547 Hamburg Germany',
+                           'Kleiner Schäferkamp 43, 20357 Hamburg Germany',
+                           'Stückenstraße 1, 22081 Hamburg Germany',
+                           'Brandenburger Str. 2A, 04103 Leipzig Germany']
 
 carehome_names = ['Marienstift', 'Seniorenstiftung', 'Pflegehaus','Seniorenzentrum Werner', 'Seniorenzentrum Tegel', 'Seniorenzentrum Mitte', 'Seniorenstift', 'Seniorenstift Mitte', 'Pflegeheim Pinecki', 'Pflegeheim Schmidt', 'Pflegeheim Käfer', 'Pflegeheim Sonne', 'Pflegeheim Sommer', 'Evangelisches Seniorenheim', 'Seniorendomizil Helga', 'Seniorendomizil Sommer', 'Haus Christophorus']
 
@@ -200,7 +200,18 @@ content_for_review = [
   'My Nan has fantastic care. This care is provided by a pleasant, hardworking caring staff who have my Nans best interests at heart. She is well looked after and is always well turned out and clean. It gives me peace of mind that my Nan is in a safe, secure environment.',
   'Staff were understanding of my needs as the daughter and of my mothers needs. The staff treated mum with respect and tenderness, clearly aware of her needs and habits. Very grateful for the care they are taking of my mum.',
   'I am happy in the home. I am looked after well and get on well with the staff. I enjoy the meals provided. Often I have health problems, they are quickly dealt with. I enjoy the entertainment provided during the week but would like more trips out.',
-  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.'
+  'I have not been here very long but I have settled in very well. The staff are great and always have time for me if I need any help nothing is a bother. The food is great with plenty of choices. I enjoy the entertainment there is always plenty of things to do. Today we went to a local pub for lunch then we had a drive to Seaham it was lovely.',
+  'Absolutely great as an employer! The staff are also super friendly and are always on hand to offer advice and assistance. I found my dream job here. I really enjoy working with people and it never gets boring. The everyday program is varied and varied. A lot is offered to the residents. Excursions are also very well chosen, as well as the cultural events in the house. One or two things could be expanded, but otherwise absolutely recommendable. For young and old!',
+  "The receptionist is really super nice .. And otherwise it's really nice there. But it is cheeky that you go to the interview and then you are told to contact me at the beginning of the week and nothing comes of it. The position is simply put online again.",
+  "It's a pity what has become of this house, it used to be a home for old and sick people. For a few years now, you've felt that nobody is taking care of the house anymore. The carers are doing their best, but nobody knows what will happen, when you have to move out because the house is sold. Bad stuff and the staff where does that go? No one knows the answer, just sad. It must be possible to offer all these people a home and a job in the years to come without having to make a big move for the elderly.",
+  "The home is very centrally located, which unfortunately also causes my points to be deducted due to the poor parking situation for a large car. The care team takes care of my concerns about my mother immediately and always in a friendly manner. In my opinion (as a visitor) the home is well furnished and a lot is being done for the residents.",
+  "My mother has lived in this home for 6 years. Every time she visits, she tells me how kindly the nursing staff takes care of her. The fact that there have been no Covid 19 infections among the residents so far is particularly noteworthy!",
+  "Our father lived in the Probstheida retirement home for 9 years. Initially with his wife, who unfortunately passed away in 2017. The care was professional and loving. We were very happy that our father could also be cared for palliatively in the home. That took a lot of burden off us, we were able to visit him every day and see for ourselves how well he was cared for. The preparation of the room has done us a lot as relatives.",
+  "Since Corona has been with us for more than a year now, I would like to thank the friendly staff of the care facility of the Albert-Schweitzer-Heim (Diakonie) in Täubchenweg. Despite the renovation and the pandemic, the carers and the administration always have an open ear for the concerns and small needs of my mom and me as relatives. Again thank yyou very much",
+  "Very committed employees in all areas, I can't say of all, but some people are just out of place without noticing it. As far as the nursing staff is concerned, I can only say hats off to anyone who is still doing it under these conditions.",
+  "As a contractor is always a pleasure to work at Cheverton Lodge.The team is fantastic, always polite and carrying. We are treated with respect, friendly words and always thanked for our work.",
+  "Outstanding home with lovely staff ......Nice to see residents happy and engaged",
+  "Lovely home, very friendly staff."
 ]
 
 200.times do

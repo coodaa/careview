@@ -133,8 +133,9 @@
 
 .carehome-reviews {
   // background-color: $bg-color;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   // grid-area: 4 / 2 / end / 4;
+  margin-top: 35px;
   position: relative;
   h3 {
     color: $secondary-color;
@@ -147,11 +148,6 @@
     color: $secondary-color;
     font-size: 1.2rem;
     // width: 40%;
-  }
-
-  a {
-    display: flex;
-    justify-content: flex-start;
   }
 }
 
