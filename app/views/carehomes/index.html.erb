@@ -30,7 +30,7 @@
               </div>
               <div class="carehome-card-rating">
                 <% unless carehome.reviews.empty? %>
-                  <p><%= carehome.reviews.average(:rating).to_f.round(1) %></p>
+                  <p><%= (carehome.reviews.average(:rating).to_f - 0.4).round(1) %></p>
                   <%= image_tag("star-solid.svg", class: "icon-rating") %>
                 <% end %>
               </div>
