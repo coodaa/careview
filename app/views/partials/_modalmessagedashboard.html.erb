@@ -5,22 +5,22 @@
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatrooms[0].id %>"
 >
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" data-chatroom-subscription-target="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close", data-chatroom-subscription-target="close", data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
               <div>
                   <%= simple_form_for [@chatrooms[0], @message],
-                    html: { class: "dashboard-input-chat", data: { action: "turbo:submit-end->chatroom-subscription#resetForm" } } do |f|%>
+                    html: { class: "dashboard-input-chat"} do |f|%>
                       <%= f.text_area :content,
                         label: false,placeholder: "Message ##{@chatrooms[0].name}",
                         wrapper_html: {class: "dashboard-input-window-chat"}
                       %>
-                    <%= f.submit "Send", id:"sweet-alert", class: "btn btn-primary" %>
+                    <%= f.submit "Send", id:"sweet-alert", class: "btn btn-primary", data: { action: "click->chatroom-subscription#closeForm" } %>
                   <% end %>
               </div>
           </div>

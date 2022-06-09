@@ -3,7 +3,7 @@ import { createConsumer } from "@rails/actioncable"
 
 export default class extends Controller {
   static values = { chatroomId: Number, userId: Number }
-  static targets = ["messages", "scroll"]
+  static targets = ["messages", "scroll", "modal", "close"]
 
   connect() {
     console.log("we are connected!");
@@ -31,6 +31,10 @@ export default class extends Controller {
 
   resetForm(event) {
     event.target.reset();
+  }
+
+  closeForm(){
+    this.closeTarget.click();
   }
 
 }
