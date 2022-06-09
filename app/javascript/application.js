@@ -11,7 +11,7 @@ import { initSweetalert } from './controllers/init_sweetalert';
 
 initSweetalert('#sweet-alert', {
   title: "Thanks",
-  text: "The Message was send",
+  text: "Your message was sent",
   icon: "success"
 }, (value) => {
   console.log(value);
