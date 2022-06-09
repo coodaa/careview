@@ -8,7 +8,7 @@ Carehome.destroy_all
 puts 'deleting current Users'
 User.destroy_all
 
-User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021',image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
+User.create(email: 'aa@bb.com', password: 'qwertz12', first_name: 'Sebi', last_name: 'Remm', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U01112279QU-32e6c9d36a8d-512")
 
 User.create(email: 'a@bb.com', password: 'qwertz12', first_name: 'Emma', last_name: 'Rünzel', phone_number: '+49 173 4728021', image_url: "https://ca.slack-edge.com/T02NE0241-U02FW703QBZ-210ec2150a11-512")
 
