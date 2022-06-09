@@ -194,15 +194,18 @@
     <div class="carehome-reviews">
       <div class="carehome-reviews-header d-flex justify-content-between mb-3">
         <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
-        <%= link_to new_carehome_review_path(@carehome) do %>
-          <div class="display-button">
-            <button class="submit">Leave a review</button>
-          </div>
-          <%# <div class="button-filter">
-          <button type="button" class="btn btn-primary filter" data-bs-toggle="modal" data-bs-target="#exampleModal" data-controller="modalfilters"><p>Write Review</p>
+        <%# <%= link_to new_carehome_review_path(@carehome) do %>
+        <%# <div class="display-button">
+        <button class="submit">Leave a review</button>
+        </div> %>
+        <%# <% end %>
+
+        <div class="button-filter">
+          <button type="button" class="btn btn-primary submit filter", data: { turbo: false } data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
           </button>
-          <%= render "partials/modalreview" %>
-        <% end %>
+          <%= render "partials/modalreview", carehome: @carehome, review: @review%>
+        </div>
+
       </div>
       <div class="carehome-reviews-preview">
         <% @reviews_last.each do |review| %>

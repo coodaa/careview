@@ -33,9 +33,10 @@ class CarehomesController < ApplicationController
     @chatroom = Chatroom.new
     authorize @chatroom
     @carehome = Carehome.find(params[:id])
-    # @carehome_new = Carehome.new
-    # @review = Review.new
     authorize @carehome
+    # @carehome_new = Carehome.new
+    @review = Review.new
+    authorize @review
     @marker = {
       lat: @carehome.latitude,
       lng: @carehome.longitude,

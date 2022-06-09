@@ -6,11 +6,11 @@
       <%# <%= link_to 'Write review !', new_carehome_review_path(@carehome), class: 'submit', data: { turbo: false } %>
     </div>
 
-    <%# <div class="button-filter">
-      <button type="button" class="btn btn-primary filter" data-bs-toggle="modal" data-bs-target="#exampleModal" data-controller="modalfilters"><p>Write Review</p>
-      </button> %>
-      <%# <%= render "partials/modalreview" %> %>
-    <%# </div> %>
+        <div class="button-filter">
+          <button type="button" class="btn btn-primary submit filter", data: { turbo: false } data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
+          </button>
+          <%= render "partials/modalreview", carehome: @carehome, review: @review%>
+        </div>
 
     <div class="move-back-btn">
       <%= link_to 'Back to Carehome', carehomes_path , class: 'btn-back' %>
