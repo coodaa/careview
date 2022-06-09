@@ -201,7 +201,7 @@
         <%# <% end %>
 
         <div class="button-filter">
-          <button type="button" class="submit filter" data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
+          <button type="button" class="submit filter" data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters" data-turbo="false" onclick="initStarRating()"><p>Leave a Review</p>
           </button>
           <%= render "partials/modalreview", carehome: @carehome, review: @review%>
         </div>
