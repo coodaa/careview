@@ -4,7 +4,7 @@ import "./controllers"
 import "bootstrap"
 
 import { initStarRating } from './controllers/init_star_rating';
-
+window.initStarRating = initStarRating
 initStarRating();
 
 import { initSweetalert } from './controllers/init_sweetalert';
