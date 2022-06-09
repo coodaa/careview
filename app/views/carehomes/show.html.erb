@@ -209,7 +209,7 @@
 
       </div>
       <div class="carehome-reviews-preview">
-        <% @reviews_last.each do |review| %>
+        <% @reviews_last.reverse.each do |review| %>
           <div class="card-product">
             <%= image_tag review.user.image_url, class: "avatar" %>
             <div class="card-product-infos">
@@ -253,7 +253,7 @@
               <div class="small-rating-bar">
                 <div class="carehome-ratings-small"
                     data-controller="review"
-                    data-review-ratings-value="<%= review.rating %>">
+                    data-review-ratings-value="<%= review.average_ratings.to_f %>">
                   <div class="carehome-rating-small">
                     <p>Overall Experience</p>
                     <div class="carehome-rating-progress" data-review-target="frame" style="width: 390px;">

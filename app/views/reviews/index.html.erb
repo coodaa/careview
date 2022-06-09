@@ -24,31 +24,31 @@
     </div>
   </div>
 
-    <div>
-      <% @carehome.reviews.each do |review| %>
+  <div>
+    <% @carehome.reviews.each do |review| %>
 
-        <div class="card-product">
-          <%= image_tag review.user.image_url, class: "avatar" %>
-          <div class="card-product-infos">
-            <b><%= review.user.first_name %>
-            <%= review.user.last_name %> </b><br>
-            <em class="small-grey"><%= review.created_at.strftime("%B %d, %Y") %></em><br>
+      <div class="card-product">
+        <%= image_tag review.user.image_url, class: "avatar" %>
+        <div class="card-product-infos">
+          <b><%= review.user.first_name %>
+          <%= review.user.last_name %> </b><br>
+          <em class="small-grey"><%= review.created_at.strftime("%B %d, %Y") %></em><br>
 
-            <div class="small-rating-bar">
-              <div class="carehome-ratings-small"
-                data-controller="review"
-                data-review-ratings-value="<%= review.rating %>">
-                <div class="carehome-rating-small">
-                  <p>Overall Experience</p>
-                  <div class="carehome-rating-progress" data-review-target="frame">
-                    <canvas data-review-target="rating"></canvas>
-                  </div>
+          <div class="small-rating-bar">
+            <div class="carehome-ratings-small"
+              data-controller="review"
+              data-review-ratings-value="<%= review.rating %>">
+              <div class="carehome-rating-small">
+                <p>Overall Experience</p>
+                <div class="carehome-rating-progress" data-review-target="frame">
+                  <canvas data-review-target="rating"></canvas>
                 </div>
               </div>
             </div>
-            <i><%= review.content %></i>
           </div>
+          <i><%= review.content %></i>
         </div>
-      <%end%>
-    </div>
+      </div>
+    <%end%>
+  </div>
 </div>
