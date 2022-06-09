@@ -2,23 +2,27 @@
 
   <div class="carehome-infos-header-review">
     <h2><%= @carehome.name %></h2>
-    <div class="carehome-no-reviews">
+     <%# <div class="carehome-no-reviews"> %>
       <%# <%= link_to 'Write review !', new_carehome_review_path(@carehome), class: 'submit', data: { turbo: false } %>
-    </div>
 
-        <div class="button-filter">
-          <button type="button" class="btn btn-primary submit filter", data: { turbo: false } data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
-          </button>
-          <%= render "partials/modalreview", carehome: @carehome, review: @review%>
-        </div>
+
+    <%# MY WORKING BUTTON %>
+    <%# <div class="button-filter">
+      <button type="button" class="btn btn-primary submit filter", data: { turbo: false } data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters"><p>Leave a Review</p>
+      </button>
+      <%= render "partials/modalreview", carehome: @carehome, review: @review%>
+    <%# </div> %>
+
+    <%# </div> %>
 
     <div class="move-back-btn">
-      <%= link_to 'Back to Carehome', carehomes_path , class: 'btn-back' %>
+      <%= link_to 'Back to Index', carehomes_path , class: 'btn-back' %>
     </div>
 
     <div class="space-between-btn">
       <h5 class="blue"><%= pluralize @carehome.reviews.size, "Review" %></h5>
     </div>
+  </div>
 
     <div>
       <% @carehome.reviews.each do |review| %>
@@ -43,10 +47,8 @@
               </div>
             </div>
             <i><%= review.content %></i>
-            <%# <i><%= review.rating %></i>
           </div>
         </div>
       <%end%>
     </div>
-  </div>
 </div>

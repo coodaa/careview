@@ -2,6 +2,7 @@ import "jquery-bar-rating";
 import $ from 'jquery';
 
 const initStarRating = () => {
+  console.log('init star rating')
   $('#review_rating').barrating({
     theme: 'bars-pill'
   });
