@@ -5,15 +5,13 @@
 >
   <div class="dashboard-user">
     <div class="dashboard-info">
-      <h2>Hi <%= current_user.first_name %>, this is your dashboard.</h2>
+      <h2>Hi <%= current_user.first_name %>, welcome on your dashboard.</h2>
       <div class="dashboard-info-text">
-        <p> <%= current_user.first_name %>
-          <%= current_user.last_name %>
-        </p> <br>
-        <p> <%= current_user.email %> </p>
-        <p> <%= current_user.phone_number %> </p>
+        <p>Full name: <%= current_user.first_name %> <%= current_user.last_name %></p>
+        <p>Email: <%= current_user.email %></p>
+        <p>Phone number: <%= current_user.phone_number %> </p>
       </div>
-      <%= link_to 'Edit', '#', class: 'btn-back' %>
+      <%# <%= link_to 'Edit', '#', class: 'btn-back' %>
     </div>
 
     <div class="dashboard-favorite">
@@ -36,9 +34,9 @@
 
     <div class="dashboard-chatrooms-all">
       <div class="dashboard-chatrrom-all-item">
-        <img src="" alt="">
+        <%# <img src="" alt=""> %>
         <p>Carehome 1</p>
-        <p>New message !</p>
+        <%# <p>New message</p> %>
       </div>
     </div>
 
