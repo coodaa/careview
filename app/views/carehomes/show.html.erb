@@ -190,15 +190,13 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
+
+      <%# REVIEWS %>
+    <% unless @carehome.reviews.empty? %>
     <div class="carehome-reviews">
       <div class="carehome-reviews-header d-flex justify-content-between mb-3">
         <h2><%= pluralize @carehome.reviews.size, "Review" %></h2>
-        <%# <%= link_to new_carehome_review_path(@carehome) do %>
-        <%# <div class="display-button">
-        <button class="submit">Leave a review</button>
-        </div> %>
-        <%# <% end %>
 
         <div class="button-filter">
           <button type="button" class="submit filter" data-bs-toggle="modal" data-bs-target="#reviewModal" data-controller="modalfilters" data-turbo="false" onclick="initStarRating()"><p>Leave a Review</p>
@@ -211,9 +209,14 @@
       <div class="carehome-reviews-preview">
         <% @reviews_last.each do |review| %>
           <div class="card-product">
+          <% unless review.user.image_url.nil? %>
             <%= image_tag review.user.image_url, class: "avatar" %>
+          <% else %>
+            <%= image_tag 'https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false,height: 55, resize_to_fit: [55, 55] %>
+          <% end %>
 
-            <%# "https://images.unsplash.com/photo-1628836484143-973cf87a36fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJldGlyZW1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60", %>
+
+
             <div class="card-product-infos" id="<%= review.id %>">
               <b><%= review.user.first_name %>
                 <%= review.user.last_name %> </b><br>
@@ -235,6 +238,7 @@
           </div>
         <% end %>
       </div>
+        <% end %>
     <% else %>
       <div class="carehome-no-reviews">
         <h3>No reviews yet</h3>
@@ -245,11 +249,11 @@
     <div data-controller="show-all-reviews">
       <div data-show-all-reviews-target="allReviews" style="visibility:hidden; height:0px;">
         <% @reviews_rest.each do |review| %>
-          <%# code from Florian for reviews index => see partial _index_reviews %>
+
           <div class="card-product">
             <%= image_tag review.user.image_url, class: "avatar" %>
 
-            <%# "https://pyxis.nymag.com/v1/imgs/74f/d91/f58e53dc74dd3ce4dac9586cede80106b7-04-angela-merkel.rsquare.w700.jpg" %>
+
             <div class="card-product-infos">
               <b><%= review.user.first_name %>
                 <%= review.user.last_name %> </b><br>

@@ -5,7 +5,7 @@ class Carehome < ApplicationRecord
   has_many_attached :photos
   acts_as_favoritable
 
-  paginates_per 9
+  paginates_per 10
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
